@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cores da marca Bem Ti Vê
+				'bem-ti-ve': {
+					'green': '#4ade80', // Verde saúde
+					'orange': '#fb923c', // Laranja vivo
+					'cream': '#FFF8EF', // Off-white
+					'green-light': '#86efac',
+					'green-dark': '#22c55e',
+					'orange-light': '#fdba74',
+					'orange-dark': '#ea580c',
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'slide-in-right': 'slide-in-right 0.3s ease-out'
+			},
+			fontFamily: {
+				'bem-ti-ve': ['Inter', 'system-ui', 'sans-serif'],
+			},
+			backgroundImage: {
+				'leaves-pattern': "url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><path fill=\"%234ade8020\" d=\"M20,20 Q40,10 60,20 Q50,40 30,50 Q10,40 20,20z M70,60 Q90,50 80,70 Q60,80 50,60 Q60,40 70,60z\"/></svg>')",
 			}
 		}
 	},
