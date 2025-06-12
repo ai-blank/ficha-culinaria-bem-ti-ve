@@ -36,7 +36,16 @@ const AuthPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-bem-ti-ve-cream via-background to-bem-ti-ve-green/10 leaves-bg flex items-center justify-center p-4">
+    <div 
+      className="min-h-screen flex items-center justify-center p-4"
+      style={{
+        background: 'linear-gradient(135deg, #f3ab6b 0%, #ec6d0b 100%)',
+        backgroundImage: `url('/lovable-uploads/932eb294-c398-43ec-b416-1c3497d2d648.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'overlay'
+      }}
+    >
       <div className="w-full max-w-md animate-fade-in">
         {renderForm()}
       </div>
