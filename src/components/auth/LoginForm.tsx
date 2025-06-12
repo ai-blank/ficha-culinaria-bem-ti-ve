@@ -48,21 +48,18 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
+    <div className="w-full max-w-md mx-auto p-8 bg-white/50 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
       <div className="text-center mb-8">
         <div className="flex justify-center mb-6">
           <img 
             src="/lovable-uploads/0495dd21-8452-4483-9264-fd17c4d9f971.png" 
             alt="Bem Ti Vê - Comida Saudável" 
-            className="h-24 w-auto"
+            className="h-32 w-auto"
           />
         </div>
         <h1 className="text-2xl font-bold text-gray-800 mb-2 font-heading">
           Faça seu login
         </h1>
-        <p className="text-gray-600 font-body">
-          Acesse sua conta para gerenciar fichas técnicas
-        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -75,7 +72,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
             onChange={(e) => setEmail(e.target.value)}
             placeholder="seu@email.com"
             required
-            className="bg-white/60 border-white/30 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange/20"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange/20 focus:ring-1"
           />
         </div>
 
@@ -88,7 +85,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Sua senha"
             required
-            className="bg-white/60 border-white/30 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange/20"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange/20 focus:ring-1"
           />
         </div>
 
