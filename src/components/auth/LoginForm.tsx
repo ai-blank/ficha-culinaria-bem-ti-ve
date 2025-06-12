@@ -48,23 +48,23 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
-      <div className="text-center mb-8">
-        <div className="flex justify-center mb-6">
+    <div className="w-full max-w-md mx-auto p-8 bg-white/25 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
+      <div className="text-center mb-6">
+        <div className="flex justify-center mb-4">
           <img 
-            src="/lovable-uploads/0495dd21-8452-4483-9264-fd17c4d9f971.png" 
+            src="/lovable-uploads/Logo _ Bem Ti Vê-09.png" 
             alt="Bem Ti Vê - Comida Saudável" 
-            className="h-48 w-auto"
+            className="h-56 w-auto"
           />
         </div>
-        <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
+        <h1 className="text-4xl font-bold text-white mb-2 font-heading">
           Faça seu login
         </h1>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-gray-700 font-body">Email</Label>
+          <Label htmlFor="email" className="text-white font-body">Email</Label>
           <Input
             id="email"
             type="email"
@@ -72,12 +72,12 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
             onChange={(e) => setEmail(e.target.value)}
             placeholder="seu@email.com"
             required
-            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="password" className="text-gray-700 font-body">Senha</Label>
+          <Label htmlFor="password" className="text-white font-body">Senha</Label>
           <Input
             id="password"
             type="password"
@@ -85,7 +85,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Sua senha"
             required
-            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
@@ -107,7 +107,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
           Esqueceu sua senha?
         </button>
         
-        <div className="text-sm text-gray-600 font-body">
+        <div className="text-sm text-white/80 font-body">
           Não tem uma conta?{' '}
           <button
             type="button"
@@ -120,11 +120,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
       </div>
 
       {/* Demo credentials */}
-      <div className="mt-8 p-4 bg-white/40 rounded-lg border border-white/20">
-        <p className="text-xs text-gray-600 mb-2 font-medium font-body">
+      <div className="mt-8 p-4 bg-white/10 rounded-lg border border-white/20">
+        <p className="text-xs text-white/80 mb-2 font-medium font-body">
           🔑 Credenciais para demonstração:
         </p>
-        <div className="text-xs space-y-1 font-body">
+        <div className="text-xs space-y-1 font-body text-white/70">
           <div>
             <strong>Admin:</strong> admin@bemtive.com / Admin123!
           </div>

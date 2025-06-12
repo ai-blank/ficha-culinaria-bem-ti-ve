@@ -42,21 +42,21 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
 
   if (sent) {
     return (
-      <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
+      <div className="w-full max-w-md mx-auto p-8 bg-white/25 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-bem-ti-ve-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <Mail className="h-8 w-8 text-bem-ti-ve-orange" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
+          <h1 className="text-3xl font-bold text-white mb-2 font-heading">
             Email enviado!
           </h1>
-          <p className="text-gray-600 font-body">
+          <p className="text-white/80 font-body">
             Enviamos um link para recuperação de senha para <strong>{email}</strong>
           </p>
         </div>
 
         <div className="space-y-4">
-          <p className="text-sm text-gray-600 text-center font-body">
+          <p className="text-sm text-white/70 text-center font-body">
             Não recebeu o email? Verifique sua caixa de spam ou tente novamente em alguns minutos.
           </p>
           
@@ -73,26 +73,26 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
-      <div className="text-center mb-8">
-        <div className="flex justify-center mb-6">
+    <div className="w-full max-w-md mx-auto p-8 bg-white/25 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
+      <div className="text-center mb-6">
+        <div className="flex justify-center mb-4">
           <img 
-            src="/lovable-uploads/0495dd21-8452-4483-9264-fd17c4d9f971.png" 
+            src="/lovable-uploads/Logo _ Bem Ti Vê-09.png" 
             alt="Bem Ti Vê - Comida Saudável" 
-            className="h-48 w-auto"
+            className="h-56 w-auto"
           />
         </div>
-        <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
+        <h1 className="text-4xl font-bold text-white mb-2 font-heading">
           Recuperar senha
         </h1>
-        <p className="text-gray-600 font-body">
+        <p className="text-white/80 font-body">
           Digite seu email para receber um link de recuperação
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-gray-700 font-body">Email</Label>
+          <Label htmlFor="email" className="text-white font-body">Email</Label>
           <Input
             id="email"
             type="email"
@@ -100,7 +100,7 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="seu@email.com"
             required
-            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
