@@ -5,7 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft, Mail } from 'lucide-react';
-import Logo from '@/components/ui/logo';
 
 interface ForgotPasswordFormProps {
   onBack: () => void;
@@ -43,28 +42,27 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
 
   if (sent) {
     return (
-      <div className="w-full max-w-md mx-auto p-8 bg-card rounded-2xl shadow-xl border border-border">
+      <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-bem-ti-ve-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Mail className="h-8 w-8 text-bem-ti-ve-green" />
+          <div className="w-16 h-16 bg-bem-ti-ve-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Mail className="h-8 w-8 text-bem-ti-ve-orange" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground mb-2">
+          <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
             Email enviado!
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-gray-600 font-body">
             Enviamos um link para recuperação de senha para <strong>{email}</strong>
           </p>
         </div>
 
         <div className="space-y-4">
-          <p className="text-sm text-muted-foreground text-center">
+          <p className="text-sm text-gray-600 text-center font-body">
             Não recebeu o email? Verifique sua caixa de spam ou tente novamente em alguns minutos.
           </p>
           
           <Button
             onClick={onBack}
-            variant="outline"
-            className="w-full"
+            className="w-full bg-bem-ti-ve-orange hover:bg-bem-ti-ve-orange-dark text-white font-medium py-3 rounded-lg transition-all duration-200 font-body"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Voltar ao login
@@ -75,20 +73,26 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 bg-card rounded-2xl shadow-xl border border-border">
+    <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
       <div className="text-center mb-8">
-        <Logo size="lg" className="justify-center mb-4" />
-        <h1 className="text-2xl font-bold text-foreground mb-2">
+        <div className="flex justify-center mb-6">
+          <img 
+            src="/lovable-uploads/0495dd21-8452-4483-9264-fd17c4d9f971.png" 
+            alt="Bem Ti Vê - Comida Saudável" 
+            className="h-48 w-auto"
+          />
+        </div>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
           Recuperar senha
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-gray-600 font-body">
           Digite seu email para receber um link de recuperação
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="email" className="text-gray-700 font-body">Email</Label>
           <Input
             id="email"
             type="email"
@@ -96,13 +100,13 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="seu@email.com"
             required
-            className="form-input"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <Button
           type="submit"
-          className="w-full btn-primary"
+          className="w-full bg-bem-ti-ve-orange hover:bg-bem-ti-ve-orange-dark text-white font-medium py-3 rounded-lg transition-all duration-200 font-body"
           disabled={loading}
         >
           {loading ? 'Enviando...' : 'Enviar link de recuperação'}
@@ -113,7 +117,7 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
         <button
           type="button"
           onClick={onBack}
-          className="text-muted-foreground hover:text-foreground text-sm transition-colors inline-flex items-center gap-2"
+          className="text-bem-ti-ve-orange hover:text-bem-ti-ve-orange-dark text-sm transition-colors inline-flex items-center gap-2 font-body"
         >
           <ArrowLeft className="h-4 w-4" />
           Voltar ao login

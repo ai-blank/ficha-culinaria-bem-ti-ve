@@ -5,7 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
-import Logo from '@/components/ui/logo';
 
 interface RegisterFormProps {
   onToggleForm: () => void;
@@ -102,20 +101,26 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
   const passwordValidation = validatePassword(formData.password);
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 bg-card rounded-2xl shadow-xl border border-border">
+    <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
       <div className="text-center mb-8">
-        <Logo size="lg" className="justify-center mb-4" />
-        <h1 className="text-2xl font-bold text-foreground mb-2">
+        <div className="flex justify-center mb-6">
+          <img 
+            src="/lovable-uploads/0495dd21-8452-4483-9264-fd17c4d9f971.png" 
+            alt="Bem Ti Vê - Comida Saudável" 
+            className="h-48 w-auto"
+          />
+        </div>
+        <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
           Criar conta
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-gray-600 font-body">
           Junte-se ao sistema de gestão culinária
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="name">Nome completo *</Label>
+          <Label htmlFor="name" className="text-gray-700 font-body">Nome completo *</Label>
           <Input
             id="name"
             name="name"
@@ -124,12 +129,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="Seu nome completo"
             required
-            className="form-input"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="email">Email *</Label>
+          <Label htmlFor="email" className="text-gray-700 font-body">Email *</Label>
           <Input
             id="email"
             name="email"
@@ -138,12 +143,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="seu@email.com"
             required
-            className="form-input"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="company">Empresa/Negócio</Label>
+          <Label htmlFor="company" className="text-gray-700 font-body">Empresa/Negócio</Label>
           <Input
             id="company"
             name="company"
@@ -151,12 +156,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             value={formData.company}
             onChange={handleChange}
             placeholder="Nome da sua empresa"
-            className="form-input"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="phone">Telefone</Label>
+          <Label htmlFor="phone" className="text-gray-700 font-body">Telefone</Label>
           <Input
             id="phone"
             name="phone"
@@ -164,12 +169,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(11) 99999-9999"
-            className="form-input"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="password">Senha *</Label>
+          <Label htmlFor="password" className="text-gray-700 font-body">Senha *</Label>
           <Input
             id="password"
             name="password"
@@ -178,7 +183,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="Sua senha"
             required
-            className="form-input"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
           {formData.password && (
             <div className="text-xs space-y-1 mt-2">
@@ -202,7 +207,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="confirmPassword">Confirmar senha *</Label>
+          <Label htmlFor="confirmPassword" className="text-gray-700 font-body">Confirmar senha *</Label>
           <Input
             id="confirmPassword"
             name="confirmPassword"
@@ -211,13 +216,13 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="Confirme sua senha"
             required
-            className="form-input"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <Button
           type="submit"
-          className="w-full btn-primary"
+          className="w-full bg-bem-ti-ve-orange hover:bg-bem-ti-ve-orange-dark text-white font-medium py-3 rounded-lg transition-all duration-200 font-body"
           disabled={loading || !passwordValidation.valid}
         >
           {loading ? 'Criando conta...' : 'Criar conta'}
@@ -225,12 +230,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
       </form>
 
       <div className="mt-6 text-center">
-        <div className="text-sm text-muted-foreground">
+        <div className="text-sm text-gray-600 font-body">
           Já tem uma conta?{' '}
           <button
             type="button"
             onClick={onToggleForm}
-            className="text-primary hover:text-primary/80 font-medium transition-colors"
+            className="text-bem-ti-ve-orange hover:text-bem-ti-ve-orange-dark font-medium transition-colors"
           >
             Faça login
           </button>
