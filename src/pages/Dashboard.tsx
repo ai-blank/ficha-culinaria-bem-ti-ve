@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Sidebar from '@/components/layout/Sidebar';
 import DashboardOverview from '@/components/dashboard/DashboardOverview';
 import ProfileForm from '@/components/profile/ProfileForm';
+import { IngredientesPage } from '@/components/ingredientes/IngredientesPage';
 
 const Dashboard: React.FC = () => {
   const { user } = useAuth();
@@ -27,12 +28,7 @@ const Dashboard: React.FC = () => {
           </div>
         );
       case 'ingredientes':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-bold mb-4">Ingredientes</h2>
-            <p className="text-muted-foreground">Módulo de ingredientes em desenvolvimento...</p>
-          </div>
-        );
+        return <IngredientesPage />;
       case 'calculadora':
         return (
           <div className="text-center py-12">
@@ -97,14 +93,14 @@ const Dashboard: React.FC = () => {
         />
         
         <main className="flex-1 p-6">
-          <div className="mb-6">
-            <h1 className="text-3xl font-bold text-foreground">{getPageTitle()}</h1>
-            {!showProfile && (
+          {!showProfile && activeTab !== 'ingredientes' && (
+            <div className="mb-6">
+              <h1 className="text-3xl font-bold text-foreground">{getPageTitle()}</h1>
               <p className="text-muted-foreground mt-2">
                 Bem-vindo ao sistema de gestão culinária Bem Ti Vê
               </p>
-            )}
-          </div>
+            </div>
+          )}
           
           <div className="animate-fade-in">
             {renderContent()}
