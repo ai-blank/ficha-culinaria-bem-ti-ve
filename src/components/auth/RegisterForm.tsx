@@ -101,26 +101,26 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
   const passwordValidation = validatePassword(formData.password);
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 bg-white/25 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
-      <div className="text-center mb-6">
-        <div className="flex justify-center mb-4">
+    <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
+      <div className="text-center mb-8">
+        <div className="flex justify-center mb-6">
           <img 
-            src="/lovable-uploads/Logo _ Bem Ti Vê-09.png" 
+            src="/lovable-uploads/0495dd21-8452-4483-9264-fd17c4d9f971.png" 
             alt="Bem Ti Vê - Comida Saudável" 
-            className="h-56 w-auto"
+            className="h-48 w-auto"
           />
         </div>
-        <h1 className="text-4xl font-bold text-white mb-2 font-heading">
+        <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
           Criar conta
         </h1>
-        <p className="text-white/80 font-body">
+        <p className="text-gray-600 font-body">
           Junte-se ao sistema de gestão culinária
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="name" className="text-white font-body">Nome completo *</Label>
+          <Label htmlFor="name" className="text-gray-700 font-body">Nome completo *</Label>
           <Input
             id="name"
             name="name"
@@ -129,12 +129,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="Seu nome completo"
             required
-            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-white font-body">Email *</Label>
+          <Label htmlFor="email" className="text-gray-700 font-body">Email *</Label>
           <Input
             id="email"
             name="email"
@@ -143,12 +143,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="seu@email.com"
             required
-            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="company" className="text-white font-body">Empresa/Negócio</Label>
+          <Label htmlFor="company" className="text-gray-700 font-body">Empresa/Negócio</Label>
           <Input
             id="company"
             name="company"
@@ -156,12 +156,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             value={formData.company}
             onChange={handleChange}
             placeholder="Nome da sua empresa"
-            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="phone" className="text-white font-body">Telefone</Label>
+          <Label htmlFor="phone" className="text-gray-700 font-body">Telefone</Label>
           <Input
             id="phone"
             name="phone"
@@ -169,12 +169,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(11) 99999-9999"
-            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="password" className="text-white font-body">Senha *</Label>
+          <Label htmlFor="password" className="text-gray-700 font-body">Senha *</Label>
           <Input
             id="password"
             name="password"
@@ -183,23 +183,23 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="Sua senha"
             required
-            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
           {formData.password && (
             <div className="text-xs space-y-1 mt-2">
-              <div className={passwordValidation.minLength ? 'text-green-400' : 'text-red-400'}>
+              <div className={passwordValidation.minLength ? 'text-green-600' : 'text-red-600'}>
                 ✓ Mínimo 8 caracteres
               </div>
-              <div className={passwordValidation.hasUpper ? 'text-green-400' : 'text-red-400'}>
+              <div className={passwordValidation.hasUpper ? 'text-green-600' : 'text-red-600'}>
                 ✓ Uma letra maiúscula
               </div>
-              <div className={passwordValidation.hasLower ? 'text-green-400' : 'text-red-400'}>
+              <div className={passwordValidation.hasLower ? 'text-green-600' : 'text-red-600'}>
                 ✓ Uma letra minúscula
               </div>
-              <div className={passwordValidation.hasNumber ? 'text-green-400' : 'text-red-400'}>
+              <div className={passwordValidation.hasNumber ? 'text-green-600' : 'text-red-600'}>
                 ✓ Um número
               </div>
-              <div className={passwordValidation.hasSpecial ? 'text-green-400' : 'text-red-400'}>
+              <div className={passwordValidation.hasSpecial ? 'text-green-600' : 'text-red-600'}>
                 ✓ Um caractere especial
               </div>
             </div>
@@ -207,7 +207,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="confirmPassword" className="text-white font-body">Confirmar senha *</Label>
+          <Label htmlFor="confirmPassword" className="text-gray-700 font-body">Confirmar senha *</Label>
           <Input
             id="confirmPassword"
             name="confirmPassword"
@@ -216,7 +216,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
             onChange={handleChange}
             placeholder="Confirme sua senha"
             required
-            className="bg-white/20 border-white/30 text-white placeholder:text-white/70 focus:bg-white/30 focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
+            className="bg-white/60 border-white/50 text-gray-800 placeholder:text-gray-500 focus:bg-white focus:border-bem-ti-ve-orange focus:ring-bem-ti-ve-orange focus:ring-1"
           />
         </div>
 
@@ -230,7 +230,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
       </form>
 
       <div className="mt-6 text-center">
-        <div className="text-sm text-white/80 font-body">
+        <div className="text-sm text-gray-600 font-body">
           Já tem uma conta?{' '}
           <button
             type="button"
