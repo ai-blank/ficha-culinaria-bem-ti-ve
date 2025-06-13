@@ -1,9 +1,12 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { FileText, Package, TrendingUp, Users, Calculator, ChefHat } from 'lucide-react';
 
-const DashboardOverview: React.FC = () => {
+interface DashboardOverviewProps {
+  onNavigate?: (tab: string) => void;
+}
+
+const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => {
   // Dados simulados para demonstração
   const stats = {
     totalFichas: 24,
@@ -92,7 +95,10 @@ const DashboardOverview: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card className="hover-scale cursor-pointer bg-gradient-to-br from-secondary/10 to-secondary/5 border-secondary/20">
+        <Card 
+          className="hover-scale cursor-pointer bg-gradient-to-br from-secondary/10 to-secondary/5 border-secondary/20"
+          onClick={() => onNavigate?.('ingredientes')}
+        >
           <CardContent className="p-6">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">

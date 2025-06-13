@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import Header from '@/components/layout/Header';
@@ -12,6 +11,11 @@ const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [showProfile, setShowProfile] = useState(false);
 
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    setShowProfile(false);
+  };
+
   const renderContent = () => {
     if (showProfile) {
       return <ProfileForm />;
@@ -19,7 +23,7 @@ const Dashboard: React.FC = () => {
 
     switch (activeTab) {
       case 'dashboard':
-        return <DashboardOverview />;
+        return <DashboardOverview onNavigate={handleTabChange} />;
       case 'fichas':
         return (
           <div className="text-center py-12">
@@ -51,7 +55,7 @@ const Dashboard: React.FC = () => {
           </div>
         );
       default:
-        return <DashboardOverview />;
+        return <DashboardOverview onNavigate={handleTabChange} />;
     }
   };
 
@@ -74,8 +78,7 @@ const Dashboard: React.FC = () => {
       <Sidebar 
         activeTab={activeTab} 
         onTabChange={(tab) => {
-          setActiveTab(tab);
-          setShowProfile(false);
+          handleTabChange(tab);
         }}
         isAdmin={user?.admin || false}
       />
