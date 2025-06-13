@@ -1,0 +1,173 @@
+
+[
+  {
+    "alimento": "ABACATE kg",
+    "percentual": 66.0,
+    "fator_correcao": 1.51
+  },
+  {
+    "alimento": "ABACAXI kg",
+    "percentual": 53.0,
+    "fator_correcao": 1.89
+  },
+  {
+    "alimento": "ABACAXI RODELAS EM CALDA kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "ABIU kg",
+    "percentual": 66.0,
+    "fator_correcao": 1.51
+  },
+  {
+    "alimento": "ABÃBORA kg",
+    "percentual": 73.0,
+    "fator_correcao": 1.37
+  },
+  {
+    "alimento": "ABÃBORA-MORANGA kg",
+    "percentual": 77.0,
+    "fator_correcao": 1.3
+  },
+  {
+    "alimento": "ABOBRINHA kg",
+    "percentual": 76.0,
+    "fator_correcao": 1.31
+  },
+  {
+    "alimento": "ABRICÃ kg",
+    "percentual": 79.0,
+    "fator_correcao": 1.27
+  },
+  {
+    "alimento": "ABSINTO L",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "ACAFRAO Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃAÃ kg",
+    "percentual": 10.0,
+    "fator_correcao": 9.61
+  },
+  {
+    "alimento": "ACELGA kg",
+    "percentual": 66.0,
+    "fator_correcao": 1.51
+  },
+  {
+    "alimento": "ACÃM kg",
+    "percentual": 85.0,
+    "fator_correcao": 1.17
+  },
+  {
+    "alimento": "ACETO BALSAMICO ml",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "ACHOCOLATADO EM PO Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "ACHOCOLATADO EM PÃ kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "ACIDO CITRICO kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR BAUNILHA kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO AMARELO kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO AZUL kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO BRANCO kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO LARANJA kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO PRETO kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO ROSA kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO VERDE kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR COLORIDO VERMELHO kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR CRISTAL Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR DE CONFEITEIRO Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR DE CONFEITEIRO GLAÃUCAR Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR DE CONFEITEIRO IMPALPAVEL Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR DOÃUCAR Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR MASCAVO Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AÃUCAR REFINADO Kg",
+    "percentual": 100.0,
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "AGRIÃO kg",
+    "percentual": 56.0,
+    "fator_correcao": 1.78
+  }
+]
