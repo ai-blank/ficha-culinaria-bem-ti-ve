@@ -79,7 +79,7 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
           <img 
             src="/lovable-uploads/logo-orange.png" 
             alt="Bem Ti Vê - Comida Saudável" 
-            className="h-48 w-auto"
+            className="h-32 w-auto"
           />
         </div>
         <h1 className="text-3xl font-bold text-gray-800 mb-2 font-heading">
