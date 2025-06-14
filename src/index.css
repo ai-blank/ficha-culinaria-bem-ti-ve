@@ -1,65 +1,94 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Importar fontes da marca Bem Ti Vê */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Sistema de design atualizado para Bem Ti Vê */
+
 @layer base {
   :root {
-    --background: #ffffff2;
-    --foreground: #000000;
-    --card: #ffffff;
-    --card-foreground: #000000;
-    --popover: #ffffff;
-    --popover-foreground: #000000;
-    --primary: #f3ab6b;
-    --primary-foreground: #ffffff;
-    --secondary: #f1f5f9;
-    --secondary-foreground: #0f172a;
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
-    --accent: #f1f5f9;
-    --accent-foreground: #0f172a;
-    --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
-    --border: #e2e8f0;
-    --input: #e2e8f0;
-    --ring: #f3ab6b;
-    --radius: 0.5rem;
-    --chart-1: #f3ab6b;
-    --chart-2: #ec6d0b;
-    --chart-3: #d97706;
-    --chart-4: #92400e;
-    --chart-5: #78350f;
+    /* Modo Claro (Light Mode) */
+    --background: 0 0 98%; /* #ffffff2 - Branco quase puro */
+    --foreground: 0 0% 0%; /* Preto para texto */
+
+    --card: 0 0% 100%; /* Branco para cards */
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 22 93% 56%; /* #ec6d0b - Laranja Vibrante */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 23 85% 38%; /* #b84b0a - Laranja Queimado */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 94%; /* Cinza muito claro */
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 27 67% 67%; /* #f3ab6b - Laranja Claro Suave */
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 94%;
+    --input: 0 0% 94%;
+    --ring: 22 93% 56%; /* #ec6d0b - Laranja Vibrante */
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 22 93% 56%; /* #ec6d0b */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 94%;
+    --sidebar-ring: 22 93% 56%; /* #ec6d0b */
   }
 
   .dark {
-    --background: #212121;
-    --foreground: #ffffff;
-    --card: #2a2a2a;
-    --card-foreground: #ffffff;
-    --popover: #2a2a2a;
-    --popover-foreground: #ffffff;
-    --primary: #f3ab6b;
-    --primary-foreground: #000000;
-    --secondary: #374151;
-    --secondary-foreground: #ffffff;
-    --muted: #374151;
-    --muted-foreground: #9ca3af;
-    --accent: #374151;
-    --accent-foreground: #ffffff;
-    --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
-    --border: #4b5563;
-    --input: #374151;
-    --ring: #f3ab6b;
-    --chart-1: #f3ab6b;
-    --chart-2: #ec6d0b;
-    --chart-3: #d97706;
-    --chart-4: #92400e;
-    --chart-5: #78350f;
+    /* Modo Escuro (Dark Mode) */
+    --background: 0 0% 13%; /* #212121 - Cinza escuro */
+    --foreground: 0 0% 100%; /* Branco para texto */
+
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 13%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 22 93% 56%; /* #ec6d0b - Laranja Vibrante mantém */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 67%;
+
+    --accent: 27 67% 67%; /* #f3ab6b - Laranja Claro Suave */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 22 93% 56%; /* #ec6d0b */
+
+    --sidebar-background: 0 0% 13%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 22 93% 56%; /* #ec6d0b */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 22 93% 56%; /* #ec6d0b */
   }
 }
 
@@ -67,77 +96,89 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground font-body;
   }
-  .font-heading {
-    font-family: 'Playfair Display', serif;
+
+  /* Tipografia da marca */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading; /* Marcellus SC para títulos */
   }
-  .font-body {
-    font-family: 'Inter', sans-serif;
+
+  /* Estilos para campos de formulário */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none font-body;
+  }
+
+  /* Botão primário da marca */
+  .btn-primary {
+    @apply bg-bem-ti-ve-orange text-white hover:bg-bem-ti-ve-orange-dark px-6 py-3 rounded-lg font-medium font-body transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-bem-ti-ve-orange/20 focus:outline-none;
+  }
+
+  /* Botão secundário da marca */
+  .btn-secondary {
+    @apply bg-bem-ti-ve-orange-dark text-white hover:bg-bem-ti-ve-orange px-6 py-3 rounded-lg font-medium font-body transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-bem-ti-ve-orange-dark/20 focus:outline-none;
+  }
+
+  /* Gradiente da marca */
+  .gradient-brand {
+    background: linear-gradient(135deg, #f3ab6b 0%, #ec6d0b 100%);
+  }
+
+  /* Background com padrão de folhas atualizado */
+  .leaves-bg {
+    background-color: #fffaf0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><pattern id="leaves" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path fill="%23ec6d0b15" d="M20,20 Q40,10 60,20 Q50,40 30,50 Q10,40 20,20z M70,60 Q90,50 80,70 Q60,80 50,60 Q60,40 70,60z"/></pattern></defs><rect width="100%" height="100%" fill="url(%23leaves)"/></svg>');
+  }
+
+  .dark .leaves-bg {
+    background-color: #0f0f0f;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><pattern id="leaves-dark" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path fill="%23ec6d0b25" d="M20,20 Q40,10 60,20 Q50,40 30,50 Q10,40 20,20z M70,60 Q90,50 80,70 Q60,80 50,60 Q60,40 70,60z"/></pattern></defs><rect width="100%" height="100%" fill="url(%23leaves-dark)"/></svg>');
   }
 }
 
+/* Animações e utilitários */
 @layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slide-in-right 0.3s ease-out;
+  }
+
   .hover-scale {
     @apply transition-transform duration-200 hover:scale-105;
   }
-  
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  /* Texto com cor da marca */
+  .text-brand {
+    color: #ec6d0b;
   }
 
-  /* Sidebar responsive adjustments */
-  @media (max-width: 768px) {
-    .sidebar-content {
-      @apply text-sm;
-    }
+  .text-brand-dark {
+    color: #b84b0a;
   }
 
-  /* Table responsive improvements */
-  .table-responsive {
-    @apply overflow-x-auto;
+  /* Backgrounds com cores da marca */
+  .bg-brand {
+    background-color: #ec6d0b;
   }
 
-  .table-responsive table {
-    @apply min-w-full;
+  .bg-brand-dark {
+    background-color: #b84b0a;
   }
 
-  /* Card responsive spacing */
-  @media (max-width: 640px) {
-    .card-responsive {
-      @apply p-4;
-    }
+  .bg-brand-light {
+    background-color: #f3ab6b;
   }
-}
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
+  .bg-brand-cream {
+    background-color: #fffaf0;
+  }
 
-::-webkit-scrollbar-track {
-  background: hsl(var(--muted));
-}
-
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground));
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary));
+  .bg-brand-beige {
+    background-color: #fefcf8;
+  }
 }

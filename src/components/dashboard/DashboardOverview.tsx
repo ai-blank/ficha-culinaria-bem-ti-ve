@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Package, TrendingUp, Users, ChefHat } from 'lucide-react';
+import { FileText, Package, TrendingUp, Users, Calculator, ChefHat } from 'lucide-react';
 
 interface DashboardOverviewProps {
   onNavigate?: (tab: string) => void;
@@ -26,7 +25,7 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
   return (
     <div className="space-y-6">
       {/* Estatísticas principais */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Fichas Técnicas</CardTitle>
@@ -81,15 +80,15 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
       </div>
 
       {/* Cards de ações rápidas */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card className="hover-scale cursor-pointer bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
-          <CardContent className="p-4 md:p-6">
+          <CardContent className="p-6">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                <ChefHat className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <ChefHat className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-base md:text-lg">Nova Ficha Técnica</h3>
+                <h3 className="font-semibold text-lg">Nova Ficha Técnica</h3>
                 <p className="text-sm text-muted-foreground">Criar receita e calcular custos</p>
               </div>
             </div>
@@ -100,14 +99,28 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
           className="hover-scale cursor-pointer bg-gradient-to-br from-secondary/10 to-secondary/5 border-secondary/20"
           onClick={() => onNavigate?.('ingredientes')}
         >
-          <CardContent className="p-4 md:p-6">
+          <CardContent className="p-6">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-                <Package className="h-5 w-5 md:h-6 md:w-6 text-secondary" />
+              <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
+                <Package className="h-6 w-6 text-secondary" />
               </div>
               <div>
-                <h3 className="font-semibold text-base md:text-lg">Novo Ingrediente</h3>
+                <h3 className="font-semibold text-lg">Novo Ingrediente</h3>
                 <p className="text-sm text-muted-foreground">Cadastrar ingrediente no sistema</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="hover-scale cursor-pointer bg-gradient-to-br from-bem-ti-ve-orange/10 to-bem-ti-ve-orange/5 border-bem-ti-ve-orange/20">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-bem-ti-ve-orange/20 rounded-lg flex items-center justify-center">
+                <Calculator className="h-6 w-6 text-bem-ti-ve-orange" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">Calculadora</h3>
+                <p className="text-sm text-muted-foreground">Calcular custos rapidamente</p>
               </div>
             </div>
           </CardContent>
@@ -117,18 +130,18 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
       {/* Atividade recente */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg md:text-xl">Atividade Recente</CardTitle>
+          <CardTitle>Atividade Recente</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             {recentActivity.map((activity) => (
               <div key={activity.id} className="flex items-center gap-4 p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                    <span className="font-medium text-sm">{activity.action}</span>
-                    <span className="text-muted-foreground hidden sm:block">•</span>
-                    <span className="text-sm text-muted-foreground truncate">{activity.item}</span>
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <span className="font-medium">{activity.action}</span>
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-sm">{activity.item}</span>
                   </div>
                   <p className="text-xs text-muted-foreground">{activity.time}</p>
                 </div>
