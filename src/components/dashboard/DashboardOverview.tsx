@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Package, TrendingUp, Users, Calculator, ChefHat } from 'lucide-react';
+import { FileText, Package, TrendingUp, Users, ChefHat } from 'lucide-react';
 
 interface DashboardOverviewProps {
   onNavigate?: (tab: string) => void;
@@ -80,8 +81,11 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
       </div>
 
       {/* Cards de ações rápidas */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="hover-scale cursor-pointer bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card 
+          className="hover-scale cursor-pointer bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20"
+          onClick={() => onNavigate?.('fichas')}
+        >
           <CardContent className="p-6">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
@@ -107,20 +111,6 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
               <div>
                 <h3 className="font-semibold text-lg">Novo Ingrediente</h3>
                 <p className="text-sm text-muted-foreground">Cadastrar ingrediente no sistema</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="hover-scale cursor-pointer bg-gradient-to-br from-bem-ti-ve-orange/10 to-bem-ti-ve-orange/5 border-bem-ti-ve-orange/20">
-          <CardContent className="p-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-bem-ti-ve-orange/20 rounded-lg flex items-center justify-center">
-                <Calculator className="h-6 w-6 text-bem-ti-ve-orange" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg">Calculadora</h3>
-                <p className="text-sm text-muted-foreground">Calcular custos rapidamente</p>
               </div>
             </div>
           </CardContent>

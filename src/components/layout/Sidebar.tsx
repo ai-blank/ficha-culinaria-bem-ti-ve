@@ -8,7 +8,6 @@ import {
   Package, 
   Users, 
   ChefHat,
-  Calculator,
   Database
 } from 'lucide-react';
 
@@ -23,7 +22,6 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, isAdmin }) =>
     { id: 'dashboard', label: 'Dashboard', icon: Home },
     { id: 'fichas', label: 'Fichas Técnicas', icon: FileText },
     { id: 'ingredientes', label: 'Ingredientes', icon: Package },
-    { id: 'calculadora', label: 'Calculadora', icon: Calculator },
   ];
 
   const adminItems = [

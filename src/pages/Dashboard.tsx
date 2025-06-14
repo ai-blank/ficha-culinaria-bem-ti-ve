@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import Header from '@/components/layout/Header';
@@ -5,6 +6,8 @@ import Sidebar from '@/components/layout/Sidebar';
 import DashboardOverview from '@/components/dashboard/DashboardOverview';
 import ProfileForm from '@/components/profile/ProfileForm';
 import { IngredientesPage } from '@/components/ingredientes/IngredientesPage';
+import AdminUsersPage from '@/components/admin/AdminUsersPage';
+import AdminSystemPage from '@/components/admin/AdminSystemPage';
 
 const Dashboard: React.FC = () => {
   const { user } = useAuth();
@@ -28,32 +31,15 @@ const Dashboard: React.FC = () => {
         return (
           <div className="text-center py-12">
             <h2 className="text-2xl font-bold mb-4">Fichas Técnicas</h2>
-            <p className="text-muted-foreground">Módulo de fichas técnicas em desenvolvimento...</p>
+            <p className="text-muted-foreground">Módulo de fichas técnicas com calculadora em desenvolvimento...</p>
           </div>
         );
       case 'ingredientes':
         return <IngredientesPage />;
-      case 'calculadora':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-bold mb-4">Calculadora</h2>
-            <p className="text-muted-foreground">Calculadora de custos em desenvolvimento...</p>
-          </div>
-        );
       case 'admin-users':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-bold mb-4">Gerenciar Usuários</h2>
-            <p className="text-muted-foreground">Painel administrativo em desenvolvimento...</p>
-          </div>
-        );
+        return <AdminUsersPage />;
       case 'admin-system':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-bold mb-4">Sistema</h2>
-            <p className="text-muted-foreground">Configurações do sistema em desenvolvimento...</p>
-          </div>
-        );
+        return <AdminSystemPage />;
       default:
         return <DashboardOverview onNavigate={handleTabChange} />;
     }
@@ -66,7 +52,6 @@ const Dashboard: React.FC = () => {
       case 'dashboard': return 'Dashboard';
       case 'fichas': return 'Fichas Técnicas';
       case 'ingredientes': return 'Ingredientes';
-      case 'calculadora': return 'Calculadora';
       case 'admin-users': return 'Gerenciar Usuários';
       case 'admin-system': return 'Sistema';
       default: return 'Dashboard';
