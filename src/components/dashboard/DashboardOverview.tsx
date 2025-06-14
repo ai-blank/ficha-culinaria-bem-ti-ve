@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useIngredientes } from '@/hooks/useIngredientes';
@@ -52,7 +53,7 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold mb-2">
-                Olá, {user?.nome || 'Usuário'}! 👋
+                Olá, {user?.name || 'Usuário'}! 👋
               </h2>
               <p className="text-muted-foreground">
                 Bem-vindo ao seu painel de gestão culinária
