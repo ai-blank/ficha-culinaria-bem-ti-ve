@@ -40,7 +40,7 @@ const AuthPage: React.FC = () => {
       className="min-h-screen flex items-center justify-center p-4"
       style={{
         background: 'linear-gradient(135deg, #f3ab6b 0%, #ec6d0b 100%)',
-        backgroundImage: `url('/lovable-uploads/932eb294-c398-43ec-b416-1c3497d2d648.png')`,
+        backgroundImage: `url('/lovable-uploads/background-orange.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundBlendMode: 'overlay'

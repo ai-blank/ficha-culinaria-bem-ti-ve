@@ -24,7 +24,14 @@ const Header: React.FC<HeaderProps> = ({ onProfileClick, onSettingsClick }) => {
 
   return (
     <header className="bg-card border-b border-border px-6 py-4 flex items-center justify-between">
-      <Logo size="sm" />
+      {/* <Logo size="sm" /> */}
+      <div className="flex justify-center">
+          <img 
+            src="/lovable-uploads/logo-orange-2.png" 
+            alt="Bem Ti Vê - Comida Saudável" 
+            className="h-10 w-auto"
+          />
+        </div>
       
       <div className="flex items-center gap-4">
         {/* Toggle tema */}

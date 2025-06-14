@@ -42,7 +42,7 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
 
   if (sent) {
     return (
-      <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
+      <div className="w-full max-w-md mx-auto p-8 bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-bem-ti-ve-orange/20 rounded-full flex items-center justify-center mx-auto mb-4">
             <Mail className="h-8 w-8 text-bem-ti-ve-orange" />
@@ -73,11 +73,11 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
   }
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 bg-white/30 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
+    <div className="w-full max-w-md mx-auto p-8 bg-white/60 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20">
       <div className="text-center mb-8">
         <div className="flex justify-center mb-6">
           <img 
-            src="/lovable-uploads/0495dd21-8452-4483-9264-fd17c4d9f971.png" 
+            src="/lovable-uploads/logo-orange.png" 
             alt="Bem Ti Vê - Comida Saudável" 
             className="h-48 w-auto"
           />
