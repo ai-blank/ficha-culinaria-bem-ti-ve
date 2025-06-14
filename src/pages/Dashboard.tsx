@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import Header from '@/components/layout/Header';
@@ -8,6 +7,7 @@ import ProfileForm from '@/components/profile/ProfileForm';
 import { IngredientesPage } from '@/components/ingredientes/IngredientesPage';
 import AdminUsersPage from '@/components/admin/AdminUsersPage';
 import AdminSystemPage from '@/components/admin/AdminSystemPage';
+import { FichasTecnicasPage } from '@/components/fichas/FichasTecnicasPage';
 
 const Dashboard: React.FC = () => {
   const { user } = useAuth();
@@ -28,12 +28,7 @@ const Dashboard: React.FC = () => {
       case 'dashboard':
         return <DashboardOverview onNavigate={handleTabChange} />;
       case 'fichas':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-bold mb-4">Fichas Técnicas</h2>
-            <p className="text-muted-foreground">Módulo de fichas técnicas com calculadora em desenvolvimento...</p>
-          </div>
-        );
+        return <FichasTecnicasPage />;
       case 'ingredientes':
         return <IngredientesPage />;
       case 'admin-users':
@@ -81,7 +76,7 @@ const Dashboard: React.FC = () => {
         />
         
         <main className="flex-1 p-6">
-          {!showProfile && activeTab !== 'ingredientes' && (
+          {!showProfile && activeTab !== 'ingredientes' && activeTab !== 'fichas' && (
             <div className="mb-6">
               <h1 className="text-3xl font-bold text-foreground">{getPageTitle()}</h1>
               <p className="text-muted-foreground mt-2">

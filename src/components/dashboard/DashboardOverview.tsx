@@ -1,143 +1,215 @@
-
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Package, TrendingUp, Users, ChefHat } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
+import { useIngredientes } from '@/hooks/useIngredientes';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  Package,
+  ChefHat,
+  Activity,
+  TrendingUp,
+  FileText,
+  Calculator
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useFichasTecnicas } from '@/hooks/useFichasTecnicas';
 
 interface DashboardOverviewProps {
-  onNavigate?: (tab: string) => void;
+  onNavigate: (tab: string) => void;
 }
 
 const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => {
-  // Dados simulados para demonstração
-  const stats = {
-    totalFichas: 24,
-    totalIngredientes: 156,
-    economiaMedia: 15.8,
-    usuarios: 8
+  const { user } = useAuth();
+  const { ingredientes } = useIngredientes();
+  const { fichasTecnicas } = useFichasTecnicas();
+
+  const estatisticas = {
+    totalIngredientes: ingredientes.length,
+    ingredientesAtivos: ingredientes.filter(i => i.ativo).length,
+    totalFichas: fichasTecnicas.length,
+    fichasAtivas: fichasTecnicas.filter(f => f.ativo).length,
+    valorMedioFichas: fichasTecnicas.length > 0 
+      ? fichasTecnicas.reduce((acc, f) => acc + (f.custo_total || 0), 0) / fichasTecnicas.length 
+      : 0,
   };
 
-  const recentActivity = [
-    { id: 1, action: 'Ficha criada', item: 'Bolo de Chocolate Premium', time: '2 horas atrás' },
-    { id: 2, action: 'Ingrediente atualizado', item: 'Farinha de Trigo Especial', time: '4 horas atrás' },
-    { id: 3, action: 'Cálculo realizado', item: 'Torta de Morango', time: '6 horas atrás' },
-    { id: 4, action: 'Ficha clonada', item: 'Pão Francês Artesanal', time: '1 dia atrás' },
-  ];
+  const formatarMoeda = (valor: number) => {
+    return new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    }).format(valor);
+  };
 
   return (
     <div className="space-y-6">
-      {/* Estatísticas principais */}
+      {/* Welcome message */}
+      <Card>
+        <CardContent className="p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-2xl font-bold mb-2">
+                Olá, {user?.nome || 'Usuário'}! 👋
+              </h2>
+              <p className="text-muted-foreground">
+                Bem-vindo ao seu painel de gestão culinária
+              </p>
+            </div>
+            <ChefHat className="h-16 w-16 text-primary opacity-20" />
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Fichas Técnicas</CardTitle>
-            <FileText className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-primary">{stats.totalFichas}</div>
-            <p className="text-xs text-muted-foreground">
-              +3 novas este mês
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Ingredientes</CardTitle>
-            <Package className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-secondary">{stats.totalIngredientes}</div>
-            <p className="text-xs text-muted-foreground">
-              +12 novos este mês
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Economia Média</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-bem-ti-ve-green">{stats.economiaMedia}%</div>
-            <p className="text-xs text-muted-foreground">
-              vs preços de mercado
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Usuários Ativos</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold text-bem-ti-ve-orange">{stats.usuarios}</div>
-            <p className="text-xs text-muted-foreground">
-              +2 novos usuários
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Cards de ações rápidas */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card 
-          className="hover-scale cursor-pointer bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20"
-          onClick={() => onNavigate?.('fichas')}
-        >
+        <Card className="cursor-pointer hover:shadow-lg transition-shadow" 
+              onClick={() => onNavigate('ingredientes')}>
           <CardContent className="p-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                <ChefHat className="h-6 w-6 text-primary" />
-              </div>
+            <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-semibold text-lg">Nova Ficha Técnica</h3>
-                <p className="text-sm text-muted-foreground">Criar receita e calcular custos</p>
+                <p className="text-sm text-muted-foreground">Ingredientes</p>
+                <p className="text-2xl font-bold">{estatisticas.totalIngredientes}</p>
+                <p className="text-xs text-muted-foreground">
+                  {estatisticas.ingredientesAtivos} ativos
+                </p>
               </div>
+              <Package className="h-8 w-8 text-green-600" />
             </div>
           </CardContent>
         </Card>
 
-        <Card 
-          className="hover-scale cursor-pointer bg-gradient-to-br from-secondary/10 to-secondary/5 border-secondary/20"
-          onClick={() => onNavigate?.('ingredientes')}
-        >
+        <Card className="cursor-pointer hover:shadow-lg transition-shadow" 
+              onClick={() => onNavigate('fichas')}>
           <CardContent className="p-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center">
-                <Package className="h-6 w-6 text-secondary" />
-              </div>
+            <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-semibold text-lg">Novo Ingrediente</h3>
-                <p className="text-sm text-muted-foreground">Cadastrar ingrediente no sistema</p>
+                <p className="text-sm text-muted-foreground">Fichas Técnicas</p>
+                <p className="text-2xl font-bold">{estatisticas.totalFichas}</p>
+                <p className="text-xs text-muted-foreground">
+                  {estatisticas.fichasAtivas} ativas
+                </p>
               </div>
+              <Calculator className="h-8 w-8 text-blue-600" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-muted-foreground">Custo Médio</p>
+                <p className="text-2xl font-bold">{formatarMoeda(estatisticas.valorMedioFichas)}</p>
+                <p className="text-xs text-muted-foreground">por ficha técnica</p>
+              </div>
+              <TrendingUp className="h-8 w-8 text-orange-600" />
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-muted-foreground">Sistema</p>
+                <p className="text-2xl font-bold text-green-600">Online</p>
+                <p className="text-xs text-muted-foreground">funcionando</p>
+              </div>
+              <Activity className="h-8 w-8 text-green-600" />
             </div>
           </CardContent>
         </Card>
       </div>
 
-      {/* Atividade recente */}
+      {/* Quick Actions */}
       <Card>
         <CardHeader>
-          <CardTitle>Atividade Recente</CardTitle>
+          <CardTitle>Ações Rápidas</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            {recentActivity.map((activity) => (
-              <div key={activity.id} className="flex items-center gap-4 p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2">
-                    <span className="font-medium">{activity.action}</span>
-                    <span className="text-muted-foreground">•</span>
-                    <span className="text-sm">{activity.item}</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground">{activity.time}</p>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Button 
+              onClick={() => onNavigate('ingredientes')} 
+              className="h-20 flex flex-col gap-2"
+              variant="outline"
+            >
+              <Package className="h-6 w-6" />
+              Gerenciar Ingredientes
+            </Button>
+            
+            <Button 
+              onClick={() => onNavigate('fichas')} 
+              className="h-20 flex flex-col gap-2"
+              variant="outline"
+            >
+              <Calculator className="h-6 w-6" />
+              Criar Ficha Técnica
+            </Button>
+            
+            <Button 
+              onClick={() => onNavigate('fichas')} 
+              className="h-20 flex flex-col gap-2"
+              variant="outline"
+            >
+              <FileText className="h-6 w-6" />
+              Ver Relatórios
+            </Button>
           </div>
+        </CardContent>
+      </Card>
+
+      {/* Recent Activity */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Fichas Técnicas Recentes</CardTitle>
+        </CardHeader>
+        <CardContent>
+          {fichasTecnicas.length === 0 ? (
+            <div className="text-center py-8">
+              <Calculator className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
+              <p className="text-muted-foreground mb-4">
+                Nenhuma ficha técnica criada ainda
+              </p>
+              <Button onClick={() => onNavigate('fichas')}>
+                Criar primeira ficha técnica
+              </Button>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {fichasTecnicas
+                .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
+                .slice(0, 5)
+                .map((ficha) => (
+                  <div key={ficha.id} className="flex items-center justify-between p-4 border rounded-lg">
+                    <div>
+                      <p className="font-medium">{ficha.nome_receita}</p>
+                      <p className="text-sm text-muted-foreground">
+                        Rendimento: {ficha.rendimento} {ficha.unidade_rendimento}
+                      </p>
+                    </div>
+                    <div className="text-right">
+                      <p className="font-medium">{formatarMoeda(ficha.custo_total || 0)}</p>
+                      <p className="text-sm text-muted-foreground">
+                        Atualizada em {new Date(ficha.updated_at).toLocaleDateString('pt-BR')}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              
+              {fichasTecnicas.length > 5 && (
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  onClick={() => onNavigate('fichas')}
+                >
+                  Ver todas as fichas técnicas
+                </Button>
+              )}
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
