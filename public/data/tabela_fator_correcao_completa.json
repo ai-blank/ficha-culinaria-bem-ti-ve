@@ -1,2942 +1,3530 @@
 [
   {
-    "alimento": "ABACATE kg",
-    "percentual": 66.0,
+    "alimento": "ABACATE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "ABACAXI kg",
-    "percentual": 53.0,
+    "alimento": "ABACAXI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 53.0,
     "fator_correcao": 1.89
   },
   {
-    "alimento": "ABACAXI RODELAS EM CALDA kg",
-    "percentual": 100.0,
+    "alimento": "ABACAXI RODELAS EM CALDA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ABIU kg",
-    "percentual": 66.0,
+    "alimento": "ABIU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "ABÓBORA kg",
-    "percentual": 73.0,
+    "alimento": "ABÓBORA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 73.0,
     "fator_correcao": 1.37
   },
   {
-    "alimento": "ABÓBORA-MORANGA kg",
-    "percentual": 77.0,
+    "alimento": "ABÓBORA-MORANGA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 77.0,
     "fator_correcao": 1.3
   },
   {
-    "alimento": "ABOBRINHA kg",
-    "percentual": 76.0,
+    "alimento": "ABOBRINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "ABRICÓ kg",
-    "percentual": 79.0,
+    "alimento": "ABRICÓ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 79.0,
     "fator_correcao": 1.27
   },
   {
-    "alimento": "ABSINTO L",
-    "percentual": 100.0,
+    "alimento": "ABSINTO",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ACAFRAO Kg",
-    "percentual": 100.0,
+    "alimento": "ACAFRAO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇAÍ kg",
-    "percentual": 10.0,
+    "alimento": "AÇAÍ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 10.0,
     "fator_correcao": 9.61
   },
   {
-    "alimento": "ACELGA kg",
-    "percentual": 66.0,
+    "alimento": "ACELGA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "ACÉM kg",
-    "percentual": 85.0,
+    "alimento": "ACÉM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.17
   },
   {
-    "alimento": "ACETO BALSAMICO ml",
-    "percentual": 100.0,
+    "alimento": "ACETO BALSAMICO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ACHOCOLATADO EM PO Kg",
-    "percentual": 100.0,
+    "alimento": "ACHOCOLATADO EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ACHOCOLATADO EM PÓ kg",
-    "percentual": 100.0,
+    "alimento": "ACHOCOLATADO EM PÓ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ACIDO CITRICO kg",
-    "percentual": 100.0,
+    "alimento": "ACIDO CITRICO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR BAUNILHA kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR BAUNILHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO AMARELO kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO AMARELO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO AZUL kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO AZUL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO BRANCO kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO BRANCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO LARANJA kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO LARANJA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO PRETO kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO PRETO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO ROSA kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO ROSA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO VERDE kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR COLORIDO VERMELHO kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR COLORIDO VERMELHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR CRISTAL Kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR CRISTAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR DE CONFEITEIRO Kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR DE CONFEITEIRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR DE CONFEITEIRO GLAÇUCAR Kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR DE CONFEITEIRO GLAÇUCAR",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR DE CONFEITEIRO IMPALPAVEL Kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR DE CONFEITEIRO IMPALPAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR DOÇUCAR Kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR DOÇUCAR",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR MASCAVO Kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR MASCAVO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AÇUCAR REFINADO Kg",
-    "percentual": 100.0,
+    "alimento": "AÇUCAR REFINADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AGRIÃO kg",
-    "percentual": 56.0,
+    "alimento": "AGRIÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 56.0,
     "fator_correcao": 1.78
   },
   {
-    "alimento": "AGULHA kg",
-    "percentual": 88.0,
+    "alimento": "AGULHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 88.0,
     "fator_correcao": 1.14
   },
   {
-    "alimento": "AIPO kg",
-    "percentual": 75.0,
+    "alimento": "AIPO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 75.0,
     "fator_correcao": 1.34
   },
   {
-    "alimento": "AJINOMOTO kg",
-    "percentual": 100.0,
+    "alimento": "AJINOMOTO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ALCACHOFRA kg",
-    "percentual": 48.0,
+    "alimento": "ALCACHOFRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 48.0,
     "fator_correcao": 2.08
   },
   {
-    "alimento": "ALCAPARRAS kg",
-    "percentual": 100.0,
+    "alimento": "ALCAPARRAS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ALCATRA kg",
-    "percentual": 86.0,
+    "alimento": "ALCATRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 86.0,
     "fator_correcao": 1.16
   },
   {
-    "alimento": "ALECRIM Kg",
-    "percentual": 100.0,
+    "alimento": "ALECRIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ALFACE kg",
-    "percentual": 83.0,
+    "alimento": "ALFACE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.21
   },
   {
-    "alimento": "ALFACE LISA kg",
-    "percentual": 76.0,
+    "alimento": "ALFACE LISA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "ALFACE-CRESPA kg",
-    "percentual": 68.0,
+    "alimento": "ALFACE-CRESPA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 68.0,
     "fator_correcao": 1.46
   },
   {
-    "alimento": "ALFAVACA DESIDRATADA kg",
-    "percentual": 100.0,
+    "alimento": "ALFAVACA DESIDRATADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ALHO PORÓ kg",
-    "percentual": 62.0,
+    "alimento": "ALHO PORÓ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 62.0,
     "fator_correcao": 1.62
   },
   {
-    "alimento": "ALHO kg",
-    "percentual": 93.0,
+    "alimento": "ALHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 93.0,
     "fator_correcao": 1.08
   },
   {
-    "alimento": "ALHO EM FLOCOS DESIDRATADO kg",
-    "percentual": 100.0,
+    "alimento": "ALHO EM FLOCOS DESIDRATADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ALHO TRITURADO PURO kg",
-    "percentual": 100.0,
+    "alimento": "ALHO TRITURADO PURO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ALMEIRÃO kg",
-    "percentual": 83.0,
+    "alimento": "ALMEIRÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.21
   },
   {
-    "alimento": "AMACIANTE DE CARNE kg",
-    "percentual": 100.0,
+    "alimento": "AMACIANTE DE CARNE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMEINDOIM COM CASCA kg",
-    "percentual": 50.0,
+    "alimento": "AMEINDOIM COM CASCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 50.0,
     "fator_correcao": 2.0
   },
   {
-    "alimento": "AMEIXA kg",
-    "percentual": 83.0,
+    "alimento": "AMEIXA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.2
   },
   {
-    "alimento": "AMEIXA SECA SEM CAROÇO kg",
-    "percentual": 100.0,
+    "alimento": "AMEIXA SECA SEM CAROÇO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMEIXAS EM CALDA kg",
-    "percentual": 100.0,
+    "alimento": "AMEIXAS EM CALDA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMENDOA CRUA kg",
-    "percentual": 100.0,
+    "alimento": "AMENDOA CRUA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMENDOA LAMINADA kg",
-    "percentual": 100.0,
+    "alimento": "AMENDOA LAMINADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMENDOIM kg",
-    "percentual": 44.0,
+    "alimento": "AMENDOIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 44.0,
     "fator_correcao": 2.25
   },
   {
-    "alimento": "AMENDOIM AÇUCARADO Kg",
-    "percentual": 100.0,
+    "alimento": "AMENDOIM AÇUCARADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMENDOIM DESCASCADO Kg",
-    "percentual": 100.0,
+    "alimento": "AMENDOIM DESCASCADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMENDOIM SEM CASCA kg",
-    "percentual": 74.0,
+    "alimento": "AMENDOIM SEM CASCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 74.0,
     "fator_correcao": 1.35
   },
   {
-    "alimento": "AMENDOIM TORRADO EM PO Kg",
-    "percentual": 100.0,
+    "alimento": "AMENDOIM TORRADO EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMIDO DE MILHO Kg",
-    "percentual": 100.0,
+    "alimento": "AMIDO DE MILHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AMORA kg",
-    "percentual": 47.0,
+    "alimento": "AMORA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 47.0,
     "fator_correcao": 2.11
   },
   {
-    "alimento": "ANANÁS kg",
-    "percentual": 56.0,
+    "alimento": "ANANÁS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 56.0,
     "fator_correcao": 1.78
   },
   {
-    "alimento": "ANIS ESTRELADO Kg",
-    "percentual": 100.0,
+    "alimento": "ANIS ESTRELADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ANONA kg",
-    "percentual": 41.0,
+    "alimento": "ANONA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 41.0,
     "fator_correcao": 2.44
   },
   {
-    "alimento": "ARAÇA kg",
-    "percentual": 86.0,
+    "alimento": "ARAÇA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 86.0,
     "fator_correcao": 1.16
   },
   {
-    "alimento": "ARENQUE kg",
-    "percentual": 56.0,
+    "alimento": "ARENQUE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 56.0,
     "fator_correcao": 1.78
   },
   {
-    "alimento": "AROMA BAUNILHA ml",
-    "percentual": 100.0,
+    "alimento": "AROMA BAUNILHA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ARRAIA kg",
-    "percentual": 85.0,
+    "alimento": "ARRAIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.18
   },
   {
-    "alimento": "ARROZ kg",
-    "percentual": 100.0,
+    "alimento": "ARROZ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ARROZ INTEGRAL kg",
-    "percentual": 99.0,
+    "alimento": "ARROZ INTEGRAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 99.0,
     "fator_correcao": 1.01
   },
   {
-    "alimento": "ARROZ PARBOLIZADO kg",
-    "percentual": 100.0,
+    "alimento": "ARROZ PARBOLIZADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ARROZ TIPO 1 kg",
-    "percentual": 100.0,
+    "alimento": "ARROZ TIPO 1",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ASA DE FRANGO kg",
-    "percentual": 45.0,
+    "alimento": "ASA DE FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 45.0,
     "fator_correcao": 2.24
   },
   {
-    "alimento": "ASA E SOBREASA DE FRANGO kg",
-    "percentual": 55.0,
+    "alimento": "ASA E SOBREASA DE FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 55.0,
     "fator_correcao": 1.81
   },
   {
-    "alimento": "ASPARGO kg",
-    "percentual": 50.0,
+    "alimento": "ASPARGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 50.0,
     "fator_correcao": 2.0
   },
   {
-    "alimento": "ATUM kg",
-    "percentual": 85.0,
+    "alimento": "ATUM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.18
   },
   {
-    "alimento": "ATUM NATURAL Kg",
-    "percentual": 100.0,
+    "alimento": "ATUM NATURAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ATUM RALADO Kg",
-    "percentual": 100.0,
+    "alimento": "ATUM RALADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AZEITE DE DENDE ml",
-    "percentual": 100.0,
+    "alimento": "AZEITE DE DENDE",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AZEITE DE OLIVA ml",
-    "percentual": 100.0,
+    "alimento": "AZEITE DE OLIVA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AZEITONA kg",
-    "percentual": 78.0,
+    "alimento": "AZEITONA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 78.0,
     "fator_correcao": 1.28
   },
   {
-    "alimento": "AZEITONA PRETA Kg",
-    "percentual": 100.0,
+    "alimento": "AZEITONA PRETA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "AZEITONA VERDE Kg",
-    "percentual": 100.0,
+    "alimento": "AZEITONA VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BACALHAU kg",
-    "percentual": 40.0,
+    "alimento": "BACALHAU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 40.0,
     "fator_correcao": 2.52
   },
   {
-    "alimento": "BACON CUBOS Kg",
-    "percentual": 100.0,
+    "alimento": "BACON CUBOS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BACON FATIADO Kg",
-    "percentual": 100.0,
+    "alimento": "BACON FATIADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BACON MANTA DEFUMADO Kg",
-    "percentual": 100.0,
+    "alimento": "BACON MANTA DEFUMADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BANANA kg",
-    "percentual": 67.0,
+    "alimento": "BANANA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 67.0,
     "fator_correcao": 1.5
   },
   {
-    "alimento": "BANANA D ́ÁGUA kg",
-    "percentual": 60.0,
+    "alimento": "BANANA D ́ÁGUA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 60.0,
     "fator_correcao": 1.66
   },
   {
-    "alimento": "BANANA DA TERRA kg",
-    "percentual": 72.0,
+    "alimento": "BANANA DA TERRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 72.0,
     "fator_correcao": 1.39
   },
   {
-    "alimento": "BANANA DE SÃO TOMÉ kg",
-    "percentual": 76.0,
+    "alimento": "BANANA DE SÃO TOMÉ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "BANANA FIGO kg",
-    "percentual": 68.0,
+    "alimento": "BANANA FIGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 68.0,
     "fator_correcao": 1.47
   },
   {
-    "alimento": "BANANA MAÇA kg",
-    "percentual": 63.0,
+    "alimento": "BANANA MAÇA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 63.0,
     "fator_correcao": 1.58
   },
   {
-    "alimento": "BANANA MARMELO kg",
-    "percentual": 64.0,
+    "alimento": "BANANA MARMELO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 64.0,
     "fator_correcao": 1.56
   },
   {
-    "alimento": "BANANA OURO kg",
-    "percentual": 82.0,
+    "alimento": "BANANA OURO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 82.0,
     "fator_correcao": 1.22
   },
   {
-    "alimento": "BANANA PRATA kg",
-    "percentual": 66.0,
+    "alimento": "BANANA PRATA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "BATATA kg",
-    "percentual": 94.0,
+    "alimento": "BATATA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 94.0,
     "fator_correcao": 1.06
   },
   {
-    "alimento": "BATATA CENOURA kg",
-    "percentual": 91.0,
+    "alimento": "BATATA CENOURA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 91.0,
     "fator_correcao": 1.1
   },
   {
-    "alimento": "BATATA DOCE kg",
-    "percentual": 83.0,
+    "alimento": "BATATA DOCE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.21
   },
   {
-    "alimento": "BATATA INGLESA kg",
-    "percentual": 94.0,
+    "alimento": "BATATA INGLESA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 94.0,
     "fator_correcao": 1.06
   },
   {
-    "alimento": "BATATA PALHA Kg",
-    "percentual": 100.0,
+    "alimento": "BATATA PALHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BATATA PALITO Kg",
-    "percentual": 100.0,
+    "alimento": "BATATA PALITO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BERIBÁ kg",
-    "percentual": 74.0,
+    "alimento": "BERIBÁ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 74.0,
     "fator_correcao": 1.35
   },
   {
-    "alimento": "BERINCASA kg",
-    "percentual": 69.0,
+    "alimento": "BERINCASA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 69.0,
     "fator_correcao": 1.44
   },
   {
-    "alimento": "BERINJELA kg",
-    "percentual": 94.0,
+    "alimento": "BERINJELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 94.0,
     "fator_correcao": 1.06
   },
   {
-    "alimento": "BERTALHA kg",
-    "percentual": 56.0,
+    "alimento": "BERTALHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 56.0,
     "fator_correcao": 1.8
   },
   {
-    "alimento": "BETERRABA kg",
-    "percentual": 61.0,
+    "alimento": "BETERRABA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 61.0,
     "fator_correcao": 1.64
   },
   {
-    "alimento": "BICARBONATO AMONIA Kg",
-    "percentual": 100.0,
+    "alimento": "BICARBONATO AMONIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BICARBONATO DE SODIO Kg",
-    "percentual": 100.0,
+    "alimento": "BICARBONATO DE SODIO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BISCOITO MAISENA Kg",
-    "percentual": 100.0,
+    "alimento": "BISCOITO MAISENA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BISCOITO MINI MAISENA Kg",
-    "percentual": 100.0,
+    "alimento": "BISCOITO MINI MAISENA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BOFE kg",
-    "percentual": 93.0,
+    "alimento": "BOFE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 93.0,
     "fator_correcao": 1.07
   },
   {
-    "alimento": "BONITO kg",
-    "percentual": 58.0,
+    "alimento": "BONITO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 58.0,
     "fator_correcao": 1.72
   },
   {
-    "alimento": "BREDO kg",
-    "percentual": 64.0,
+    "alimento": "BREDO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 64.0,
     "fator_correcao": 1.56
   },
   {
-    "alimento": "BRIGADEIRO Kg",
-    "percentual": 100.0,
+    "alimento": "BRIGADEIRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BRIGADEIRO ZERO LACTOSE Kg",
-    "percentual": 100.0,
+    "alimento": "BRIGADEIRO ZERO LACTOSE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "BRÓCOLIS kg",
-    "percentual": 43.0,
+    "alimento": "BRÓCOLIS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 43.0,
     "fator_correcao": 2.34
   },
   {
-    "alimento": "BROTO DE BAMBU kg",
-    "percentual": 30.0,
+    "alimento": "BROTO DE BAMBU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 30.0,
     "fator_correcao": 3.33
   },
   {
-    "alimento": "BUCHO kg",
-    "percentual": 90.0,
+    "alimento": "BUCHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 90.0,
     "fator_correcao": 1.11
   },
   {
-    "alimento": "BURITI kg",
-    "percentual": 21.0,
+    "alimento": "BURITI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 21.0,
     "fator_correcao": 4.76
   },
   {
-    "alimento": "CAÇÃO kg",
-    "percentual": 85.0,
+    "alimento": "CAÇÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.18
   },
   {
-    "alimento": "CACAU kg",
-    "percentual": 28.0,
+    "alimento": "CACAU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 28.0,
     "fator_correcao": 3.57
   },
   {
-    "alimento": "CACAU EM PO Kg",
-    "percentual": 100.0,
+    "alimento": "CACAU EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CACAU EM PO ALCALINO Kg",
-    "percentual": 100.0,
+    "alimento": "CACAU EM PO ALCALINO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CACHAÇA L",
-    "percentual": 100.0,
+    "alimento": "CACHAÇA",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CAJÁ kg",
-    "percentual": 62.0,
+    "alimento": "CAJÁ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 62.0,
     "fator_correcao": 1.61
   },
   {
-    "alimento": "CAJU kg",
-    "percentual": 78.0,
+    "alimento": "CAJU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 78.0,
     "fator_correcao": 1.28
   },
   {
-    "alimento": "CAJUZINHO Kg",
-    "percentual": 100.0,
+    "alimento": "CAJUZINHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CALDA PARA PUDIM Kg",
-    "percentual": 100.0,
+    "alimento": "CALDA PARA PUDIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CALDO DE CARNE Kg",
-    "percentual": 100.0,
+    "alimento": "CALDO DE CARNE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CALDO DE GALINHA Kg",
-    "percentual": 100.0,
+    "alimento": "CALDO DE GALINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CALDO DE LEGUMES Kg",
-    "percentual": 100.0,
+    "alimento": "CALDO DE LEGUMES",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CAMARÃO kg",
-    "percentual": 24.0,
+    "alimento": "CAMARÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 24.0,
     "fator_correcao": 4.1
   },
   {
-    "alimento": "CANELA EM PÓ Kg",
-    "percentual": 100.0,
+    "alimento": "CANELA EM PÓ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CANELA RAMA Kg",
-    "percentual": 100.0,
+    "alimento": "CANELA RAMA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CANJIQUINHA AMARELA Kg",
-    "percentual": 100.0,
+    "alimento": "CANJIQUINHA AMARELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CAQUI kg",
-    "percentual": 94.0,
+    "alimento": "CAQUI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 94.0,
     "fator_correcao": 1.06
   },
   {
-    "alimento": "CARÁ kg",
-    "percentual": 82.0,
+    "alimento": "CARÁ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 82.0,
     "fator_correcao": 1.22
   },
   {
-    "alimento": "CARAMBOLA kg",
-    "percentual": 81.0,
+    "alimento": "CARAMBOLA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 81.0,
     "fator_correcao": 1.23
   },
   {
-    "alimento": "CARDONIZ kg",
-    "percentual": 67.0,
+    "alimento": "CARDONIZ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 67.0,
     "fator_correcao": 1.49
   },
   {
-    "alimento": "CARPA kg",
-    "percentual": 39.0,
+    "alimento": "CARPA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 39.0,
     "fator_correcao": 2.56
   },
   {
-    "alimento": "CARURU kg",
-    "percentual": 50.0,
+    "alimento": "CARURU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 50.0,
     "fator_correcao": 2.0
   },
   {
-    "alimento": "CASTANHA DE CAJU Kg",
-    "percentual": 100.0,
+    "alimento": "CASTANHA DE CAJU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CAVALINHA kg",
-    "percentual": 83.0,
+    "alimento": "CAVALINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.2
   },
   {
-    "alimento": "CEBOLA kg",
-    "percentual": 61.0,
+    "alimento": "CEBOLA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 61.0,
     "fator_correcao": 1.64
   },
   {
-    "alimento": "CEBOLINHA kg",
-    "percentual": 85.0,
+    "alimento": "CEBOLINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.18
   },
   {
-    "alimento": "CENOURA kg",
-    "percentual": 85.0,
+    "alimento": "CENOURA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.17
   },
   {
-    "alimento": "CEOUVE kg",
-    "percentual": 52.0,
+    "alimento": "CEOUVE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 52.0,
     "fator_correcao": 1.91
   },
   {
-    "alimento": "CEREJA kg",
-    "percentual": 82.0,
+    "alimento": "CEREJA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 82.0,
     "fator_correcao": 1.22
   },
   {
-    "alimento": "CEREJAS EM CALDA Kg",
-    "percentual": 100.0,
+    "alimento": "CEREJAS EM CALDA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CERVEJA L",
-    "percentual": 100.0,
+    "alimento": "CERVEJA",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHÃ-DE-DENTRO kg",
-    "percentual": 90.0,
+    "alimento": "CHÃ-DE-DENTRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 90.0,
     "fator_correcao": 1.11
   },
   {
-    "alimento": "CHAMPANHE L",
-    "percentual": 100.0,
+    "alimento": "CHAMPANHE",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHANTILLY Kg",
-    "percentual": 100.0,
+    "alimento": "CHANTILLY",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHEIRO VERDE kg",
-    "percentual": 91.0,
+    "alimento": "CHEIRO VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 91.0,
     "fator_correcao": 1.1
   },
   {
-    "alimento": "CHICÓRIA CRESPA kg",
-    "percentual": 74.0,
+    "alimento": "CHICÓRIA CRESPA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 74.0,
     "fator_correcao": 1.35
   },
   {
-    "alimento": "CHICÓRIA LISA kg",
-    "percentual": 89.0,
+    "alimento": "CHICÓRIA LISA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.13
   },
   {
-    "alimento": "CHOCOLATE AO LEITE Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE AO LEITE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE BRANCO Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE BRANCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE BRANCO FORNEAVEL Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE BRANCO FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE EM PÓ Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE EM PÓ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE EM PO 33 % Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE EM PO 33 %",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE EM PO 35 % Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE EM PO 35 %",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE EM PO 50 % Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE EM PO 50 %",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE MEIO AMARGO Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE MEIO AMARGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE OVOMALTINE Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE OVOMALTINE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE PRETO FORNEAVEL Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE PRETO FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHOCOLATE PRETO MEIO AMARGO BLEND Kg",
-    "percentual": 100.0,
+    "alimento": "CHOCOLATE PRETO MEIO AMARGO BLEND",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CHUCHU kg",
-    "percentual": 68.0,
+    "alimento": "CHUCHU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 68.0,
     "fator_correcao": 1.47
   },
   {
-    "alimento": "CIDRA kg",
-    "percentual": 65.0,
+    "alimento": "CIDRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 65.0,
     "fator_correcao": 1.54
   },
   {
-    "alimento": "CIOBA kg",
-    "percentual": 90.0,
+    "alimento": "CIOBA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 90.0,
     "fator_correcao": 1.11
   },
   {
-    "alimento": "CLARA DE OVO LIQ PASTEURIZADA ml",
-    "percentual": 100.0,
+    "alimento": "CLARA DE OVO LIQ PASTEURIZADA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CLARA EM PO Kg",
-    "percentual": 100.0,
+    "alimento": "CLARA EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO kg",
-    "percentual": 53.0,
+    "alimento": "COCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 53.0,
     "fator_correcao": 1.88
   },
   {
-    "alimento": "COCO FLOCOS SWEET Kg",
-    "percentual": 100.0,
+    "alimento": "COCO FLOCOS SWEET",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO FLOCOS UMIDO ADOÇADO Kg",
-    "percentual": 100.0,
+    "alimento": "COCO FLOCOS UMIDO ADOÇADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO FRESCO FINO Kg",
-    "percentual": 100.0,
+    "alimento": "COCO FRESCO FINO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO FRESCO GROSSO Kg",
-    "percentual": 100.0,
+    "alimento": "COCO FRESCO GROSSO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO FRESCO MEDIO Kg",
-    "percentual": 100.0,
+    "alimento": "COCO FRESCO MEDIO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO MADURO kg",
-    "percentual": 56.0,
+    "alimento": "COCO MADURO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 56.0,
     "fator_correcao": 1.79
   },
   {
-    "alimento": "COCO RALADO Kg",
-    "percentual": 100.0,
+    "alimento": "COCO RALADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO SECO FINO Kg",
-    "percentual": 100.0,
+    "alimento": "COCO SECO FINO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COCO VERDE kg",
-    "percentual": 14.0,
+    "alimento": "COCO VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 14.0,
     "fator_correcao": 7.4
   },
   {
-    "alimento": "COENTRO kg",
-    "percentual": 79.0,
+    "alimento": "COENTRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 79.0,
     "fator_correcao": 1.26
   },
   {
-    "alimento": "COLORAU Kg",
-    "percentual": 100.0,
+    "alimento": "COLORAU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COLORAU TEMPERADO Kg",
-    "percentual": 100.0,
+    "alimento": "COLORAU TEMPERADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COLORETI GRANDE Kg",
-    "percentual": 100.0,
+    "alimento": "COLORETI GRANDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COLORETI MINI Kg",
-    "percentual": 100.0,
+    "alimento": "COLORETI MINI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "COMINHO Kg",
-    "percentual": 100.0,
+    "alimento": "COMINHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CONDESSA kg",
-    "percentual": 63.0,
+    "alimento": "CONDESSA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 63.0,
     "fator_correcao": 1.6
   },
   {
-    "alimento": "CONHAQUE L",
-    "percentual": 100.0,
+    "alimento": "CONHAQUE",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CONTRAFILÉ kg",
-    "percentual": 80.0,
+    "alimento": "CONTRAFILÉ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 80.0,
     "fator_correcao": 1.25
   },
   {
-    "alimento": "CORAÇÃO kg",
-    "percentual": 77.0,
+    "alimento": "CORAÇÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 77.0,
     "fator_correcao": 1.3
   },
   {
-    "alimento": "CORANTE CARAMELO ml",
-    "percentual": 100.0,
+    "alimento": "CORANTE CARAMELO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CORVINA kg",
-    "percentual": 84.0,
+    "alimento": "CORVINA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 84.0,
     "fator_correcao": 1.19
   },
   {
-    "alimento": "COSTELA GROSSA kg",
-    "percentual": 93.0,
+    "alimento": "COSTELA GROSSA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 93.0,
     "fator_correcao": 1.08
   },
   {
-    "alimento": "COSTELA TRÊS RIPAS kg",
-    "percentual": 89.0,
+    "alimento": "COSTELA TRÊS RIPAS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.13
   },
   {
-    "alimento": "COUVE kg",
-    "percentual": 67.0,
+    "alimento": "COUVE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 67.0,
     "fator_correcao": 1.5
   },
   {
-    "alimento": "COUVE-FLOR kg",
-    "percentual": 43.0,
+    "alimento": "COUVE-FLOR",
+    "unidade": "kg",
+    "percentual_aproveitamento": 43.0,
     "fator_correcao": 2.34
   },
   {
-    "alimento": "COXA DE FRANGO kg",
-    "percentual": 67.0,
+    "alimento": "COXA DE FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 67.0,
     "fator_correcao": 1.5
   },
   {
-    "alimento": "COXÃO DURO kg",
-    "percentual": 93.0,
+    "alimento": "COXÃO DURO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 93.0,
     "fator_correcao": 1.08
   },
   {
-    "alimento": "COXÃO MOLE kg",
-    "percentual": 95.0,
+    "alimento": "COXÃO MOLE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 95.0,
     "fator_correcao": 1.05
   },
   {
-    "alimento": "CRAVO DA INDIA Kg",
-    "percentual": 100.0,
+    "alimento": "CRAVO DA INDIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREAM CHEESE Kg",
-    "percentual": 100.0,
+    "alimento": "CREAM CHEESE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREME CHANTILLY Kg",
-    "percentual": 100.0,
+    "alimento": "CREME CHANTILLY",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREME DE AVELA Kg",
-    "percentual": 100.0,
+    "alimento": "CREME DE AVELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREME DE CONFEITEIRO Kg",
-    "percentual": 100.0,
+    "alimento": "CREME DE CONFEITEIRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREME DE LEITE ml",
-    "percentual": 100.0,
+    "alimento": "CREME DE LEITE",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREME DE RICOTA Kg",
-    "percentual": 100.0,
+    "alimento": "CREME DE RICOTA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREME DE RICOTA LIGHT Kg",
-    "percentual": 100.0,
+    "alimento": "CREME DE RICOTA LIGHT",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CREME VEGETAL CULINARIO ml",
-    "percentual": 100.0,
+    "alimento": "CREME VEGETAL CULINARIO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "CUPUAÇU kg",
-    "percentual": 60.0,
+    "alimento": "CUPUAÇU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 60.0,
     "fator_correcao": 1.67
   },
   {
-    "alimento": "DAMASCO kg",
-    "percentual": 60.0,
+    "alimento": "DAMASCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 60.0,
     "fator_correcao": 1.66
   },
   {
-    "alimento": "DOCE DE LEITE Kg",
-    "percentual": 100.0,
+    "alimento": "DOCE DE LEITE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "DOCE DE LEITE C/ CHOCOLATE Kg",
-    "percentual": 100.0,
+    "alimento": "DOCE DE LEITE C/ CHOCOLATE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "DOCE DE LEITE PASTA Kg",
-    "percentual": 100.0,
+    "alimento": "DOCE DE LEITE PASTA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "DOCE DE LEITE ZERO LACTOSE Kg",
-    "percentual": 100.0,
+    "alimento": "DOCE DE LEITE ZERO LACTOSE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "DOURADO kg",
-    "percentual": 85.0,
+    "alimento": "DOURADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.18
   },
   {
-    "alimento": "ENCHOCA kg",
-    "percentual": 100.0,
+    "alimento": "ENCHOCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ENGUIA kg",
-    "percentual": 76.0,
+    "alimento": "ENGUIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "ERVA DOCE kg",
-    "percentual": 71.0,
+    "alimento": "ERVA DOCE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 71.0,
     "fator_correcao": 1.4
   },
   {
-    "alimento": "ERVAS FINAS Kg",
-    "percentual": 100.0,
+    "alimento": "ERVAS FINAS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ERVILHA kg",
-    "percentual": 97.0,
+    "alimento": "ERVILHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 97.0,
     "fator_correcao": 1.03
   },
   {
-    "alimento": "ERVILHA FRESCA kg",
-    "percentual": 50.0,
+    "alimento": "ERVILHA FRESCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 50.0,
     "fator_correcao": 2.0
   },
   {
-    "alimento": "ERVILHA SECA kg",
-    "percentual": 97.0,
+    "alimento": "ERVILHA SECA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 97.0,
     "fator_correcao": 1.03
   },
   {
-    "alimento": "ESCAROLA kg",
-    "percentual": 58.0,
+    "alimento": "ESCAROLA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 58.0,
     "fator_correcao": 1.71
   },
   {
-    "alimento": "ESPADA kg",
-    "percentual": 86.0,
+    "alimento": "ESPADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 86.0,
     "fator_correcao": 1.16
   },
   {
-    "alimento": "ESPINAFRE kg",
-    "percentual": 56.0,
+    "alimento": "ESPINAFRE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 56.0,
     "fator_correcao": 1.78
   },
   {
-    "alimento": "ESSENCIA ABACAXI ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA ABACAXI",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA AMARULA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA AMARULA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA AVELA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA AVELA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA BANANA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA BANANA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA BAUNILHA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA BAUNILHA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA CAFÉ ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA CAFÉ",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA CHAMPAGNE ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA CHAMPAGNE",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA CHOCOLATE ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA CHOCOLATE",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA COCO ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA COCO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA LARANJA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA LARANJA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA LIMAO ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA LIMAO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA MANTEIGA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA MANTEIGA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA MARACUJA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA MARACUJA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA MEL ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA MEL",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA MORANGO ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA MORANGO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA NOZES ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA NOZES",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA PANETONE ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA PANETONE",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA QUEIJO ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA QUEIJO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESSENCIA RUM JAMAICA ml",
-    "percentual": 100.0,
+    "alimento": "ESSENCIA RUM JAMAICA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "ESTURJÃO kg",
-    "percentual": 85.0,
+    "alimento": "ESTURJÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.17
   },
   {
-    "alimento": "EXTRATO DE TOMATE kg",
-    "percentual": 100.0,
+    "alimento": "EXTRATO DE TOMATE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FAISÃO kg",
-    "percentual": 55.0,
+    "alimento": "FAISÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 55.0,
     "fator_correcao": 1.81
   },
   {
-    "alimento": "FARINHA DE AMENDOIM kg",
-    "percentual": 100.0,
+    "alimento": "FARINHA DE AMENDOIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FARINHA DE MANDIOCA kg",
-    "percentual": 100.0,
+    "alimento": "FARINHA DE MANDIOCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FARINHA DE ROSCA kg",
-    "percentual": 100.0,
+    "alimento": "FARINHA DE ROSCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FARINHA DE TRIGO Kg",
-    "percentual": 100.0,
+    "alimento": "FARINHA DE TRIGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FARINHA PANKO kg",
-    "percentual": 100.0,
+    "alimento": "FARINHA PANKO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FAROFA CROCANTE DE AMENDOIM kg",
-    "percentual": 100.0,
+    "alimento": "FAROFA CROCANTE DE AMENDOIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FAVA kg",
-    "percentual": 96.0,
+    "alimento": "FAVA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 96.0,
     "fator_correcao": 1.04
   },
   {
-    "alimento": "FAVA FRESCA kg",
-    "percentual": 34.0,
+    "alimento": "FAVA FRESCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 34.0,
     "fator_correcao": 2.94
   },
   {
-    "alimento": "FECULA DE MANDIOCA kg",
-    "percentual": 100.0,
+    "alimento": "FECULA DE MANDIOCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FEIJÃO BRANCO kg",
-    "percentual": 97.0,
+    "alimento": "FEIJÃO BRANCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 97.0,
     "fator_correcao": 1.03
   },
   {
-    "alimento": "FEIJÃO EM GERAL kg",
-    "percentual": 97.0,
+    "alimento": "FEIJÃO EM GERAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 97.0,
     "fator_correcao": 1.03
   },
   {
-    "alimento": "FEIJÃO MULATINHO kg",
-    "percentual": 97.0,
+    "alimento": "FEIJÃO MULATINHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 97.0,
     "fator_correcao": 1.03
   },
   {
-    "alimento": "FERMENTO BIOLOGICO SECO Kg",
-    "percentual": 100.0,
+    "alimento": "FERMENTO BIOLOGICO SECO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FERMENTO EM PÓ Kg",
-    "percentual": 100.0,
+    "alimento": "FERMENTO EM PÓ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FERMENTO FRESCO Kg",
-    "percentual": 100.0,
+    "alimento": "FERMENTO FRESCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FERMENTO INSTANTANEO Kg",
-    "percentual": 100.0,
+    "alimento": "FERMENTO INSTANTANEO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FERMENTO QUIMICO EM PO Kg",
-    "percentual": 100.0,
+    "alimento": "FERMENTO QUIMICO EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FIGO kg",
-    "percentual": 97.0,
+    "alimento": "FIGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 97.0,
     "fator_correcao": 1.03
   },
   {
-    "alimento": "FIGO INTEIRO EM CALDA Kg",
-    "percentual": 100.0,
+    "alimento": "FIGO INTEIRO EM CALDA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FIGO VERDE kg",
-    "percentual": 90.0,
+    "alimento": "FIGO VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 90.0,
     "fator_correcao": 1.11
   },
   {
-    "alimento": "FILÉ-MIGNON kg",
-    "percentual": 78.0,
+    "alimento": "FILÉ-MIGNON",
+    "unidade": "kg",
+    "percentual_aproveitamento": 78.0,
     "fator_correcao": 1.28
   },
   {
-    "alimento": "FIOS DE OVOS Kg",
-    "percentual": 100.0,
+    "alimento": "FIOS DE OVOS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FONDANT Kg",
-    "percentual": 100.0,
+    "alimento": "FONDANT",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FRANGO kg",
-    "percentual": 42.0,
+    "alimento": "FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 42.0,
     "fator_correcao": 2.38
   },
   {
-    "alimento": "FRUTA DO CONDE kg",
-    "percentual": 75.0,
+    "alimento": "FRUTA DO CONDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 75.0,
     "fator_correcao": 1.33
   },
   {
-    "alimento": "FRUTA PÃO kg",
-    "percentual": 77.0,
+    "alimento": "FRUTA PÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 77.0,
     "fator_correcao": 1.3
   },
   {
-    "alimento": "FUBÁ Kg",
-    "percentual": 100.0,
+    "alimento": "FUBÁ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FUBA AMARELO kg",
-    "percentual": 100.0,
+    "alimento": "FUBA AMARELO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FUBA DE MILHO kg",
-    "percentual": 100.0,
+    "alimento": "FUBA DE MILHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "FUNCHO kg",
-    "percentual": 93.0,
+    "alimento": "FUNCHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 93.0,
     "fator_correcao": 1.07
   },
   {
-    "alimento": "GALINHA kg",
-    "percentual": 58.0,
+    "alimento": "GALINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 58.0,
     "fator_correcao": 1.72
   },
   {
-    "alimento": "GALO kg",
-    "percentual": 80.0,
+    "alimento": "GALO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 80.0,
     "fator_correcao": 1.25
   },
   {
-    "alimento": "GANACHE CHOCOLATE BRANCO kg",
-    "percentual": 100.0,
+    "alimento": "GANACHE CHOCOLATE BRANCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GANACHE CHOCOLATE PRETO kg",
-    "percentual": 100.0,
+    "alimento": "GANACHE CHOCOLATE PRETO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GANACHE MEIO AMARGO kg",
-    "percentual": 100.0,
+    "alimento": "GANACHE MEIO AMARGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GANSO kg",
-    "percentual": 59.0,
+    "alimento": "GANSO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 59.0,
     "fator_correcao": 1.69
   },
   {
-    "alimento": "GAROUPA kg",
-    "percentual": 89.0,
+    "alimento": "GAROUPA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.13
   },
   {
-    "alimento": "GELATINA ABACAXI kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA ABACAXI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELATINA CEREJA kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA CEREJA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELATINA FRAMBOESA kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA FRAMBOESA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELATINA LIMAO kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA LIMAO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELATINA MORANGO kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA MORANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELATINA NATURAL kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA NATURAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELATINA SEM SABOR kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA SEM SABOR",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELATINA UVA kg",
-    "percentual": 100.0,
+    "alimento": "GELATINA UVA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELEIA DE BRILHO MORANGO Kg",
-    "percentual": 100.0,
+    "alimento": "GELEIA DE BRILHO MORANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GELEIA DE GOIABA Kg",
-    "percentual": 100.0,
+    "alimento": "GELEIA DE GOIABA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GEMA EM PO kg",
-    "percentual": 100.0,
+    "alimento": "GEMA EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GENGIBRE kg",
-    "percentual": 90.0,
+    "alimento": "GENGIBRE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 90.0,
     "fator_correcao": 1.11
   },
   {
-    "alimento": "GERGELIM BRANCO kg",
-    "percentual": 100.0,
+    "alimento": "GERGELIM BRANCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GIM L",
-    "percentual": 100.0,
+    "alimento": "GIM",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GLUCOSE DE MILHO kg",
-    "percentual": 100.0,
+    "alimento": "GLUCOSE DE MILHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GOIABA kg",
-    "percentual": 82.0,
+    "alimento": "GOIABA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 82.0,
     "fator_correcao": 1.22
   },
   {
-    "alimento": "GOMA XANTANA kg",
-    "percentual": 100.0,
+    "alimento": "GOMA XANTANA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GORDURA DE PALMA kg",
-    "percentual": 100.0,
+    "alimento": "GORDURA DE PALMA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GORDURA MANTEIGA kg",
-    "percentual": 100.0,
+    "alimento": "GORDURA MANTEIGA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GORDURA PROMULT kg",
-    "percentual": 100.0,
+    "alimento": "GORDURA PROMULT",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GORDURA VEGETAL Kg",
-    "percentual": 100.0,
+    "alimento": "GORDURA VEGETAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GRANULADO AMARELO Kg",
-    "percentual": 100.0,
+    "alimento": "GRANULADO AMARELO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GRANULADO AZUL Kg",
-    "percentual": 100.0,
+    "alimento": "GRANULADO AZUL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GRANULADO BRANCO Kg",
-    "percentual": 100.0,
+    "alimento": "GRANULADO BRANCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GRANULADO BRANCO E PRETO Kg",
-    "percentual": 100.0,
+    "alimento": "GRANULADO BRANCO E PRETO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GRANULADO COLORIDO Kg",
-    "percentual": 100.0,
+    "alimento": "GRANULADO COLORIDO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "GRÃO-DE-BICO kg",
-    "percentual": 98.0,
+    "alimento": "GRÃO-DE-BICO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 98.0,
     "fator_correcao": 1.02
   },
   {
-    "alimento": "GRAPEFRUIT kg",
-    "percentual": 36.0,
+    "alimento": "GRAPEFRUIT",
+    "unidade": "kg",
+    "percentual_aproveitamento": 36.0,
     "fator_correcao": 2.78
   },
   {
-    "alimento": "GRAVIOLA kg",
-    "percentual": 73.0,
+    "alimento": "GRAVIOLA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 73.0,
     "fator_correcao": 1.37
   },
   {
-    "alimento": "GROSELHA XAROPE ml",
-    "percentual": 100.0,
+    "alimento": "GROSELHA XAROPE",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "HIPOGLOSSO kg",
-    "percentual": 81.0,
+    "alimento": "HIPOGLOSSO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 81.0,
     "fator_correcao": 1.23
   },
   {
-    "alimento": "HORTELÃ kg",
-    "percentual": 74.0,
+    "alimento": "HORTELÃ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 74.0,
     "fator_correcao": 1.36
   },
   {
-    "alimento": "INHAME kg",
-    "percentual": 71.0,
+    "alimento": "INHAME",
+    "unidade": "kg",
+    "percentual_aproveitamento": 71.0,
     "fator_correcao": 1.4
   },
   {
-    "alimento": "JAVA kg",
-    "percentual": 24.0,
+    "alimento": "JAVA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 24.0,
     "fator_correcao": 4.13
   },
   {
-    "alimento": "JILÓ kg",
-    "percentual": 92.0,
+    "alimento": "JILÓ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 92.0,
     "fator_correcao": 1.09
   },
   {
-    "alimento": "JURUBEBA kg",
-    "percentual": 84.0,
+    "alimento": "JURUBEBA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 84.0,
     "fator_correcao": 1.19
   },
   {
-    "alimento": "KETCHUP Kg",
-    "percentual": 100.0,
+    "alimento": "KETCHUP",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "KIWI kg",
-    "percentual": 90.0,
+    "alimento": "KIWI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 90.0,
     "fator_correcao": 1.11
   },
   {
-    "alimento": "LAGARTO kg",
-    "percentual": 87.0,
+    "alimento": "LAGARTO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 87.0,
     "fator_correcao": 1.15
   },
   {
-    "alimento": "LAGOSTA kg",
-    "percentual": 36.0,
+    "alimento": "LAGOSTA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 36.0,
     "fator_correcao": 2.78
   },
   {
-    "alimento": "LAMBARI kg",
-    "percentual": 83.0,
+    "alimento": "LAMBARI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.2
   },
   {
-    "alimento": "LARANJA kg",
-    "percentual": 57.0,
+    "alimento": "LARANJA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 57.0,
     "fator_correcao": 1.77
   },
   {
-    "alimento": "LARANJA BAHIA kg",
-    "percentual": 64.0,
+    "alimento": "LARANJA BAHIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 64.0,
     "fator_correcao": 1.56
   },
   {
-    "alimento": "LARANJA DA TERRA kg",
-    "percentual": 58.0,
+    "alimento": "LARANJA DA TERRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 58.0,
     "fator_correcao": 1.72
   },
   {
-    "alimento": "LARANJA LIMA kg",
-    "percentual": 63.0,
+    "alimento": "LARANJA LIMA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 63.0,
     "fator_correcao": 1.59
   },
   {
-    "alimento": "LARANJA PÊRA kg",
-    "percentual": 62.0,
+    "alimento": "LARANJA PÊRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 62.0,
     "fator_correcao": 1.61
   },
   {
-    "alimento": "LEITE CONDENSADO Kg",
-    "percentual": 100.0,
+    "alimento": "LEITE CONDENSADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "LEITE DE COCO ml",
-    "percentual": 100.0,
+    "alimento": "LEITE DE COCO",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "LEITE PO INTEGRAL Kg",
-    "percentual": 100.0,
+    "alimento": "LEITE PO INTEGRAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "LEMON PEPPER kg",
-    "percentual": 100.0,
+    "alimento": "LEMON PEPPER",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "LENTILHA kg",
-    "percentual": 53.0,
+    "alimento": "LENTILHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 53.0,
     "fator_correcao": 1.88
   },
   {
-    "alimento": "LICOR CACAU ml",
-    "percentual": 100.0,
+    "alimento": "LICOR CACAU",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "LIMA kg",
-    "percentual": 66.0,
+    "alimento": "LIMA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "LIMA DA PÉRSIA kg",
-    "percentual": 66.0,
+    "alimento": "LIMA DA PÉRSIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "LIMÃO COMUM kg",
-    "percentual": 44.0,
+    "alimento": "LIMÃO COMUM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 44.0,
     "fator_correcao": 2.26
   },
   {
-    "alimento": "LIMÃO GALEGO kg",
-    "percentual": 44.0,
+    "alimento": "LIMÃO GALEGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 44.0,
     "fator_correcao": 2.27
   },
   {
-    "alimento": "LÍNGUA kg",
-    "percentual": 83.0,
+    "alimento": "LÍNGUA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.2
   },
   {
-    "alimento": "LINGUADO kg",
-    "percentual": 39.0,
+    "alimento": "LINGUADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 39.0,
     "fator_correcao": 2.56
   },
   {
-    "alimento": "LINHAÇA Kg",
-    "percentual": 100.0,
+    "alimento": "LINHAÇA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "LULA kg",
-    "percentual": 86.0,
+    "alimento": "LULA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 86.0,
     "fator_correcao": 1.16
   },
   {
-    "alimento": "MAÇA kg",
-    "percentual": 80.0,
+    "alimento": "MAÇA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 80.0,
     "fator_correcao": 1.25
   },
   {
-    "alimento": "MACAXEIRA (AIPIM) kg",
-    "percentual": 76.0,
+    "alimento": "MACAXEIRA (AIPIM)",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "MAIONESE kg",
-    "percentual": 100.0,
+    "alimento": "MAIONESE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MAMÃO kg",
-    "percentual": 61.0,
+    "alimento": "MAMÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 61.0,
     "fator_correcao": 1.63
   },
   {
-    "alimento": "MAMINHA kg",
-    "percentual": 79.0,
+    "alimento": "MAMINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 79.0,
     "fator_correcao": 1.26
   },
   {
-    "alimento": "MANDIOCA kg",
-    "percentual": 72.0,
+    "alimento": "MANDIOCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 72.0,
     "fator_correcao": 1.39
   },
   {
-    "alimento": "MANDIOQUINHA SALSA kg",
-    "percentual": 87.0,
+    "alimento": "MANDIOQUINHA SALSA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 87.0,
     "fator_correcao": 1.15
   },
   {
-    "alimento": "MANGA kg",
-    "percentual": 62.0,
+    "alimento": "MANGA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 62.0,
     "fator_correcao": 1.61
   },
   {
-    "alimento": "MANGA ESPADA kg",
-    "percentual": 66.0,
+    "alimento": "MANGA ESPADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "MANGABA kg",
-    "percentual": 76.0,
+    "alimento": "MANGABA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.32
   },
   {
-    "alimento": "MANJERONA kg",
-    "percentual": 80.0,
+    "alimento": "MANJERONA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 80.0,
     "fator_correcao": 1.25
   },
   {
-    "alimento": "MANTEIGA kg",
-    "percentual": 100.0,
+    "alimento": "MANTEIGA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MANTEIGA COMUM COM SAL kg",
-    "percentual": 100.0,
+    "alimento": "MANTEIGA COMUM COM SAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MANTEIGA COMUM S/S kg",
-    "percentual": 100.0,
+    "alimento": "MANTEIGA COMUM S/S",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MANTEIGA EXTRA S/SAL kg",
-    "percentual": 100.0,
+    "alimento": "MANTEIGA EXTRA S/SAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MANTEIGA GOURMET S/SAL kg",
-    "percentual": 100.0,
+    "alimento": "MANTEIGA GOURMET S/SAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARACUJÁ kg",
-    "percentual": 49.0,
+    "alimento": "MARACUJÁ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 49.0,
     "fator_correcao": 2.04
   },
   {
-    "alimento": "MARGARINA kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARGARINA 50 % kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA 50 %",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARGARINA 75 % kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA 75 %",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARGARINA 80 % SEM SAL kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA 80 % SEM SAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARGARINA COISSANT RICCA kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA COISSANT RICCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARGARINA CREME RICCA kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA CREME RICCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARGARINA FOLHADA kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA FOLHADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARGARINA MASSA RICCA kg",
-    "percentual": 100.0,
+    "alimento": "MARGARINA MASSA RICCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MARMELO kg",
-    "percentual": 69.0,
+    "alimento": "MARMELO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 69.0,
     "fator_correcao": 1.45
   },
   {
-    "alimento": "MARSHMALLOW Kg",
-    "percentual": 100.0,
+    "alimento": "MARSHMALLOW",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MASTRUÇO kg",
-    "percentual": 51.0,
+    "alimento": "MASTRUÇO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 51.0,
     "fator_correcao": 1.96
   },
   {
-    "alimento": "MAXIXE kg",
-    "percentual": 95.0,
+    "alimento": "MAXIXE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 95.0,
     "fator_correcao": 1.05
   },
   {
-    "alimento": "MEL Kg",
-    "percentual": 100.0,
+    "alimento": "MEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MELANCIA kg",
-    "percentual": 46.0,
+    "alimento": "MELANCIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 46.0,
     "fator_correcao": 2.17
   },
   {
-    "alimento": "MELÃO kg",
-    "percentual": 96.0,
+    "alimento": "MELÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 96.0,
     "fator_correcao": 1.04
   },
   {
-    "alimento": "MERLUSA kg",
-    "percentual": 60.0,
+    "alimento": "MERLUSA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 60.0,
     "fator_correcao": 1.66
   },
   {
-    "alimento": "MEXERICA kg",
-    "percentual": 67.0,
+    "alimento": "MEXERICA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 67.0,
     "fator_correcao": 1.5
   },
   {
-    "alimento": "MILHO SECO kg",
-    "percentual": 68.0,
+    "alimento": "MILHO SECO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 68.0,
     "fator_correcao": 1.47
   },
   {
-    "alimento": "MILHO VERDE kg",
-    "percentual": 40.0,
+    "alimento": "MILHO VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 40.0,
     "fator_correcao": 2.53
   },
   {
-    "alimento": "MILHO VERDE EM CONSERVA Kg",
-    "percentual": 100.0,
+    "alimento": "MILHO VERDE EM CONSERVA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MIOLO kg",
-    "percentual": 86.0,
+    "alimento": "MIOLO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 86.0,
     "fator_correcao": 1.16
   },
   {
-    "alimento": "MISTURA CUPCAKE kg",
-    "percentual": 100.0,
+    "alimento": "MISTURA CUPCAKE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOLHO BRANCO BECHAMEL Kg",
-    "percentual": 100.0,
+    "alimento": "MOLHO BRANCO BECHAMEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOLHO DE TOMATE kg",
-    "percentual": 100.0,
+    "alimento": "MOLHO DE TOMATE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOLHO ESCURO DEMIGLACE Kg",
-    "percentual": 100.0,
+    "alimento": "MOLHO ESCURO DEMIGLACE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOLHO INGLES ml",
-    "percentual": 100.0,
+    "alimento": "MOLHO INGLES",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOLHO MADEIRA ml",
-    "percentual": 100.0,
+    "alimento": "MOLHO MADEIRA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOLHO PIMENTA ml",
-    "percentual": 100.0,
+    "alimento": "MOLHO PIMENTA",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MORANGO kg",
-    "percentual": 89.0,
+    "alimento": "MORANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "MOSTARDA kg",
-    "percentual": 66.0,
+    "alimento": "MOSTARDA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 66.0,
     "fator_correcao": 1.51
   },
   {
-    "alimento": "MOSTARDA AMARELA Kg",
-    "percentual": 100.0,
+    "alimento": "MOSTARDA AMARELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOSTARDA ESCURA Kg",
-    "percentual": 100.0,
+    "alimento": "MOSTARDA ESCURA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOUSSE CHOCOLATE kg",
-    "percentual": 100.0,
+    "alimento": "MOUSSE CHOCOLATE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOUSSE LIMAO kg",
-    "percentual": 100.0,
+    "alimento": "MOUSSE LIMAO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOUSSE MARACUJA kg",
-    "percentual": 100.0,
+    "alimento": "MOUSSE MARACUJA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MOUSSE MORANGO kg",
-    "percentual": 100.0,
+    "alimento": "MOUSSE MORANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "MÚSCULO kg",
-    "percentual": 89.0,
+    "alimento": "MÚSCULO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "MUSSARELA RALADA Kg",
-    "percentual": 100.0,
+    "alimento": "MUSSARELA RALADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "NABO kg",
-    "percentual": 89.0,
+    "alimento": "NABO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "NATA kg",
-    "percentual": 100.0,
+    "alimento": "NATA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "NÊSPERA kg",
-    "percentual": 76.0,
+    "alimento": "NÊSPERA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.32
   },
   {
-    "alimento": "NOZ MOSCADA kg",
-    "percentual": 100.0,
+    "alimento": "NOZ MOSCADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "NOZES kg",
-    "percentual": 23.0,
+    "alimento": "NOZES",
+    "unidade": "kg",
+    "percentual_aproveitamento": 23.0,
     "fator_correcao": 4.32
   },
   {
-    "alimento": "NOZES INTEIRA Kg",
-    "percentual": 100.0,
+    "alimento": "NOZES INTEIRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "OLEO DE ALGODAO Kg",
-    "percentual": 100.0,
+    "alimento": "OLEO DE ALGODAO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "OLEO DE GIRASSOL L",
-    "percentual": 100.0,
+    "alimento": "OLEO DE GIRASSOL",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "OLEO EMULSIFICANTE L",
-    "percentual": 100.0,
+    "alimento": "OLEO EMULSIFICANTE",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "OREGANO kg",
-    "percentual": 100.0,
+    "alimento": "OREGANO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "OVO DE CODORNA Un",
-    "percentual": 89.0,
+    "alimento": "OVO DE CODORNA",
+    "unidade": "un",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.13
   },
   {
-    "alimento": "OVO DE GALINHA Un",
-    "percentual": 89.0,
+    "alimento": "OVO DE GALINHA",
+    "unidade": "un",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.13
   },
   {
-    "alimento": "OVO DE GALINHA D ́ANGOLA Un",
-    "percentual": 89.0,
+    "alimento": "OVO DE GALINHA D ́ANGOLA",
+    "unidade": "un",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "OVO DE GANSA Un",
-    "percentual": 89.0,
+    "alimento": "OVO DE GANSA",
+    "unidade": "un",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "OVO DE MARRECA Un",
-    "percentual": 87.0,
+    "alimento": "OVO DE MARRECA",
+    "unidade": "un",
+    "percentual_aproveitamento": 87.0,
     "fator_correcao": 1.15
   },
   {
-    "alimento": "OVO DE PATA Un",
-    "percentual": 87.0,
+    "alimento": "OVO DE PATA",
+    "unidade": "un",
+    "percentual_aproveitamento": 87.0,
     "fator_correcao": 1.15
   },
   {
-    "alimento": "OVO DE PERUA Un",
-    "percentual": 89.0,
+    "alimento": "OVO DE PERUA",
+    "unidade": "un",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.13
   },
   {
-    "alimento": "OVO DE TARTARUGA Un",
-    "percentual": 91.0,
+    "alimento": "OVO DE TARTARUGA",
+    "unidade": "un",
+    "percentual_aproveitamento": 91.0,
     "fator_correcao": 1.1
   },
   {
-    "alimento": "OVOS DE GALINHA Un",
-    "percentual": 89.0,
+    "alimento": "OVOS DE GALINHA",
+    "unidade": "un",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "PÁ kg",
-    "percentual": 61.0,
+    "alimento": "PÁ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 61.0,
     "fator_correcao": 1.65
   },
   {
-    "alimento": "PAÇOCA DE AMENDOIM Kg",
-    "percentual": 100.0,
+    "alimento": "PAÇOCA DE AMENDOIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PAÇOCA EM PO kg",
-    "percentual": 100.0,
+    "alimento": "PAÇOCA EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PACU kg",
-    "percentual": 89.0,
+    "alimento": "PACU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.13
   },
   {
-    "alimento": "PALETA kg",
-    "percentual": 89.0,
+    "alimento": "PALETA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "PALMITO kg",
-    "percentual": 49.0,
+    "alimento": "PALMITO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 49.0,
     "fator_correcao": 2.04
   },
   {
-    "alimento": "PALMITO PICADO Kg",
-    "percentual": 100.0,
+    "alimento": "PALMITO PICADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PALMITO RODELA Kg",
-    "percentual": 100.0,
+    "alimento": "PALMITO RODELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PALMITO TOLETE Kg",
-    "percentual": 100.0,
+    "alimento": "PALMITO TOLETE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PARMESÃO RALADO Kg",
-    "percentual": 100.0,
+    "alimento": "PARMESÃO RALADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA ABACAXI kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA ABACAXI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA COCO kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA COCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA DAMASCO kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA DAMASCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA FRUTAS VERMELHAS kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA FRUTAS VERMELHAS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA GOIABA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA GOIABA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA MAÇA CANELA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA MAÇA CANELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA MORANGO kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA MORANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA ALEMA PESSEGO kg",
-    "percentual": 100.0,
+    "alimento": "PASTA ALEMA PESSEGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA AMARELA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA AMARELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA AZUL kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA AZUL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA AZUL kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA AZUL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA BAUNILHA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA BAUNILHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA BRANCA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA BRANCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA CHOC BRANCO kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA CHOC BRANCO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA NEUTRA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA NEUTRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA PINK kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA PINK",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA PRETA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA PRETA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA ROSA BEBE kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA ROSA BEBE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA VERDE kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA AMERICANA VERMELHA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA AMERICANA VERMELHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PASTA GIANDUIA kg",
-    "percentual": 100.0,
+    "alimento": "PASTA GIANDUIA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PATINHO kg",
-    "percentual": 88.0,
+    "alimento": "PATINHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 88.0,
     "fator_correcao": 1.14
   },
   {
-    "alimento": "PATO kg",
-    "percentual": 64.0,
+    "alimento": "PATO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 64.0,
     "fator_correcao": 1.56
   },
   {
-    "alimento": "PEITO kg",
-    "percentual": 80.0,
+    "alimento": "PEITO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 80.0,
     "fator_correcao": 1.25
   },
   {
-    "alimento": "PEITO DE FRANGO kg",
-    "percentual": 72.0,
+    "alimento": "PEITO DE FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 72.0,
     "fator_correcao": 1.39
   },
   {
-    "alimento": "PEIXE REI kg",
-    "percentual": 55.0,
+    "alimento": "PEIXE REI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 55.0,
     "fator_correcao": 1.81
   },
   {
-    "alimento": "PEIXINHO kg",
-    "percentual": 86.0,
+    "alimento": "PEIXINHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 86.0,
     "fator_correcao": 1.16
   },
   {
-    "alimento": "PEPINO kg",
-    "percentual": 77.0,
+    "alimento": "PEPINO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 77.0,
     "fator_correcao": 1.3
   },
   {
-    "alimento": "PÊRA kg",
-    "percentual": 83.0,
+    "alimento": "PÊRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.2
   },
   {
-    "alimento": "PERDIZ kg",
-    "percentual": 39.0,
+    "alimento": "PERDIZ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 39.0,
     "fator_correcao": 2.56
   },
   {
-    "alimento": "PERU kg",
-    "percentual": 61.0,
+    "alimento": "PERU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 61.0,
     "fator_correcao": 1.64
   },
   {
-    "alimento": "PESCADINHA kg",
-    "percentual": 50.0,
+    "alimento": "PESCADINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 50.0,
     "fator_correcao": 2.0
   },
   {
-    "alimento": "PESCADO kg",
-    "percentual": 84.0,
+    "alimento": "PESCADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 84.0,
     "fator_correcao": 1.19
   },
   {
-    "alimento": "PESCOÇO DE FRANGO kg",
-    "percentual": 46.0,
+    "alimento": "PESCOÇO DE FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 46.0,
     "fator_correcao": 2.17
   },
   {
-    "alimento": "PÊSSEGO kg",
-    "percentual": 80.0,
+    "alimento": "PÊSSEGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 80.0,
     "fator_correcao": 1.25
   },
   {
-    "alimento": "PICANHA kg",
-    "percentual": 79.0,
+    "alimento": "PICANHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 79.0,
     "fator_correcao": 1.27
   },
   {
-    "alimento": "PIMENTA BIQUINHO Kg",
-    "percentual": 100.0,
+    "alimento": "PIMENTA BIQUINHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PIMENTA CALABRESA Kg",
-    "percentual": 100.0,
+    "alimento": "PIMENTA CALABRESA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PIMENTA DO REINO Kg",
-    "percentual": 100.0,
+    "alimento": "PIMENTA DO REINO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PIMENTA MALAGUETA VERDE Kg",
-    "percentual": 100.0,
+    "alimento": "PIMENTA MALAGUETA VERDE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PIMENTA PRETA EM PO Kg",
-    "percentual": 100.0,
+    "alimento": "PIMENTA PRETA EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "PIMENTÃO kg",
-    "percentual": 70.0,
+    "alimento": "PIMENTÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 70.0,
     "fator_correcao": 1.42
   },
   {
-    "alimento": "PINTADO kg",
-    "percentual": 97.0,
+    "alimento": "PINTADO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 97.0,
     "fator_correcao": 1.03
   },
   {
-    "alimento": "PIRANHA kg",
-    "percentual": 83.0,
+    "alimento": "PIRANHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.2
   },
   {
-    "alimento": "PITANGA kg",
-    "percentual": 81.0,
+    "alimento": "PITANGA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 81.0,
     "fator_correcao": 1.23
   },
   {
-    "alimento": "PITOMBA kg",
-    "percentual": 50.0,
+    "alimento": "PITOMBA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 50.0,
     "fator_correcao": 2.0
   },
   {
-    "alimento": "POLVILHO Kg",
-    "percentual": 100.0,
+    "alimento": "POLVILHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "POLVILHO AZEDO kg",
-    "percentual": 100.0,
+    "alimento": "POLVILHO AZEDO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "POMBO kg",
-    "percentual": 60.0,
+    "alimento": "POMBO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 60.0,
     "fator_correcao": 1.66
   },
   {
-    "alimento": "PONTA DO PEITO kg",
-    "percentual": 58.0,
+    "alimento": "PONTA DO PEITO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 58.0,
     "fator_correcao": 1.71
   },
   {
-    "alimento": "PRESUNTO COZIDO kg",
-    "percentual": 100.0,
+    "alimento": "PRESUNTO COZIDO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUARTO DIANTEIRO kg",
-    "percentual": 87.0,
+    "alimento": "QUARTO DIANTEIRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 87.0,
     "fator_correcao": 1.15
   },
   {
-    "alimento": "QUARTO TRASEIRO kg",
-    "percentual": 63.0,
+    "alimento": "QUARTO TRASEIRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 63.0,
     "fator_correcao": 1.59
   },
   {
-    "alimento": "QUEIJO BRIE kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO BRIE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO COALHO kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO COALHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO COLONIAL kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO COLONIAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO EMMENTAL kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO EMMENTAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO ESTEPE kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO ESTEPE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO GORGONZOLA kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO GORGONZOLA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO GOUDA kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO GOUDA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO GRAN FORMAGGIO 12 MESES kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO GRAN FORMAGGIO 12 MESES",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO GRUYERE kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO GRUYERE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO MINAS FRESCAL kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO MINAS FRESCAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO MUSSARELA kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO MUSSARELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO PARMESAO kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO PARMESAO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO PECORINO ROMANO kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO PECORINO ROMANO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO PRATO kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO PRATO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO PROVOLONE kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO PROVOLONE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUEIJO TIPO COTTAGE kg",
-    "percentual": 100.0,
+    "alimento": "QUEIJO TIPO COTTAGE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUENTAO L",
-    "percentual": 100.0,
+    "alimento": "QUENTAO",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "QUIABO kg",
-    "percentual": 76.0,
+    "alimento": "QUIABO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "RÃ kg",
-    "percentual": 85.0,
+    "alimento": "RÃ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 85.0,
     "fator_correcao": 1.17
   },
   {
-    "alimento": "RABANETE kg",
-    "percentual": 91.0,
+    "alimento": "RABANETE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 91.0,
     "fator_correcao": 1.1
   },
   {
-    "alimento": "RÁBANO kg",
-    "percentual": 49.0,
+    "alimento": "RÁBANO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 49.0,
     "fator_correcao": 2.04
   },
   {
-    "alimento": "RECHEIO ABACAXI FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO ABACAXI FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO AMEIXA FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO AMEIXA FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO AVELA FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO AVELA FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO BAUNILHA FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO BAUNILHA FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO BRANCO FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO BRANCO FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO BRIGADEIRO kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO BRIGADEIRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO BRIGADEIRO FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO BRIGADEIRO FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO CHOC AO LEITE kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO CHOC AO LEITE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO CHOCOLATE AO LEITE kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO CHOCOLATE AO LEITE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO CHOCOLATE BRANCO E AVELA FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO CHOCOLATE BRANCO E AVELA FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO CHOCOLATE BRANCO FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO CHOCOLATE BRANCO FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO CHOCOLATE C/AVELA kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO CHOCOLATE C/AVELA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO CHOCOLATE C/AVELA FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO CHOCOLATE C/AVELA FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO CREMOSO GOIABA kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO CREMOSO GOIABA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE ABACAXI kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE ABACAXI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE ABACAXI AO VINHO kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE ABACAXI AO VINHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE AMENDOIM C/ PEDAÇOS kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE AMENDOIM C/ PEDAÇOS",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE COCO FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE COCO FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE DOCE DE LEITE FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE DOCE DE LEITE FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE FRUTAS VERM FORN kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE FRUTAS VERM FORN",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE GOIABA FORNEAVE kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE GOIABA FORNEAVE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE LEITE COND kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE LEITE COND",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE MARACUJA FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE MARACUJA FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE MORANGO FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE MORANGO FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RECHEIO DE TRUFA FORNEAVEL kg",
-    "percentual": 100.0,
+    "alimento": "RECHEIO DE TRUFA FORNEAVEL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "REPOLHO kg",
-    "percentual": 65.0,
+    "alimento": "REPOLHO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 65.0,
     "fator_correcao": 1.54
   },
   {
-    "alimento": "REQUEIJAO CHEDDAR kg",
-    "percentual": 100.0,
+    "alimento": "REQUEIJAO CHEDDAR",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "REQUEIJAO CREM COM AMIDO kg",
-    "percentual": 100.0,
+    "alimento": "REQUEIJAO CREM COM AMIDO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "REQUEIJAO CREMOSO kg",
-    "percentual": 100.0,
+    "alimento": "REQUEIJAO CREMOSO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "RIM kg",
-    "percentual": 80.0,
+    "alimento": "RIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 80.0,
     "fator_correcao": 1.25
   },
   {
-    "alimento": "ROBALO kg",
-    "percentual": 48.0,
+    "alimento": "ROBALO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 48.0,
     "fator_correcao": 2.08
   },
   {
-    "alimento": "ROMÃ kg",
-    "percentual": 53.0,
+    "alimento": "ROMÃ",
+    "unidade": "kg",
+    "percentual_aproveitamento": 53.0,
     "fator_correcao": 1.89
   },
   {
-    "alimento": "RÚCULA kg",
-    "percentual": 64.0,
+    "alimento": "RÚCULA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 64.0,
     "fator_correcao": 1.57
   },
   {
-    "alimento": "RUM L",
-    "percentual": 100.0,
+    "alimento": "RUM",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SAL Kg",
-    "percentual": 100.0,
+    "alimento": "SAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SAL AMONIACO kg",
-    "percentual": 100.0,
+    "alimento": "SAL AMONIACO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SAL ROSA DO HIMALAIA FINO kg",
-    "percentual": 100.0,
+    "alimento": "SAL ROSA DO HIMALAIA FINO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SALADA DE FRUTAS TROPICAL kg",
-    "percentual": 100.0,
+    "alimento": "SALADA DE FRUTAS TROPICAL",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SALAME ITALIANO Kg",
-    "percentual": 100.0,
+    "alimento": "SALAME ITALIANO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SALAME PEPPERONE kg",
-    "percentual": 100.0,
+    "alimento": "SALAME PEPPERONE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SALMÃO kg",
-    "percentual": 46.0,
+    "alimento": "SALMÃO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 46.0,
     "fator_correcao": 2.17
   },
   {
-    "alimento": "SALSA kg",
-    "percentual": 79.0,
+    "alimento": "SALSA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 79.0,
     "fator_correcao": 1.27
   },
   {
-    "alimento": "SAPOTI kg",
-    "percentual": 75.0,
+    "alimento": "SAPOTI",
+    "unidade": "kg",
+    "percentual_aproveitamento": 75.0,
     "fator_correcao": 1.33
   },
   {
-    "alimento": "SAQUÊ L",
-    "percentual": 100.0,
+    "alimento": "SAQUÊ",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SARDINHA kg",
-    "percentual": 59.0,
+    "alimento": "SARDINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 59.0,
     "fator_correcao": 1.7
   },
   {
-    "alimento": "SERRA kg",
-    "percentual": 89.0,
+    "alimento": "SERRA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 89.0,
     "fator_correcao": 1.12
   },
   {
-    "alimento": "SHOYU ml",
-    "percentual": 100.0,
+    "alimento": "SHOYU",
+    "unidade": "ml",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SOBREASA DE FRANGO kg",
-    "percentual": 67.0,
+    "alimento": "SOBREASA DE FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 67.0,
     "fator_correcao": 1.5
   },
   {
-    "alimento": "SOBRECOXA DE FRANGO kg",
-    "percentual": 76.0,
+    "alimento": "SOBRECOXA DE FRANGO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "SOJA kg",
-    "percentual": 53.0,
+    "alimento": "SOJA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 53.0,
     "fator_correcao": 1.88
   },
   {
-    "alimento": "SORBATO DE POTASSIO kg",
-    "percentual": 100.0,
+    "alimento": "SORBATO DE POTASSIO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SORO DE LEITE EM PO kg",
-    "percentual": 100.0,
+    "alimento": "SORO DE LEITE EM PO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "SURUBIM kg",
-    "percentual": 64.0,
+    "alimento": "SURUBIM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 64.0,
     "fator_correcao": 1.57
   },
   {
-    "alimento": "SUSPIRO Kg",
-    "percentual": 100.0,
+    "alimento": "SUSPIRO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "TAINHA kg",
-    "percentual": 82.0,
+    "alimento": "TAINHA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 82.0,
     "fator_correcao": 1.22
   },
   {
-    "alimento": "TAIOBA kg",
-    "percentual": 87.0,
+    "alimento": "TAIOBA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 87.0,
     "fator_correcao": 1.15
   },
   {
-    "alimento": "TÂMARA kg",
-    "percentual": 87.0,
+    "alimento": "TÂMARA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 87.0,
     "fator_correcao": 1.15
   },
   {
-    "alimento": "TAMARINDO kg",
-    "percentual": 48.0,
+    "alimento": "TAMARINDO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 48.0,
     "fator_correcao": 2.08
   },
   {
-    "alimento": "TANGERINA kg",
-    "percentual": 74.0,
+    "alimento": "TANGERINA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 74.0,
     "fator_correcao": 1.36
   },
   {
-    "alimento": "TARTARUGA DE RIO kg",
-    "percentual": 21.0,
+    "alimento": "TARTARUGA DE RIO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 21.0,
     "fator_correcao": 4.76
   },
   {
-    "alimento": "TARTATUGA DO MAR kg",
-    "percentual": 24.0,
+    "alimento": "TARTATUGA DO MAR",
+    "unidade": "kg",
+    "percentual_aproveitamento": 24.0,
     "fator_correcao": 4.16
   },
   {
-    "alimento": "TEQUILA L",
-    "percentual": 100.0,
+    "alimento": "TEQUILA",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "TOMATE Kg",
-    "percentual": 70.0,
+    "alimento": "TOMATE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 70.0,
     "fator_correcao": 1.43
   },
   {
-    "alimento": "TOMATE SECO kg",
-    "percentual": 100.0,
+    "alimento": "TOMATE SECO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "TORRADA Kg",
-    "percentual": 100.0,
+    "alimento": "TORRADA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "TREMOÇO kg",
-    "percentual": 53.0,
+    "alimento": "TREMOÇO",
+    "unidade": "kg",
+    "percentual_aproveitamento": 53.0,
     "fator_correcao": 1.88
   },
   {
-    "alimento": "TRIGO PARA KIBE kg",
-    "percentual": 100.0,
+    "alimento": "TRIGO PARA KIBE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "TRUTA kg",
-    "percentual": 49.0,
+    "alimento": "TRUTA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 49.0,
     "fator_correcao": 2.04
   },
   {
-    "alimento": "UÍSQUE L",
-    "percentual": 100.0,
+    "alimento": "UÍSQUE",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "UVA kg",
-    "percentual": 90.0,
+    "alimento": "UVA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 90.0,
     "fator_correcao": 1.11
   },
   {
-    "alimento": "UVA BRANCA kg",
-    "percentual": 83.0,
+    "alimento": "UVA BRANCA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 83.0,
     "fator_correcao": 1.21
   },
   {
-    "alimento": "UVA ESCURA kg",
-    "percentual": 77.0,
+    "alimento": "UVA ESCURA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 77.0,
     "fator_correcao": 1.3
   },
   {
-    "alimento": "UVA PASSA BRANCA SEM SEMENTE kg",
-    "percentual": 100.0,
+    "alimento": "UVA PASSA BRANCA SEM SEMENTE",
+    "unidade": "kg",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "UVA PRETA kg",
-    "percentual": 76.0,
+    "alimento": "UVA PRETA",
+    "unidade": "kg",
+    "percentual_aproveitamento": 76.0,
     "fator_correcao": 1.31
   },
   {
-    "alimento": "VAGEM kg",
-    "percentual": 75.0,
+    "alimento": "VAGEM",
+    "unidade": "kg",
+    "percentual_aproveitamento": 75.0,
     "fator_correcao": 1.34
   },
   {
-    "alimento": "VINHO L",
-    "percentual": 100.0,
+    "alimento": "VINHO",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "VINHO BRANCO SECO L",
-    "percentual": 100.0,
+    "alimento": "VINHO BRANCO SECO",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "VINHO TINTO SECO L",
-    "percentual": 100.0,
+    "alimento": "VINHO TINTO SECO",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "VODKA L",
-    "percentual": 100.0,
+    "alimento": "VODKA",
+    "unidade": "l",
+    "percentual_aproveitamento": 100.0,
     "fator_correcao": 1.0
   },
   {
-    "alimento": "XARÉU kg",
-    "percentual": 86.0,
+    "alimento": "XARÉU",
+    "unidade": "kg",
+    "percentual_aproveitamento": 86.0,
     "fator_correcao": 1.16
   }
 ]
