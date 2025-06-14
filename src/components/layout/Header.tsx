@@ -11,7 +11,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
-import Logo from '@/components/ui/logo';
 
 interface HeaderProps {
   onProfileClick: () => void;
@@ -23,37 +22,34 @@ const Header: React.FC<HeaderProps> = ({ onProfileClick, onSettingsClick }) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="bg-card border-b border-border px-6 py-4 flex items-center justify-between">
-      {/* <Logo size="sm" /> */}
-      <div className="flex justify-center">
-          <img 
-            src="/lovable-uploads/logo-orange-2.png" 
-            alt="Bem Ti Vê - Comida Saudável" 
-            className="h-10 w-auto"
-          />
-        </div>
+    <header className="bg-card border-b border-border px-4 md:px-6 py-4 flex items-center justify-between">
+      <div className="flex justify-center md:justify-start">
+        <img 
+          src="/lovable-uploads/logo-orange-2.png" 
+          alt="Bem Ti Vê - Comida Saudável" 
+          className="h-8 md:h-10 w-auto"
+        />
+      </div>
       
-      <div className="flex items-center gap-4">
-        {/* Toggle tema */}
+      <div className="flex items-center gap-2 md:gap-4">
         <Button
           variant="ghost"
           size="icon"
           onClick={toggleTheme}
-          className="hover-scale"
+          className="hover-scale h-8 w-8 md:h-10 md:w-10"
         >
           {theme === 'light' ? (
-            <Moon className="h-5 w-5" />
+            <Moon className="h-4 w-4 md:h-5 md:w-5" />
           ) : (
-            <Sun className="h-5 w-5" />
+            <Sun className="h-4 w-4 md:h-5 md:w-5" />
           )}
         </Button>
 
-        {/* Menu do usuário */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="flex items-center gap-2">
-              <User className="h-5 w-5" />
-              <span className="hidden md:block">{user?.name}</span>
+            <Button variant="ghost" className="flex items-center gap-2 h-8 md:h-10 px-2 md:px-3">
+              <User className="h-4 w-4 md:h-5 md:w-5" />
+              <span className="hidden sm:block text-sm">{user?.name}</span>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
