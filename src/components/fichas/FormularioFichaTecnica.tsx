@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -301,7 +302,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                           ingredientes
                             .filter(ing => ing.ativo)
                             .map((ingrediente) => (
-                              <SelectItem key={ingrediente.id} value={ingrediente.id}>
+                              <SelectItem key={`ingrediente-${ingrediente.id}`} value={ingrediente.id}>
                                 {ingrediente.alimento}
                               </SelectItem>
                             ))
@@ -483,12 +484,12 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="unidade">Unidade</SelectItem>
-                            <SelectItem value="porção">Porção</SelectItem>
-                            <SelectItem value="fatia">Fatia</SelectItem>
-                            <SelectItem value="bolo">Bolo</SelectItem>
-                            <SelectItem value="litro">Litro</SelectItem>
-                            <SelectItem value="kg">Quilograma</SelectItem>
+                            <SelectItem key="unidade" value="unidade">Unidade</SelectItem>
+                            <SelectItem key="porcao" value="porção">Porção</SelectItem>
+                            <SelectItem key="fatia" value="fatia">Fatia</SelectItem>
+                            <SelectItem key="bolo" value="bolo">Bolo</SelectItem>
+                            <SelectItem key="litro" value="litro">Litro</SelectItem>
+                            <SelectItem key="kg" value="kg">Quilograma</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
