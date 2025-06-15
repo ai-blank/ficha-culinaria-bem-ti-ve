@@ -43,7 +43,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (token) {
       const savedUser = localStorage.getItem('user_data');
       if (savedUser) {
-        setUser(JSON.parse(savedUser));
+        const userData = JSON.parse(savedUser);
+        console.log('🔄 Restaurando sessão do usuário:', userData.email);
+        setUser(userData);
       }
     }
     setIsLoading(false);
@@ -58,11 +60,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const userData = response.data.user;
         const token = response.data.token;
         
+        console.log('✅ Login bem-sucedido! Token:', token.substring(0, 20) + '...');
+        console.log('👤 Dados do usuário:', userData);
+        
         setUser(userData);
         localStorage.setItem('auth_token', token);
         localStorage.setItem('user_data', JSON.stringify(userData));
         
-        console.log('✅ Login bem-sucedido!');
+        // Manter compatibilidade com formato antigo também
+        localStorage.setItem('user', JSON.stringify({ ...userData, token }));
+        
+        console.log('💾 Token salvo no localStorage');
         return true;
       }
       return false;
@@ -93,6 +101,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setUser(null);
     localStorage.removeItem('auth_token');
     localStorage.removeItem('user_data');
+    localStorage.removeItem('user'); // Remover formato antigo também
     console.log('👋 Logout realizado');
   };
 

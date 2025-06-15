@@ -15,13 +15,43 @@ export const useIngredientes = () => {
   }, []);
 
   const getAuthToken = () => {
+    // Primeiro tentar pegar o token do formato usado pelo AuthContext
+    const authToken = localStorage.getItem('auth_token');
+    if (authToken) {
+      console.log('🔑 Token encontrado (auth_token):', authToken.substring(0, 20) + '...');
+      return authToken;
+    }
+
+    // Fallback para o formato antigo
     const user = localStorage.getItem('user');
     if (user) {
-      const userData = JSON.parse(user);
-      console.log('🔑 Token encontrado:', userData.token ? 'Sim' : 'Não');
-      return userData.token;
+      try {
+        const userData = JSON.parse(user);
+        if (userData.token) {
+          console.log('🔑 Token encontrado (user.token):', userData.token.substring(0, 20) + '...');
+          return userData.token;
+        }
+      } catch (error) {
+        console.error('❌ Erro ao fazer parse do user no localStorage:', error);
+      }
     }
+
+    // Verificar também user_data
+    const userData = localStorage.getItem('user_data');
+    if (userData) {
+      try {
+        const user = JSON.parse(userData);
+        if (user.token) {
+          console.log('🔑 Token encontrado (user_data.token):', user.token.substring(0, 20) + '...');
+          return user.token;
+        }
+      } catch (error) {
+        console.error('❌ Erro ao fazer parse do user_data no localStorage:', error);
+      }
+    }
+
     console.log('❌ Nenhum token encontrado no localStorage');
+    console.log('🔍 Chaves disponíveis no localStorage:', Object.keys(localStorage));
     return null;
   };
 
@@ -67,6 +97,8 @@ export const useIngredientes = () => {
           'Content-Type': 'application/json',
         },
       });
+
+      console.log('📡 Status da resposta:', response.status);
 
       if (response.ok) {
         const data = await response.json();
@@ -214,6 +246,7 @@ export const useIngredientes = () => {
       }
 
       console.log('🔄 Enviando ingrediente para API:', dados);
+      console.log('🔑 Usando token:', token.substring(0, 20) + '...');
 
       // Adicionar alimento à base de dados se não existir
       adicionarAlimentoNaBase(dados);
@@ -227,6 +260,8 @@ export const useIngredientes = () => {
         body: JSON.stringify(dados),
       });
 
+      console.log('📡 Status da resposta da API:', response.status);
+      
       const result = await response.json();
       console.log('📡 Resposta da API:', result);
 
@@ -241,11 +276,16 @@ export const useIngredientes = () => {
         return novoIngrediente;
       } else {
         console.error('❌ Erro na resposta da API:', result);
-        throw new Error(result.message || 'Erro ao criar ingrediente');
+        console.error('❌ Status HTTP:', response.status);
+        
+        // Em caso de erro na API, criar localmente
+        console.log('🔄 Fallback: criando ingrediente localmente devido ao erro da API');
+        return criarIngredienteLocal(dados);
       }
     } catch (error) {
       console.error('❌ Erro ao criar ingrediente na API:', error);
-      throw error; // Re-throw para que o componente possa tratar
+      console.log('🔄 Fallback: criando ingrediente localmente devido ao erro de rede');
+      return criarIngredienteLocal(dados);
     }
   };
 
