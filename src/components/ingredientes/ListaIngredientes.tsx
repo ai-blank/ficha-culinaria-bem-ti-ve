@@ -160,7 +160,7 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
               </TableHeader>
               <TableBody>
                 {ingredientesFiltrados.map((ingrediente) => (
-                  <TableRow key={ingrediente.id}>
+                  <TableRow key={`ingrediente-${ingrediente.id}`}>
                     <TableCell>
                       <Badge variant={ingrediente.ativo ? 'default' : 'secondary'}>
                         {ingrediente.ativo ? 'Ativo' : 'Inativo'}
