@@ -3,3528 +3,4116 @@
     "alimento": "ABACATE",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ABACAXI",
     "unidade": "kg",
     "percentual_aproveitamento": 53.0,
-    "fator_correcao": 1.89
+    "fator_correcao": 1.89,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ABACAXI RODELAS EM CALDA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ABIU",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ABÓBORA",
     "unidade": "kg",
     "percentual_aproveitamento": 73.0,
-    "fator_correcao": 1.37
+    "fator_correcao": 1.37,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ABÓBORA-MORANGA",
     "unidade": "kg",
     "percentual_aproveitamento": 77.0,
-    "fator_correcao": 1.3
+    "fator_correcao": 1.3,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ABOBRINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ABRICÓ",
     "unidade": "kg",
     "percentual_aproveitamento": 79.0,
-    "fator_correcao": 1.27
+    "fator_correcao": 1.27,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ABSINTO",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "ACAFRAO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "AÇAÍ",
     "unidade": "kg",
     "percentual_aproveitamento": 10.0,
-    "fator_correcao": 9.61
+    "fator_correcao": 9.61,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ACELGA",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ACÉM",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.17
+    "fator_correcao": 1.17,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ACETO BALSAMICO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "ACHOCOLATADO EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "ACHOCOLATADO EM PÓ",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "ACIDO CITRICO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "AÇUCAR BAUNILHA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR COLORIDO AMARELO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR COLORIDO AZUL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR COLORIDO BRANCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR COLORIDO LARANJA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "AÇUCAR COLORIDO PRETO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR COLORIDO ROSA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR COLORIDO VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR COLORIDO VERMELHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR CRISTAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR DE CONFEITEIRO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR DE CONFEITEIRO GLAÇUCAR",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR DE CONFEITEIRO IMPALPAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR DOÇUCAR",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR MASCAVO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AÇUCAR REFINADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AGRIÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 56.0,
-    "fator_correcao": 1.78
+    "fator_correcao": 1.78,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "AGULHA",
     "unidade": "kg",
     "percentual_aproveitamento": 88.0,
-    "fator_correcao": 1.14
+    "fator_correcao": 1.14,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "AIPO",
     "unidade": "kg",
     "percentual_aproveitamento": 75.0,
-    "fator_correcao": 1.34
+    "fator_correcao": 1.34,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "AJINOMOTO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ALCACHOFRA",
     "unidade": "kg",
     "percentual_aproveitamento": 48.0,
-    "fator_correcao": 2.08
+    "fator_correcao": 2.08,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALCAPARRAS",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "ALCATRA",
     "unidade": "kg",
     "percentual_aproveitamento": 86.0,
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ALECRIM",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "ALFACE",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.21
+    "fator_correcao": 1.21,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALFACE LISA",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALFACE-CRESPA",
     "unidade": "kg",
     "percentual_aproveitamento": 68.0,
-    "fator_correcao": 1.46
+    "fator_correcao": 1.46,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALFAVACA DESIDRATADA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "ALHO PORÓ",
     "unidade": "kg",
     "percentual_aproveitamento": 62.0,
-    "fator_correcao": 1.62
+    "fator_correcao": 1.62,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALHO",
     "unidade": "kg",
     "percentual_aproveitamento": 93.0,
-    "fator_correcao": 1.08
+    "fator_correcao": 1.08,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALHO EM FLOCOS DESIDRATADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALHO TRITURADO PURO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ALMEIRÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.21
+    "fator_correcao": 1.21,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "AMACIANTE DE CARNE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "AMEINDOIM COM CASCA",
     "unidade": "kg",
     "percentual_aproveitamento": 50.0,
-    "fator_correcao": 2.0
+    "fator_correcao": 2.0,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "AMEIXA",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.2
+    "fator_correcao": 1.2,
+    "categoria": "Frutas"
   },
   {
     "alimento": "AMEIXA SECA SEM CAROÇO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "AMEIXAS EM CALDA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "AMENDOA CRUA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "AMENDOA LAMINADA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "AMENDOIM",
     "unidade": "kg",
     "percentual_aproveitamento": 44.0,
-    "fator_correcao": 2.25
+    "fator_correcao": 2.25,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "AMENDOIM AÇUCARADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "AMENDOIM DESCASCADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "AMENDOIM SEM CASCA",
     "unidade": "kg",
     "percentual_aproveitamento": 74.0,
-    "fator_correcao": 1.35
+    "fator_correcao": 1.35,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "AMENDOIM TORRADO EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "AMIDO DE MILHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "AMORA",
     "unidade": "kg",
     "percentual_aproveitamento": 47.0,
-    "fator_correcao": 2.11
+    "fator_correcao": 2.11,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ANANÁS",
     "unidade": "kg",
     "percentual_aproveitamento": 56.0,
-    "fator_correcao": 1.78
+    "fator_correcao": 1.78,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ANIS ESTRELADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "ANONA",
     "unidade": "kg",
     "percentual_aproveitamento": 41.0,
-    "fator_correcao": 2.44
+    "fator_correcao": 2.44,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ARAÇA",
     "unidade": "kg",
     "percentual_aproveitamento": 86.0,
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ARENQUE",
     "unidade": "kg",
     "percentual_aproveitamento": 56.0,
-    "fator_correcao": 1.78
+    "fator_correcao": 1.78,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "AROMA BAUNILHA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ARRAIA",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.18
+    "fator_correcao": 1.18,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ARROZ",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "ARROZ INTEGRAL",
     "unidade": "kg",
     "percentual_aproveitamento": 99.0,
-    "fator_correcao": 1.01
+    "fator_correcao": 1.01,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "ARROZ PARBOLIZADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "ARROZ TIPO 1",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "ASA DE FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 45.0,
-    "fator_correcao": 2.24
+    "fator_correcao": 2.24,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ASA E SOBREASA DE FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 55.0,
-    "fator_correcao": 1.81
+    "fator_correcao": 1.81,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ASPARGO",
     "unidade": "kg",
     "percentual_aproveitamento": 50.0,
-    "fator_correcao": 2.0
+    "fator_correcao": 2.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ATUM",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.18
+    "fator_correcao": 1.18,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ATUM NATURAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ATUM RALADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "AZEITE DE DENDE",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "AZEITE DE OLIVA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "AZEITONA",
     "unidade": "kg",
     "percentual_aproveitamento": 78.0,
-    "fator_correcao": 1.28
+    "fator_correcao": 1.28,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "AZEITONA PRETA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "AZEITONA VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "BACALHAU",
     "unidade": "kg",
     "percentual_aproveitamento": 40.0,
-    "fator_correcao": 2.52
+    "fator_correcao": 2.52,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "BACON CUBOS",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "BACON FATIADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "BACON MANTA DEFUMADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "BANANA",
     "unidade": "kg",
     "percentual_aproveitamento": 67.0,
-    "fator_correcao": 1.5
+    "fator_correcao": 1.5,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA D ́ÁGUA",
     "unidade": "kg",
     "percentual_aproveitamento": 60.0,
-    "fator_correcao": 1.66
+    "fator_correcao": 1.66,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA DA TERRA",
     "unidade": "kg",
     "percentual_aproveitamento": 72.0,
-    "fator_correcao": 1.39
+    "fator_correcao": 1.39,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA DE SÃO TOMÉ",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA FIGO",
     "unidade": "kg",
     "percentual_aproveitamento": 68.0,
-    "fator_correcao": 1.47
+    "fator_correcao": 1.47,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA MAÇA",
     "unidade": "kg",
     "percentual_aproveitamento": 63.0,
-    "fator_correcao": 1.58
+    "fator_correcao": 1.58,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA MARMELO",
     "unidade": "kg",
     "percentual_aproveitamento": 64.0,
-    "fator_correcao": 1.56
+    "fator_correcao": 1.56,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA OURO",
     "unidade": "kg",
     "percentual_aproveitamento": 82.0,
-    "fator_correcao": 1.22
+    "fator_correcao": 1.22,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BANANA PRATA",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BATATA",
     "unidade": "kg",
     "percentual_aproveitamento": 94.0,
-    "fator_correcao": 1.06
+    "fator_correcao": 1.06,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BATATA CENOURA",
     "unidade": "kg",
     "percentual_aproveitamento": 91.0,
-    "fator_correcao": 1.1
+    "fator_correcao": 1.1,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BATATA DOCE",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.21
+    "fator_correcao": 1.21,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BATATA INGLESA",
     "unidade": "kg",
     "percentual_aproveitamento": 94.0,
-    "fator_correcao": 1.06
+    "fator_correcao": 1.06,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BATATA PALHA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BATATA PALITO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BERIBÁ",
     "unidade": "kg",
     "percentual_aproveitamento": 74.0,
-    "fator_correcao": 1.35
+    "fator_correcao": 1.35,
+    "categoria": "Frutas"
   },
   {
     "alimento": "BERINCASA",
     "unidade": "kg",
     "percentual_aproveitamento": 69.0,
-    "fator_correcao": 1.44
+    "fator_correcao": 1.44,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BERINJELA",
     "unidade": "kg",
     "percentual_aproveitamento": 94.0,
-    "fator_correcao": 1.06
+    "fator_correcao": 1.06,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BERTALHA",
     "unidade": "kg",
     "percentual_aproveitamento": 56.0,
-    "fator_correcao": 1.8
+    "fator_correcao": 1.8,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BETERRABA",
     "unidade": "kg",
     "percentual_aproveitamento": 61.0,
-    "fator_correcao": 1.64
+    "fator_correcao": 1.64,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BICARBONATO AMONIA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "BICARBONATO DE SODIO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "BISCOITO MAISENA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Pães e Bolos"
   },
   {
     "alimento": "BISCOITO MINI MAISENA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Pães e Bolos"
   },
   {
     "alimento": "BOFE",
     "unidade": "kg",
     "percentual_aproveitamento": 93.0,
-    "fator_correcao": 1.07
+    "fator_correcao": 1.07,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "BONITO",
     "unidade": "kg",
     "percentual_aproveitamento": 58.0,
-    "fator_correcao": 1.72
+    "fator_correcao": 1.72,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "BREDO",
     "unidade": "kg",
     "percentual_aproveitamento": 64.0,
-    "fator_correcao": 1.56
+    "fator_correcao": 1.56,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BRIGADEIRO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "BRIGADEIRO ZERO LACTOSE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "BRÓCOLIS",
     "unidade": "kg",
     "percentual_aproveitamento": 43.0,
-    "fator_correcao": 2.34
+    "fator_correcao": 2.34,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BROTO DE BAMBU",
     "unidade": "kg",
     "percentual_aproveitamento": 30.0,
-    "fator_correcao": 3.33
+    "fator_correcao": 3.33,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "BUCHO",
     "unidade": "kg",
     "percentual_aproveitamento": 90.0,
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "BURITI",
     "unidade": "kg",
     "percentual_aproveitamento": 21.0,
-    "fator_correcao": 4.76
+    "fator_correcao": 4.76,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CAÇÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.18
+    "fator_correcao": 1.18,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CACAU",
     "unidade": "kg",
     "percentual_aproveitamento": 28.0,
-    "fator_correcao": 3.57
+    "fator_correcao": 3.57,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "CACAU EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "CACAU EM PO ALCALINO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "CACHAÇA",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "CAJÁ",
     "unidade": "kg",
     "percentual_aproveitamento": 62.0,
-    "fator_correcao": 1.61
+    "fator_correcao": 1.61,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CAJU",
     "unidade": "kg",
     "percentual_aproveitamento": 78.0,
-    "fator_correcao": 1.28
+    "fator_correcao": 1.28,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CAJUZINHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CALDA PARA PUDIM",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CALDO DE CARNE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CALDO DE GALINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CALDO DE LEGUMES",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Produtos Industrializados e Processados"
   },
   {
     "alimento": "CAMARÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 24.0,
-    "fator_correcao": 4.1
+    "fator_correcao": 4.1,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CANELA EM PÓ",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "CANELA RAMA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "CANJIQUINHA AMARELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "CAQUI",
     "unidade": "kg",
     "percentual_aproveitamento": 94.0,
-    "fator_correcao": 1.06
+    "fator_correcao": 1.06,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CARÁ",
     "unidade": "kg",
     "percentual_aproveitamento": 82.0,
-    "fator_correcao": 1.22
+    "fator_correcao": 1.22,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CARAMBOLA",
     "unidade": "kg",
     "percentual_aproveitamento": 81.0,
-    "fator_correcao": 1.23
+    "fator_correcao": 1.23,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CARDONIZ",
     "unidade": "kg",
     "percentual_aproveitamento": 67.0,
-    "fator_correcao": 1.49
+    "fator_correcao": 1.49,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CARPA",
     "unidade": "kg",
     "percentual_aproveitamento": 39.0,
-    "fator_correcao": 2.56
+    "fator_correcao": 2.56,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CARURU",
     "unidade": "kg",
     "percentual_aproveitamento": 50.0,
-    "fator_correcao": 2.0
+    "fator_correcao": 2.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CASTANHA DE CAJU",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CAVALINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.2
+    "fator_correcao": 1.2,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CEBOLA",
     "unidade": "kg",
     "percentual_aproveitamento": 61.0,
-    "fator_correcao": 1.64
+    "fator_correcao": 1.64,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CEBOLINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.18
+    "fator_correcao": 1.18,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CENOURA",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.17
+    "fator_correcao": 1.17,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CEOUVE",
     "unidade": "kg",
     "percentual_aproveitamento": 52.0,
-    "fator_correcao": 1.91
+    "fator_correcao": 1.91,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CEREJA",
     "unidade": "kg",
     "percentual_aproveitamento": 82.0,
-    "fator_correcao": 1.22
+    "fator_correcao": 1.22,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CEREJAS EM CALDA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CERVEJA",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "CHÃ-DE-DENTRO",
     "unidade": "kg",
     "percentual_aproveitamento": 90.0,
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "CHAMPANHE",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "CHANTILLY",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CHEIRO VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 91.0,
-    "fator_correcao": 1.1
+    "fator_correcao": 1.1,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "CHICÓRIA CRESPA",
     "unidade": "kg",
     "percentual_aproveitamento": 74.0,
-    "fator_correcao": 1.35
+    "fator_correcao": 1.35,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CHICÓRIA LISA",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.13
+    "fator_correcao": 1.13,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CHOCOLATE AO LEITE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CHOCOLATE BRANCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE BRANCO FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE EM PÓ",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE EM PO 33 %",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE EM PO 35 %",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE EM PO 50 %",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE MEIO AMARGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE OVOMALTINE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ovos"
   },
   {
     "alimento": "CHOCOLATE PRETO FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHOCOLATE PRETO MEIO AMARGO BLEND",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CHUCHU",
     "unidade": "kg",
     "percentual_aproveitamento": 68.0,
-    "fator_correcao": 1.47
+    "fator_correcao": 1.47,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "CIDRA",
     "unidade": "kg",
     "percentual_aproveitamento": 65.0,
-    "fator_correcao": 1.54
+    "fator_correcao": 1.54,
+    "categoria": "Frutas"
   },
   {
     "alimento": "CIOBA",
     "unidade": "kg",
     "percentual_aproveitamento": 90.0,
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CLARA DE OVO LIQ PASTEURIZADA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ovos"
   },
   {
     "alimento": "CLARA EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ovos"
   },
   {
     "alimento": "COCO",
     "unidade": "kg",
     "percentual_aproveitamento": 53.0,
-    "fator_correcao": 1.88
+    "fator_correcao": 1.88,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO FLOCOS SWEET",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO FLOCOS UMIDO ADOÇADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO FRESCO FINO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO FRESCO GROSSO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO FRESCO MEDIO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO MADURO",
     "unidade": "kg",
     "percentual_aproveitamento": 56.0,
-    "fator_correcao": 1.79
+    "fator_correcao": 1.79,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO RALADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO SECO FINO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COCO VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 14.0,
-    "fator_correcao": 7.4
+    "fator_correcao": 7.4,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COENTRO",
     "unidade": "kg",
     "percentual_aproveitamento": 79.0,
-    "fator_correcao": 1.26
+    "fator_correcao": 1.26,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "COLORAU",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "COLORAU TEMPERADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "COLORETI GRANDE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "COLORETI MINI",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "COMINHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "CONDESSA",
     "unidade": "kg",
     "percentual_aproveitamento": 63.0,
-    "fator_correcao": 1.6
+    "fator_correcao": 1.6,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CONHAQUE",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "CONTRAFILÉ",
     "unidade": "kg",
     "percentual_aproveitamento": 80.0,
-    "fator_correcao": 1.25
+    "fator_correcao": 1.25,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CORAÇÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 77.0,
-    "fator_correcao": 1.3
+    "fator_correcao": 1.3,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CORANTE CARAMELO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "CORVINA",
     "unidade": "kg",
     "percentual_aproveitamento": 84.0,
-    "fator_correcao": 1.19
+    "fator_correcao": 1.19,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "COSTELA GROSSA",
     "unidade": "kg",
     "percentual_aproveitamento": 93.0,
-    "fator_correcao": 1.08
+    "fator_correcao": 1.08,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "COSTELA TRÊS RIPAS",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.13
+    "fator_correcao": 1.13,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "COUVE",
     "unidade": "kg",
     "percentual_aproveitamento": 67.0,
-    "fator_correcao": 1.5
+    "fator_correcao": 1.5,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "COUVE-FLOR",
     "unidade": "kg",
     "percentual_aproveitamento": 43.0,
-    "fator_correcao": 2.34
+    "fator_correcao": 2.34,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "COXA DE FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 67.0,
-    "fator_correcao": 1.5
+    "fator_correcao": 1.5,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "COXÃO DURO",
     "unidade": "kg",
     "percentual_aproveitamento": 93.0,
-    "fator_correcao": 1.08
+    "fator_correcao": 1.08,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "COXÃO MOLE",
     "unidade": "kg",
     "percentual_aproveitamento": 95.0,
-    "fator_correcao": 1.05
+    "fator_correcao": 1.05,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "CRAVO DA INDIA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "CREAM CHEESE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CREME CHANTILLY",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CREME DE AVELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CREME DE CONFEITEIRO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CREME DE LEITE",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CREME DE RICOTA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CREME DE RICOTA LIGHT",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CREME VEGETAL CULINARIO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "CUPUAÇU",
     "unidade": "kg",
     "percentual_aproveitamento": 60.0,
-    "fator_correcao": 1.67
+    "fator_correcao": 1.67,
+    "categoria": "Frutas"
   },
   {
     "alimento": "DAMASCO",
     "unidade": "kg",
     "percentual_aproveitamento": 60.0,
-    "fator_correcao": 1.66
+    "fator_correcao": 1.66,
+    "categoria": "Frutas"
   },
   {
     "alimento": "DOCE DE LEITE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "DOCE DE LEITE C/ CHOCOLATE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "DOCE DE LEITE PASTA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "DOCE DE LEITE ZERO LACTOSE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "DOURADO",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.18
+    "fator_correcao": 1.18,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ENCHOCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ENGUIA",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ERVA DOCE",
     "unidade": "kg",
     "percentual_aproveitamento": 71.0,
-    "fator_correcao": 1.4
+    "fator_correcao": 1.4,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "ERVAS FINAS",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "ERVILHA",
     "unidade": "kg",
     "percentual_aproveitamento": 97.0,
-    "fator_correcao": 1.03
+    "fator_correcao": 1.03,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ERVILHA FRESCA",
     "unidade": "kg",
     "percentual_aproveitamento": 50.0,
-    "fator_correcao": 2.0
+    "fator_correcao": 2.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ERVILHA SECA",
     "unidade": "kg",
     "percentual_aproveitamento": 97.0,
-    "fator_correcao": 1.03
+    "fator_correcao": 1.03,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ESCAROLA",
     "unidade": "kg",
     "percentual_aproveitamento": 58.0,
-    "fator_correcao": 1.71
+    "fator_correcao": 1.71,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ESPADA",
     "unidade": "kg",
     "percentual_aproveitamento": 86.0,
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ESPINAFRE",
     "unidade": "kg",
     "percentual_aproveitamento": 56.0,
-    "fator_correcao": 1.78
+    "fator_correcao": 1.78,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "ESSENCIA ABACAXI",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ESSENCIA AMARULA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA AVELA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA BANANA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ESSENCIA BAUNILHA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA CAFÉ",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "ESSENCIA CHAMPAGNE",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA CHOCOLATE",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "ESSENCIA COCO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA LARANJA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ESSENCIA LIMAO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA MANTEIGA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "ESSENCIA MARACUJA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA MEL",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "ESSENCIA MORANGO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "ESSENCIA NOZES",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "ESSENCIA PANETONE",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "ESSENCIA QUEIJO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "ESSENCIA RUM JAMAICA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "ESTURJÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.17
+    "fator_correcao": 1.17,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "EXTRATO DE TOMATE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "FAISÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 55.0,
-    "fator_correcao": 1.81
+    "fator_correcao": 1.81,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "FARINHA DE AMENDOIM",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FARINHA DE MANDIOCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FARINHA DE ROSCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FARINHA DE TRIGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FARINHA PANKO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FAROFA CROCANTE DE AMENDOIM",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Produtos Industrializados e Prontos"
   },
   {
     "alimento": "FAVA",
     "unidade": "kg",
     "percentual_aproveitamento": 96.0,
-    "fator_correcao": 1.04
+    "fator_correcao": 1.04,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "FAVA FRESCA",
     "unidade": "kg",
     "percentual_aproveitamento": 34.0,
-    "fator_correcao": 2.94
+    "fator_correcao": 2.94,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "FECULA DE MANDIOCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "FEIJÃO BRANCO",
     "unidade": "kg",
     "percentual_aproveitamento": 97.0,
-    "fator_correcao": 1.03
+    "fator_correcao": 1.03,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "FEIJÃO EM GERAL",
     "unidade": "kg",
     "percentual_aproveitamento": 97.0,
-    "fator_correcao": 1.03
+    "fator_correcao": 1.03,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "FEIJÃO MULATINHO",
     "unidade": "kg",
     "percentual_aproveitamento": 97.0,
-    "fator_correcao": 1.03
+    "fator_correcao": 1.03,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "FERMENTO BIOLOGICO SECO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "FERMENTO EM PÓ",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "FERMENTO FRESCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "FERMENTO INSTANTANEO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "FERMENTO QUIMICO EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "FIGO",
     "unidade": "kg",
     "percentual_aproveitamento": 97.0,
-    "fator_correcao": 1.03
+    "fator_correcao": 1.03,
+    "categoria": "Frutas"
   },
   {
     "alimento": "FIGO INTEIRO EM CALDA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "FIGO VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 90.0,
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "categoria": "Frutas"
   },
   {
     "alimento": "FILÉ-MIGNON",
     "unidade": "kg",
     "percentual_aproveitamento": 78.0,
-    "fator_correcao": 1.28
+    "fator_correcao": 1.28,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "FIOS DE OVOS",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ovos"
   },
   {
     "alimento": "FONDANT",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 42.0,
-    "fator_correcao": 2.38
+    "fator_correcao": 2.38,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "FRUTA DO CONDE",
     "unidade": "kg",
     "percentual_aproveitamento": 75.0,
-    "fator_correcao": 1.33
+    "fator_correcao": 1.33,
+    "categoria": "Frutas"
   },
   {
     "alimento": "FRUTA PÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 77.0,
-    "fator_correcao": 1.3
+    "fator_correcao": 1.3,
+    "categoria": "Frutas"
   },
   {
     "alimento": "FUBÁ",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FUBA AMARELO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FUBA DE MILHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "FUNCHO",
     "unidade": "kg",
     "percentual_aproveitamento": 93.0,
-    "fator_correcao": 1.07
+    "fator_correcao": 1.07,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "GALINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 58.0,
-    "fator_correcao": 1.72
+    "fator_correcao": 1.72,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "GALO",
     "unidade": "kg",
     "percentual_aproveitamento": 80.0,
-    "fator_correcao": 1.25
+    "fator_correcao": 1.25,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "GANACHE CHOCOLATE BRANCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GANACHE CHOCOLATE PRETO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GANACHE MEIO AMARGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GANSO",
     "unidade": "kg",
     "percentual_aproveitamento": 59.0,
-    "fator_correcao": 1.69
+    "fator_correcao": 1.69,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "GAROUPA",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.13
+    "fator_correcao": 1.13,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "GELATINA ABACAXI",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GELATINA CEREJA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GELATINA FRAMBOESA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GELATINA LIMAO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GELATINA MORANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GELATINA NATURAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GELATINA SEM SABOR",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "GELATINA UVA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GELEIA DE BRILHO MORANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GELEIA DE GOIABA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GEMA EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ovos"
   },
   {
     "alimento": "GENGIBRE",
     "unidade": "kg",
     "percentual_aproveitamento": 90.0,
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "GERGELIM BRANCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Sementes e Oleaginosas"
   },
   {
     "alimento": "GIM",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "GLUCOSE DE MILHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "GOIABA",
     "unidade": "kg",
     "percentual_aproveitamento": 82.0,
-    "fator_correcao": 1.22
+    "fator_correcao": 1.22,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GOMA XANTANA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "GORDURA DE PALMA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "GORDURA MANTEIGA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "GORDURA PROMULT",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "GORDURA VEGETAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "GRANULADO AMARELO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GRANULADO AZUL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GRANULADO BRANCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GRANULADO BRANCO E PRETO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GRANULADO COLORIDO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "GRÃO-DE-BICO",
     "unidade": "kg",
     "percentual_aproveitamento": 98.0,
-    "fator_correcao": 1.02
+    "fator_correcao": 1.02,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "GRAPEFRUIT",
     "unidade": "kg",
     "percentual_aproveitamento": 36.0,
-    "fator_correcao": 2.78
+    "fator_correcao": 2.78,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GRAVIOLA",
     "unidade": "kg",
     "percentual_aproveitamento": 73.0,
-    "fator_correcao": 1.37
+    "fator_correcao": 1.37,
+    "categoria": "Frutas"
   },
   {
     "alimento": "GROSELHA XAROPE",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "HIPOGLOSSO",
     "unidade": "kg",
     "percentual_aproveitamento": 81.0,
-    "fator_correcao": 1.23
+    "fator_correcao": 1.23,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "HORTELÃ",
     "unidade": "kg",
     "percentual_aproveitamento": 74.0,
-    "fator_correcao": 1.36
+    "fator_correcao": 1.36,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "INHAME",
     "unidade": "kg",
     "percentual_aproveitamento": 71.0,
-    "fator_correcao": 1.4
+    "fator_correcao": 1.4,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "JAVA",
     "unidade": "kg",
     "percentual_aproveitamento": 24.0,
-    "fator_correcao": 4.13
+    "fator_correcao": 4.13,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "JILÓ",
     "unidade": "kg",
     "percentual_aproveitamento": 92.0,
-    "fator_correcao": 1.09
+    "fator_correcao": 1.09,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "JURUBEBA",
     "unidade": "kg",
     "percentual_aproveitamento": 84.0,
-    "fator_correcao": 1.19
+    "fator_correcao": 1.19,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "KETCHUP",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Molhos e Patês"
   },
   {
     "alimento": "KIWI",
     "unidade": "kg",
     "percentual_aproveitamento": 90.0,
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LAGARTO",
     "unidade": "kg",
     "percentual_aproveitamento": 87.0,
-    "fator_correcao": 1.15
+    "fator_correcao": 1.15,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "LAGOSTA",
     "unidade": "kg",
     "percentual_aproveitamento": 36.0,
-    "fator_correcao": 2.78
+    "fator_correcao": 2.78,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "LAMBARI",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.2
+    "fator_correcao": 1.2,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "LARANJA",
     "unidade": "kg",
     "percentual_aproveitamento": 57.0,
-    "fator_correcao": 1.77
+    "fator_correcao": 1.77,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LARANJA BAHIA",
     "unidade": "kg",
     "percentual_aproveitamento": 64.0,
-    "fator_correcao": 1.56
+    "fator_correcao": 1.56,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LARANJA DA TERRA",
     "unidade": "kg",
     "percentual_aproveitamento": 58.0,
-    "fator_correcao": 1.72
+    "fator_correcao": 1.72,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LARANJA LIMA",
     "unidade": "kg",
     "percentual_aproveitamento": 63.0,
-    "fator_correcao": 1.59
+    "fator_correcao": 1.59,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LARANJA PÊRA",
     "unidade": "kg",
     "percentual_aproveitamento": 62.0,
-    "fator_correcao": 1.61
+    "fator_correcao": 1.61,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LEITE CONDENSADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "LEITE DE COCO",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "LEITE PO INTEGRAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "LEMON PEPPER",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "LENTILHA",
     "unidade": "kg",
     "percentual_aproveitamento": 53.0,
-    "fator_correcao": 1.88
+    "fator_correcao": 1.88,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "LICOR CACAU",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "LIMA",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LIMA DA PÉRSIA",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LIMÃO COMUM",
     "unidade": "kg",
     "percentual_aproveitamento": 44.0,
-    "fator_correcao": 2.26
+    "fator_correcao": 2.26,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LIMÃO GALEGO",
     "unidade": "kg",
     "percentual_aproveitamento": 44.0,
-    "fator_correcao": 2.27
+    "fator_correcao": 2.27,
+    "categoria": "Frutas"
   },
   {
     "alimento": "LÍNGUA",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.2
+    "fator_correcao": 1.2,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "LINGUADO",
     "unidade": "kg",
     "percentual_aproveitamento": 39.0,
-    "fator_correcao": 2.56
+    "fator_correcao": 2.56,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "LINHAÇA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Sementes e Oleaginosas"
   },
   {
     "alimento": "LULA",
     "unidade": "kg",
     "percentual_aproveitamento": 86.0,
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "MAÇA",
     "unidade": "kg",
     "percentual_aproveitamento": 80.0,
-    "fator_correcao": 1.25
+    "fator_correcao": 1.25,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MACAXEIRA (AIPIM)",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "MAIONESE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MAMÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 61.0,
-    "fator_correcao": 1.63
+    "fator_correcao": 1.63,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MAMINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 79.0,
-    "fator_correcao": 1.26
+    "fator_correcao": 1.26,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "MANDIOCA",
     "unidade": "kg",
     "percentual_aproveitamento": 72.0,
-    "fator_correcao": 1.39
+    "fator_correcao": 1.39,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "MANDIOQUINHA SALSA",
     "unidade": "kg",
     "percentual_aproveitamento": 87.0,
-    "fator_correcao": 1.15
+    "fator_correcao": 1.15,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "MANGA",
     "unidade": "kg",
     "percentual_aproveitamento": 62.0,
-    "fator_correcao": 1.61
+    "fator_correcao": 1.61,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MANGA ESPADA",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MANGABA",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.32
+    "fator_correcao": 1.32,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MANJERONA",
     "unidade": "kg",
     "percentual_aproveitamento": 80.0,
-    "fator_correcao": 1.25
+    "fator_correcao": 1.25,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "MANTEIGA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "MANTEIGA COMUM COM SAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "MANTEIGA COMUM S/S",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "MANTEIGA EXTRA S/SAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "MANTEIGA GOURMET S/SAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "MARACUJÁ",
     "unidade": "kg",
     "percentual_aproveitamento": 49.0,
-    "fator_correcao": 2.04
+    "fator_correcao": 2.04,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MARGARINA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MARGARINA 50 %",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MARGARINA 75 %",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MARGARINA 80 % SEM SAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "MARGARINA COISSANT RICCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MARGARINA CREME RICCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "MARGARINA FOLHADA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MARGARINA MASSA RICCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MARMELO",
     "unidade": "kg",
     "percentual_aproveitamento": 69.0,
-    "fator_correcao": 1.45
+    "fator_correcao": 1.45,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "MARSHMALLOW",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "MASTRUÇO",
     "unidade": "kg",
     "percentual_aproveitamento": 51.0,
-    "fator_correcao": 1.96
+    "fator_correcao": 1.96,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "MAXIXE",
     "unidade": "kg",
     "percentual_aproveitamento": 95.0,
-    "fator_correcao": 1.05
+    "fator_correcao": 1.05,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "MEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "MELANCIA",
     "unidade": "kg",
     "percentual_aproveitamento": 46.0,
-    "fator_correcao": 2.17
+    "fator_correcao": 2.17,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MELÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 96.0,
-    "fator_correcao": 1.04
+    "fator_correcao": 1.04,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MERLUSA",
     "unidade": "kg",
     "percentual_aproveitamento": 60.0,
-    "fator_correcao": 1.66
+    "fator_correcao": 1.66,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "MEXERICA",
     "unidade": "kg",
     "percentual_aproveitamento": 67.0,
-    "fator_correcao": 1.5
+    "fator_correcao": 1.5,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MILHO SECO",
     "unidade": "kg",
     "percentual_aproveitamento": 68.0,
-    "fator_correcao": 1.47
+    "fator_correcao": 1.47,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "MILHO VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 40.0,
-    "fator_correcao": 2.53
+    "fator_correcao": 2.53,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "MILHO VERDE EM CONSERVA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "MIOLO",
     "unidade": "kg",
     "percentual_aproveitamento": 86.0,
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "MISTURA CUPCAKE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Produtos Industrializados e Processados"
   },
   {
     "alimento": "MOLHO BRANCO BECHAMEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "MOLHO DE TOMATE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "MOLHO ESCURO DEMIGLACE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MOLHO INGLES",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MOLHO MADEIRA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "MOLHO PIMENTA",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "MORANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MOSTARDA",
     "unidade": "kg",
     "percentual_aproveitamento": 66.0,
-    "fator_correcao": 1.51
+    "fator_correcao": 1.51,
+    "categoria": "Molhos e Patês"
   },
   {
     "alimento": "MOSTARDA AMARELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Molhos e Patês"
   },
   {
     "alimento": "MOSTARDA ESCURA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Molhos e Patês"
   },
   {
     "alimento": "MOUSSE CHOCOLATE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "MOUSSE LIMAO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "MOUSSE MARACUJA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "MOUSSE MORANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "MÚSCULO",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "MUSSARELA RALADA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "NABO",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "NATA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "NÊSPERA",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.32
+    "fator_correcao": 1.32,
+    "categoria": "Frutas"
   },
   {
     "alimento": "NOZ MOSCADA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "NOZES",
     "unidade": "kg",
     "percentual_aproveitamento": 23.0,
-    "fator_correcao": 4.32
+    "fator_correcao": 4.32,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "NOZES INTEIRA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "OLEO DE ALGODAO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "OLEO DE GIRASSOL",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Óleos, Gorduras e Condimentos"
   },
   {
     "alimento": "OLEO EMULSIFICANTE",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "OREGANO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "OVO DE CODORNA",
     "unidade": "un",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.13
+    "fator_correcao": 1.13,
+    "categoria": "Ovos"
   },
   {
     "alimento": "OVO DE GALINHA",
     "unidade": "un",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.13
+    "fator_correcao": 1.13,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "OVO DE GALINHA D ́ANGOLA",
     "unidade": "un",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "OVO DE GANSA",
     "unidade": "un",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Ovos"
   },
   {
     "alimento": "OVO DE MARRECA",
     "unidade": "un",
     "percentual_aproveitamento": 87.0,
-    "fator_correcao": 1.15
+    "fator_correcao": 1.15,
+    "categoria": "Ovos"
   },
   {
     "alimento": "OVO DE PATA",
     "unidade": "un",
     "percentual_aproveitamento": 87.0,
-    "fator_correcao": 1.15
+    "fator_correcao": 1.15,
+    "categoria": "Ovos"
   },
   {
     "alimento": "OVO DE PERUA",
     "unidade": "un",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.13
+    "fator_correcao": 1.13,
+    "categoria": "Ovos"
   },
   {
     "alimento": "OVO DE TARTARUGA",
     "unidade": "un",
     "percentual_aproveitamento": 91.0,
-    "fator_correcao": 1.1
+    "fator_correcao": 1.1,
+    "categoria": "Ovos"
   },
   {
     "alimento": "OVOS DE GALINHA",
     "unidade": "un",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PÁ",
     "unidade": "kg",
     "percentual_aproveitamento": 61.0,
-    "fator_correcao": 1.65
+    "fator_correcao": 1.65,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PAÇOCA DE AMENDOIM",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PAÇOCA EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PACU",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.13
+    "fator_correcao": 1.13,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PALETA",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PALMITO",
     "unidade": "kg",
     "percentual_aproveitamento": 49.0,
-    "fator_correcao": 2.04
+    "fator_correcao": 2.04,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "PALMITO PICADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "PALMITO RODELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "PALMITO TOLETE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "PARMESÃO RALADO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "PASTA ALEMA ABACAXI",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "PASTA ALEMA COCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA ALEMA DAMASCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA ALEMA FRUTAS VERMELHAS",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "PASTA ALEMA GOIABA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "PASTA ALEMA MAÇA CANELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "PASTA ALEMA MORANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "PASTA ALEMA PESSEGO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA AMARELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA AZUL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA AZUL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA BAUNILHA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA BRANCA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA CHOC BRANCO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA NEUTRA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA PINK",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA PRETA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA ROSA BEBE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA AMERICANA VERMELHA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PASTA GIANDUIA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "PATINHO",
     "unidade": "kg",
     "percentual_aproveitamento": 88.0,
-    "fator_correcao": 1.14
+    "fator_correcao": 1.14,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PATO",
     "unidade": "kg",
     "percentual_aproveitamento": 64.0,
-    "fator_correcao": 1.56
+    "fator_correcao": 1.56,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PEITO",
     "unidade": "kg",
     "percentual_aproveitamento": 80.0,
-    "fator_correcao": 1.25
+    "fator_correcao": 1.25,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PEITO DE FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 72.0,
-    "fator_correcao": 1.39
+    "fator_correcao": 1.39,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PEIXE REI",
     "unidade": "kg",
     "percentual_aproveitamento": 55.0,
-    "fator_correcao": 1.81
+    "fator_correcao": 1.81,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PEIXINHO",
     "unidade": "kg",
     "percentual_aproveitamento": 86.0,
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PEPINO",
     "unidade": "kg",
     "percentual_aproveitamento": 77.0,
-    "fator_correcao": 1.3
+    "fator_correcao": 1.3,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "PÊRA",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.2
+    "fator_correcao": 1.2,
+    "categoria": "Frutas"
   },
   {
     "alimento": "PERDIZ",
     "unidade": "kg",
     "percentual_aproveitamento": 39.0,
-    "fator_correcao": 2.56
+    "fator_correcao": 2.56,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PERU",
     "unidade": "kg",
     "percentual_aproveitamento": 61.0,
-    "fator_correcao": 1.64
+    "fator_correcao": 1.64,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PESCADINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 50.0,
-    "fator_correcao": 2.0
+    "fator_correcao": 2.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PESCADO",
     "unidade": "kg",
     "percentual_aproveitamento": 84.0,
-    "fator_correcao": 1.19
+    "fator_correcao": 1.19,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PESCOÇO DE FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 46.0,
-    "fator_correcao": 2.17
+    "fator_correcao": 2.17,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PÊSSEGO",
     "unidade": "kg",
     "percentual_aproveitamento": 80.0,
-    "fator_correcao": 1.25
+    "fator_correcao": 1.25,
+    "categoria": "Frutas"
   },
   {
     "alimento": "PICANHA",
     "unidade": "kg",
     "percentual_aproveitamento": 79.0,
-    "fator_correcao": 1.27
+    "fator_correcao": 1.27,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PIMENTA BIQUINHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "PIMENTA CALABRESA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "PIMENTA DO REINO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "PIMENTA MALAGUETA VERDE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "PIMENTA PRETA EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "PIMENTÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 70.0,
-    "fator_correcao": 1.42
+    "fator_correcao": 1.42,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "PINTADO",
     "unidade": "kg",
     "percentual_aproveitamento": 97.0,
-    "fator_correcao": 1.03
+    "fator_correcao": 1.03,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PIRANHA",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.2
+    "fator_correcao": 1.2,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PITANGA",
     "unidade": "kg",
     "percentual_aproveitamento": 81.0,
-    "fator_correcao": 1.23
+    "fator_correcao": 1.23,
+    "categoria": "Frutas"
   },
   {
     "alimento": "PITOMBA",
     "unidade": "kg",
     "percentual_aproveitamento": 50.0,
-    "fator_correcao": 2.0
+    "fator_correcao": 2.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "POLVILHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "POLVILHO AZEDO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "POMBO",
     "unidade": "kg",
     "percentual_aproveitamento": 60.0,
-    "fator_correcao": 1.66
+    "fator_correcao": 1.66,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PONTA DO PEITO",
     "unidade": "kg",
     "percentual_aproveitamento": 58.0,
-    "fator_correcao": 1.71
+    "fator_correcao": 1.71,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "PRESUNTO COZIDO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "QUARTO DIANTEIRO",
     "unidade": "kg",
     "percentual_aproveitamento": 87.0,
-    "fator_correcao": 1.15
+    "fator_correcao": 1.15,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "QUARTO TRASEIRO",
     "unidade": "kg",
     "percentual_aproveitamento": 63.0,
-    "fator_correcao": 1.59
+    "fator_correcao": 1.59,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "QUEIJO BRIE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO COALHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO COLONIAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO EMMENTAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO ESTEPE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO GORGONZOLA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO GOUDA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO GRAN FORMAGGIO 12 MESES",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO GRUYERE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO MINAS FRESCAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO MUSSARELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO PARMESAO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO PECORINO ROMANO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO PRATO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO PROVOLONE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUEIJO TIPO COTTAGE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "QUENTAO",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "QUIABO",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "RÃ",
     "unidade": "kg",
     "percentual_aproveitamento": 85.0,
-    "fator_correcao": 1.17
+    "fator_correcao": 1.17,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "RABANETE",
     "unidade": "kg",
     "percentual_aproveitamento": 91.0,
-    "fator_correcao": 1.1
+    "fator_correcao": 1.1,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "RÁBANO",
     "unidade": "kg",
     "percentual_aproveitamento": 49.0,
-    "fator_correcao": 2.04
+    "fator_correcao": 2.04,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "RECHEIO ABACAXI FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO AMEIXA FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO AVELA FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO BAUNILHA FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO BRANCO FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO BRIGADEIRO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO BRIGADEIRO FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO CHOC AO LEITE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "RECHEIO CHOCOLATE AO LEITE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "RECHEIO CHOCOLATE BRANCO E AVELA FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO CHOCOLATE BRANCO FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO CHOCOLATE C/AVELA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO CHOCOLATE C/AVELA FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO CREMOSO GOIABA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO DE ABACAXI",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO DE ABACAXI AO VINHO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO DE AMENDOIM C/ PEDAÇOS",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO DE COCO FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO DE DOCE DE LEITE FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "RECHEIO DE FRUTAS VERM FORN",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO DE GOIABA FORNEAVE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO DE LEITE COND",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "RECHEIO DE MARACUJA FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "RECHEIO DE MORANGO FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RECHEIO DE TRUFA FORNEAVEL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "REPOLHO",
     "unidade": "kg",
     "percentual_aproveitamento": 65.0,
-    "fator_correcao": 1.54
+    "fator_correcao": 1.54,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "REQUEIJAO CHEDDAR",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "REQUEIJAO CREM COM AMIDO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "REQUEIJAO CREMOSO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "RIM",
     "unidade": "kg",
     "percentual_aproveitamento": 80.0,
-    "fator_correcao": 1.25
+    "fator_correcao": 1.25,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ROBALO",
     "unidade": "kg",
     "percentual_aproveitamento": 48.0,
-    "fator_correcao": 2.08
+    "fator_correcao": 2.08,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "ROMÃ",
     "unidade": "kg",
     "percentual_aproveitamento": 53.0,
-    "fator_correcao": 1.89
+    "fator_correcao": 1.89,
+    "categoria": "Frutas"
   },
   {
     "alimento": "RÚCULA",
     "unidade": "kg",
     "percentual_aproveitamento": 64.0,
-    "fator_correcao": 1.57
+    "fator_correcao": 1.57,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "RUM",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "SAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "SAL AMONIACO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "SAL ROSA DO HIMALAIA FINO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "SALADA DE FRUTAS TROPICAL",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "SALAME ITALIANO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "SALAME PEPPERONE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "SALMÃO",
     "unidade": "kg",
     "percentual_aproveitamento": 46.0,
-    "fator_correcao": 2.17
+    "fator_correcao": 2.17,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "SALSA",
     "unidade": "kg",
     "percentual_aproveitamento": 79.0,
-    "fator_correcao": 1.27
+    "fator_correcao": 1.27,
+    "categoria": "Temperos e Especiarias"
   },
   {
     "alimento": "SAPOTI",
     "unidade": "kg",
     "percentual_aproveitamento": 75.0,
-    "fator_correcao": 1.33
+    "fator_correcao": 1.33,
+    "categoria": "Frutas"
   },
   {
     "alimento": "SAQUÊ",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "SARDINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 59.0,
-    "fator_correcao": 1.7
+    "fator_correcao": 1.7,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "SERRA",
     "unidade": "kg",
     "percentual_aproveitamento": 89.0,
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "SHOYU",
     "unidade": "ml",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Molhos e Patês"
   },
   {
     "alimento": "SOBREASA DE FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 67.0,
-    "fator_correcao": 1.5
+    "fator_correcao": 1.5,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "SOBRECOXA DE FRANGO",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "SOJA",
     "unidade": "kg",
     "percentual_aproveitamento": 53.0,
-    "fator_correcao": 1.88
+    "fator_correcao": 1.88,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "SORBATO DE POTASSIO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Ingredientes Técnicos e Padronizantes"
   },
   {
     "alimento": "SORO DE LEITE EM PO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Laticínios e Derivados"
   },
   {
     "alimento": "SURUBIM",
     "unidade": "kg",
     "percentual_aproveitamento": 64.0,
-    "fator_correcao": 1.57
+    "fator_correcao": 1.57,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "SUSPIRO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Açúcares e Doces"
   },
   {
     "alimento": "TAINHA",
     "unidade": "kg",
     "percentual_aproveitamento": 82.0,
-    "fator_correcao": 1.22
+    "fator_correcao": 1.22,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "TAIOBA",
     "unidade": "kg",
     "percentual_aproveitamento": 87.0,
-    "fator_correcao": 1.15
+    "fator_correcao": 1.15,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "TÂMARA",
     "unidade": "kg",
     "percentual_aproveitamento": 87.0,
-    "fator_correcao": 1.15
+    "fator_correcao": 1.15,
+    "categoria": "Frutas"
   },
   {
     "alimento": "TAMARINDO",
     "unidade": "kg",
     "percentual_aproveitamento": 48.0,
-    "fator_correcao": 2.08
+    "fator_correcao": 2.08,
+    "categoria": "Frutas"
   },
   {
     "alimento": "TANGERINA",
     "unidade": "kg",
     "percentual_aproveitamento": 74.0,
-    "fator_correcao": 1.36
+    "fator_correcao": 1.36,
+    "categoria": "Frutas"
   },
   {
     "alimento": "TARTARUGA DE RIO",
     "unidade": "kg",
     "percentual_aproveitamento": 21.0,
-    "fator_correcao": 4.76
+    "fator_correcao": 4.76,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "TARTATUGA DO MAR",
     "unidade": "kg",
     "percentual_aproveitamento": 24.0,
-    "fator_correcao": 4.16
+    "fator_correcao": 4.16,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "TEQUILA",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "TOMATE",
     "unidade": "kg",
     "percentual_aproveitamento": 70.0,
-    "fator_correcao": 1.43
+    "fator_correcao": 1.43,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "TOMATE SECO",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "TORRADA",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Pães e Bolos"
   },
   {
     "alimento": "TREMOÇO",
     "unidade": "kg",
     "percentual_aproveitamento": 53.0,
-    "fator_correcao": 1.88
+    "fator_correcao": 1.88,
+    "categoria": "Leguminosas secas"
   },
   {
     "alimento": "TRIGO PARA KIBE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Cereais, Grãos e Farinhas"
   },
   {
     "alimento": "TRUTA",
     "unidade": "kg",
     "percentual_aproveitamento": 49.0,
-    "fator_correcao": 2.04
+    "fator_correcao": 2.04,
+    "categoria": "Carnes e Proteínas Animais"
   },
   {
     "alimento": "UÍSQUE",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "UVA",
     "unidade": "kg",
     "percentual_aproveitamento": 90.0,
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "categoria": "Frutas"
   },
   {
     "alimento": "UVA BRANCA",
     "unidade": "kg",
     "percentual_aproveitamento": 83.0,
-    "fator_correcao": 1.21
+    "fator_correcao": 1.21,
+    "categoria": "Frutas"
   },
   {
     "alimento": "UVA ESCURA",
     "unidade": "kg",
     "percentual_aproveitamento": 77.0,
-    "fator_correcao": 1.3
+    "fator_correcao": 1.3,
+    "categoria": "Frutas"
   },
   {
     "alimento": "UVA PASSA BRANCA SEM SEMENTE",
     "unidade": "kg",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Frutas"
   },
   {
     "alimento": "UVA PRETA",
     "unidade": "kg",
     "percentual_aproveitamento": 76.0,
-    "fator_correcao": 1.31
+    "fator_correcao": 1.31,
+    "categoria": "Frutas"
   },
   {
     "alimento": "VAGEM",
     "unidade": "kg",
     "percentual_aproveitamento": 75.0,
-    "fator_correcao": 1.34
+    "fator_correcao": 1.34,
+    "categoria": "Hortaliças e Legumes"
   },
   {
     "alimento": "VINHO",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "VINHO BRANCO SECO",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "VINHO TINTO SECO",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "VODKA",
     "unidade": "l",
     "percentual_aproveitamento": 100.0,
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "categoria": "Bebidas"
   },
   {
     "alimento": "XARÉU",
     "unidade": "kg",
     "percentual_aproveitamento": 86.0,
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "categoria": "Carnes e Proteínas Animais"
   }
 ]
