@@ -10,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { Plus, Trash2, Calculator } from 'lucide-react';
+import { Plus, Trash2, Calculator, Save, Check } from 'lucide-react';
 import { useFichasTecnicas } from '@/hooks/useFichasTecnicas';
 import { useIngredientes } from '@/hooks/useIngredientes';
 import { NovaFichaTecnicaFormData, IngredienteFicha, FichaTecnica } from '@/types/ficha-tecnica';
@@ -59,6 +59,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
 
   const [resultadoCalculo, setResultadoCalculo] = useState<any>(null);
   const [dadosAlterados, setDadosAlterados] = useState(false);
+  const [calculoRealizado, setCalculoRealizado] = useState(false);
 
   const form = useForm<NovaFichaTecnicaFormData>({
     resolver: zodResolver(formSchema),
@@ -84,6 +85,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
   useEffect(() => {
     const subscription = form.watch(() => {
       setDadosAlterados(true);
+      setCalculoRealizado(false);
       setResultadoCalculo(null);
     });
     return () => subscription.unsubscribe();
@@ -113,6 +115,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
       const resultado = calcularFichaTecnica(dados);
       setResultadoCalculo(resultado);
       setDadosAlterados(false);
+      setCalculoRealizado(true);
       
       toast({
         title: "Calculado com sucesso!",
@@ -125,6 +128,54 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
         description: "Verifique se todos os campos estão preenchidos corretamente.",
       });
     }
+  };
+
+  const salvarFicha = () => {
+    if (!resultadoCalculo) {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: "Realize o cálculo antes de salvar.",
+      });
+      return;
+    }
+
+    const dados = form.getValues();
+
+    if (fichaTecnica) {
+      // Atualizar ficha existente
+      atualizarFichaTecnica(fichaTecnica.id, {
+        ...dados,
+        custo_total: resultadoCalculo.custo_total,
+        custo_por_unidade: resultadoCalculo.custo_por_unidade,
+        preco_venda_sugerido: resultadoCalculo.preco_venda_sugerido,
+      });
+      
+      toast({
+        title: "Ficha atualizada!",
+        description: "A ficha técnica foi atualizada com sucesso.",
+      });
+    } else {
+      // Criar nova ficha
+      if (verificarNomeDuplicado(dados.nome_receita)) {
+        toast({
+          variant: "destructive",
+          title: "Nome duplicado",
+          description: "Já existe uma ficha técnica com este nome.",
+        });
+        return;
+      }
+
+      criarFichaTecnica(dados);
+      
+      toast({
+        title: "Ficha criada!",
+        description: "A ficha técnica foi criada e salva com sucesso.",
+      });
+    }
+
+    setDadosAlterados(false);
+    onSuccess?.();
   };
 
   const calcularESalvar = (dados: NovaFichaTecnicaFormData) => {
@@ -170,6 +221,18 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
       style: 'currency',
       currency: 'BRL',
     }).format(valor);
+  };
+
+  const getBotaoTexto = () => {
+    if (!fichaTecnica) {
+      return 'Calcular e salvar';
+    }
+    
+    if (dadosAlterados && calculoRealizado) {
+      return 'Calcular novamente e salvar';
+    }
+    
+    return 'Calcular e salvar';
   };
 
   return (
@@ -436,13 +499,19 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                   Calcular
                 </Button>
                 
+                {calculoRealizado && resultadoCalculo && (
+                  <Button 
+                    type="button" 
+                    onClick={salvarFicha}
+                    className="flex items-center gap-2"
+                  >
+                    <Save className="w-4 h-4" />
+                    Salvar Ficha
+                  </Button>
+                )}
+                
                 <Button type="submit" className="flex-1">
-                  {dadosAlterados && resultadoCalculo 
-                    ? 'Calcular novamente e salvar' 
-                    : fichaTecnica 
-                    ? 'Calcular e atualizar' 
-                    : 'Calcular e salvar'
-                  }
+                  {getBotaoTexto()}
                 </Button>
                 
                 {onCancel && (
@@ -463,6 +532,12 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
             <CardTitle className="flex items-center gap-2">
               <Calculator className="w-5 h-5" />
               Resultados do Cálculo
+              {calculoRealizado && (
+                <Badge variant="secondary" className="ml-2">
+                  <Check className="w-3 h-3 mr-1" />
+                  Calculado
+                </Badge>
+              )}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -510,6 +585,14 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                 <span className="font-medium">{formatarMoeda(resultadoCalculo.detalhes_custos.outros)}</span>
               </div>
             </div>
+
+            {calculoRealizado && (
+              <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                <p className="text-sm text-green-800">
+                  ✅ Cálculo realizado com sucesso! Você pode agora salvar a ficha técnica ou fazer ajustes nos valores.
+                </p>
+              </div>
+            )}
           </CardContent>
         </Card>
       )}
