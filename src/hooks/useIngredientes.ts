@@ -86,7 +86,75 @@ export const useIngredientes = () => {
     return null;
   };
 
+  const adicionarAlimentoNaBase = (dados: NovoIngredienteFormData) => {
+    // Verificar se o alimento já existe na base
+    const alimentoExiste = fatoresCorrecao.some(f => 
+      f.alimento.toLowerCase() === dados.alimento.toLowerCase()
+    );
+
+    if (!alimentoExiste) {
+      const novoAlimentoBase: FatorCorrecaoData = {
+        alimento: dados.alimento.toUpperCase(),
+        categoria: dados.categoria,
+        peso: dados.peso,
+        unidade: dados.unidade,
+        fator_correcao: dados.fator_correcao,
+        percentual_aproveitamento: Math.round((1 / dados.fator_correcao) * 100)
+      };
+
+      // Adicionar ao array local
+      const novosFatoresCorrecao = [...fatoresCorrecao, novoAlimentoBase];
+      setFatoresCorrecao(novosFatoresCorrecao);
+
+      // Salvar no localStorage como backup
+      const baseDadosLocal = localStorage.getItem('base_alimentos_customizada') || '[]';
+      const alimentosCustomizados = JSON.parse(baseDadosLocal);
+      alimentosCustomizados.push(novoAlimentoBase);
+      localStorage.setItem('base_alimentos_customizada', JSON.stringify(alimentosCustomizados));
+
+      console.log('Novo alimento adicionado à base de dados:', novoAlimentoBase);
+      
+      return novoAlimentoBase;
+    }
+    
+    return null;
+  };
+
+  const carregarAlimentosCustomizados = () => {
+    try {
+      const baseDadosLocal = localStorage.getItem('base_alimentos_customizada');
+      if (baseDadosLocal) {
+        const alimentosCustomizados = JSON.parse(baseDadosLocal);
+        // Mesclar com os dados existentes, evitando duplicatas
+        const fatoresMesclados = [...fatoresCorrecao];
+        
+        alimentosCustomizados.forEach((alimentoCustomizado: FatorCorrecaoData) => {
+          const existe = fatoresMesclados.some(f => 
+            f.alimento.toLowerCase() === alimentoCustomizado.alimento.toLowerCase()
+          );
+          if (!existe) {
+            fatoresMesclados.push(alimentoCustomizado);
+          }
+        });
+        
+        setFatoresCorrecao(fatoresMesclados);
+      }
+    } catch (error) {
+      console.error('Erro ao carregar alimentos customizados:', error);
+    }
+  };
+
+  // Carregar alimentos customizados quando os dados principais forem carregados
+  useEffect(() => {
+    if (fatoresCorrecao.length > 0) {
+      carregarAlimentosCustomizados();
+    }
+  }, []);
+
   const criarIngrediente = (dados: NovoIngredienteFormData): Ingrediente => {
+    // Adicionar alimento à base de dados se não existir
+    adicionarAlimentoNaBase(dados);
+
     const novoIngrediente: Ingrediente = {
       id: Date.now().toString(),
       ...dados,
@@ -148,5 +216,6 @@ export const useIngredientes = () => {
     converterUnidade,
     buscarAlimentosNaBase,
     obterDadosAlimentoDaBase,
+    adicionarAlimentoNaBase,
   };
 };
