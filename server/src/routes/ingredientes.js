@@ -88,7 +88,7 @@ router.get('/:id', auth, ingredienteController.getIngredienteById);
  */
 router.post('/', auth, [
   body('alimento').trim().isLength({ min: 2 }).withMessage('Nome do alimento deve ter pelo menos 2 caracteres'),
-  body('peso').isNumeric().withMessage('Peso deve ser um número'),
+  body('peso').trim().notEmpty().withMessage('Peso é obrigatório'),
   body('preco').isNumeric().withMessage('Preço deve ser um número'),
   body('unidade').trim().notEmpty().withMessage('Unidade é obrigatória'),
   body('fator_correcao').isNumeric().withMessage('Fator de correção deve ser um número'),

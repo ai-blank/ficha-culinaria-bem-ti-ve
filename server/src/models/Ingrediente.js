@@ -21,7 +21,7 @@ const mongoose = require('mongoose');
  *           type: string
  *           description: Nome do alimento
  *         peso:
- *           type: number
+ *           type: string
  *           description: Peso do ingrediente
  *         preco:
  *           type: number
@@ -57,9 +57,9 @@ const ingredienteSchema = new mongoose.Schema({
     maxlength: [100, 'Nome do alimento não pode ter mais de 100 caracteres']
   },
   peso: {
-    type: Number,
+    type: String,
     required: [true, 'Peso é obrigatório'],
-    min: [0, 'Peso deve ser maior que zero']
+    trim: true
   },
   preco: {
     type: Number,

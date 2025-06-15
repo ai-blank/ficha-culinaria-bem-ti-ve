@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Ingrediente, FatorCorrecaoData, NovoIngredienteFormData } from '@/types/ingrediente';
 
+const API_BASE_URL = 'http://localhost:5000/api';
+
 export const useIngredientes = () => {
   const [ingredientes, setIngredientes] = useState<Ingrediente[]>([]);
   const [categorias, setCategorias] = useState<string[]>([]);
@@ -12,6 +14,15 @@ export const useIngredientes = () => {
   useEffect(() => {
     carregarDados();
   }, []);
+
+  const getAuthToken = () => {
+    const user = localStorage.getItem('user');
+    if (user) {
+      const userData = JSON.parse(user);
+      return userData.token;
+    }
+    return null;
+  };
 
   const carregarDados = async () => {
     try {
@@ -27,15 +38,52 @@ export const useIngredientes = () => {
       const fatoresData = await fatoresResponse.json();
       setFatoresCorrecao(fatoresData);
 
-      // Carregar ingredientes do localStorage
-      const ingredientesSalvos = localStorage.getItem('ingredientes');
-      if (ingredientesSalvos) {
-        setIngredientes(JSON.parse(ingredientesSalvos));
-      }
+      // Carregar ingredientes da API
+      await carregarIngredientes();
     } catch (error) {
       console.error('Erro ao carregar dados:', error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const carregarIngredientes = async () => {
+    try {
+      const token = getAuthToken();
+      if (!token) {
+        console.log('Token não encontrado, usando dados do localStorage como fallback');
+        const ingredientesSalvos = localStorage.getItem('ingredientes');
+        if (ingredientesSalvos) {
+          setIngredientes(JSON.parse(ingredientesSalvos));
+        }
+        return;
+      }
+
+      const response = await fetch(`${API_BASE_URL}/ingredientes`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setIngredientes(data.data.ingredientes);
+      } else {
+        console.error('Erro ao carregar ingredientes da API');
+        // Fallback para localStorage
+        const ingredientesSalvos = localStorage.getItem('ingredientes');
+        if (ingredientesSalvos) {
+          setIngredientes(JSON.parse(ingredientesSalvos));
+        }
+      }
+    } catch (error) {
+      console.error('Erro ao carregar ingredientes:', error);
+      // Fallback para localStorage
+      const ingredientesSalvos = localStorage.getItem('ingredientes');
+      if (ingredientesSalvos) {
+        setIngredientes(JSON.parse(ingredientesSalvos));
+      }
     }
   };
 
@@ -152,7 +200,47 @@ export const useIngredientes = () => {
     }
   }, []);
 
-  const criarIngrediente = (dados: NovoIngredienteFormData): Ingrediente => {
+  const criarIngrediente = async (dados: NovoIngredienteFormData): Promise<Ingrediente> => {
+    try {
+      const token = getAuthToken();
+      
+      if (!token) {
+        // Fallback para localStorage se não houver token
+        return criarIngredienteLocal(dados);
+      }
+
+      // Adicionar alimento à base de dados se não existir
+      adicionarAlimentoNaBase(dados);
+
+      const response = await fetch(`${API_BASE_URL}/ingredientes`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dados),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        const novoIngrediente = result.data.ingrediente;
+        
+        // Atualizar estado local
+        const novosIngredientes = [...ingredientes, novoIngrediente];
+        setIngredientes(novosIngredientes);
+        
+        return novoIngrediente;
+      } else {
+        const error = await response.json();
+        throw new Error(error.message || 'Erro ao criar ingrediente');
+      }
+    } catch (error) {
+      console.error('Erro ao criar ingrediente na API, usando localStorage:', error);
+      return criarIngredienteLocal(dados);
+    }
+  };
+
+  const criarIngredienteLocal = (dados: NovoIngredienteFormData): Ingrediente => {
     // Adicionar alimento à base de dados se não existir
     adicionarAlimentoNaBase(dados);
 
@@ -171,7 +259,44 @@ export const useIngredientes = () => {
     return novoIngrediente;
   };
 
-  const atualizarIngrediente = (id: string, dados: Partial<Ingrediente>) => {
+  const atualizarIngrediente = async (id: string, dados: Partial<Ingrediente>) => {
+    try {
+      const token = getAuthToken();
+      
+      if (!token) {
+        // Fallback para localStorage se não houver token
+        return atualizarIngredienteLocal(id, dados);
+      }
+
+      const response = await fetch(`${API_BASE_URL}/ingredientes/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dados),
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        const ingredienteAtualizado = result.data.ingrediente;
+        
+        // Atualizar estado local
+        const ingredientesAtualizados = ingredientes.map(ing => 
+          ing.id === id ? ingredienteAtualizado : ing
+        );
+        setIngredientes(ingredientesAtualizados);
+      } else {
+        console.error('Erro ao atualizar ingrediente na API, usando localStorage');
+        atualizarIngredienteLocal(id, dados);
+      }
+    } catch (error) {
+      console.error('Erro ao atualizar ingrediente:', error);
+      atualizarIngredienteLocal(id, dados);
+    }
+  };
+
+  const atualizarIngredienteLocal = (id: string, dados: Partial<Ingrediente>) => {
     const ingredientesAtualizados = ingredientes.map(ing => 
       ing.id === id 
         ? { ...ing, ...dados, updated_at: new Date().toISOString() }
