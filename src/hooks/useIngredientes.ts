@@ -61,6 +61,31 @@ export const useIngredientes = () => {
     return fator?.fator_correcao || 1.0;
   };
 
+  const buscarAlimentosNaBase = (termoBusca: string) => {
+    if (!termoBusca || termoBusca.length < 2) return [];
+    
+    return fatoresCorrecao.filter(fator => 
+      fator.alimento.toLowerCase().includes(termoBusca.toLowerCase())
+    ).slice(0, 10); // Limitar a 10 resultados
+  };
+
+  const obterDadosAlimentoDaBase = (nomeAlimento: string) => {
+    const alimentoEncontrado = fatoresCorrecao.find(f => 
+      f.alimento.toLowerCase() === nomeAlimento.toLowerCase()
+    );
+    
+    if (alimentoEncontrado) {
+      return {
+        alimento: alimentoEncontrado.alimento,
+        categoria: alimentoEncontrado.categoria || 'Outros',
+        unidade: alimentoEncontrado.unidade || 'kg',
+        fator_correcao: alimentoEncontrado.fator_correcao || 1.0,
+      };
+    }
+    
+    return null;
+  };
+
   const criarIngrediente = (dados: NovoIngredienteFormData): Ingrediente => {
     const novoIngrediente: Ingrediente = {
       id: Date.now().toString(),
@@ -121,5 +146,7 @@ export const useIngredientes = () => {
     extrairUnidade,
     buscarFatorCorrecao,
     converterUnidade,
+    buscarAlimentosNaBase,
+    obterDadosAlimentoDaBase,
   };
 };

@@ -17,8 +17,10 @@ export interface Ingrediente {
 
 export interface FatorCorrecaoData {
   alimento: string;
-  percentual: number;
+  unidade: string;
+  percentual_aproveitamento: number;
   fator_correcao: number;
+  categoria?: string;
 }
 
 export interface NovoIngredienteFormData {
