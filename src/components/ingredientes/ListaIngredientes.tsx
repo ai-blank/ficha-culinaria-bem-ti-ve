@@ -159,8 +159,8 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {ingredientesFiltrados.map((ingrediente) => (
-                  <TableRow key={`ingrediente-${ingrediente.id}`}>
+                {ingredientesFiltrados.map((ingrediente, index) => (
+                  <TableRow key={ingrediente.id || `ingrediente-${index}`}>
                     <TableCell>
                       <Badge variant={ingrediente.ativo ? 'default' : 'secondary'}>
                         {ingrediente.ativo ? 'Ativo' : 'Inativo'}
