@@ -48,6 +48,28 @@ router.get('/', auth, ingredienteController.getIngredientes);
 
 /**
  * @swagger
+ * /ingredientes/{id}:
+ *   get:
+ *     summary: Obtém um ingrediente específico
+ *     tags: [Ingredientes]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Ingrediente encontrado
+ *       404:
+ *         description: Ingrediente não encontrado
+ */
+router.get('/:id', auth, ingredienteController.getIngredienteById);
+
+/**
+ * @swagger
  * /ingredientes:
  *   post:
  *     summary: Cria novo ingrediente

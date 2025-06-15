@@ -43,6 +43,28 @@ router.get('/', auth, fichaController.getFichas);
 
 /**
  * @swagger
+ * /fichas/{id}:
+ *   get:
+ *     summary: Obtém uma ficha técnica específica
+ *     tags: [Fichas Técnicas]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Ficha técnica encontrada
+ *       404:
+ *         description: Ficha técnica não encontrada
+ */
+router.get('/:id', auth, fichaController.getFichaById);
+
+/**
+ * @swagger
  * /fichas:
  *   post:
  *     summary: Cria nova ficha técnica

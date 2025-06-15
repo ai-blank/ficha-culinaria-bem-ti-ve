@@ -96,6 +96,33 @@ const getFichas = async (req, res, next) => {
   }
 };
 
+// @desc    Obter ficha técnica por ID
+// @route   GET /api/fichas/:id
+// @access  Private
+const getFichaById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    const ficha = await FichaTecnica.findById(id)
+      .populate('ingredientes.ingrediente_id', 'alimento categoria unidade peso preco');
+
+    if (!ficha) {
+      return res.status(404).json({
+        success: false,
+        message: 'Ficha técnica não encontrada'
+      });
+    }
+
+    res.json({
+      success: true,
+      data: { ficha }
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
 // @desc    Criar ficha técnica
 // @route   POST /api/fichas
 // @access  Private
@@ -276,6 +303,7 @@ const clonarFicha = async (req, res, next) => {
 
 module.exports = {
   getFichas,
+  getFichaById,
   createFicha,
   updateFicha,
   updateFichaStatus,

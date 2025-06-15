@@ -67,6 +67,32 @@ const getIngredientes = async (req, res, next) => {
   }
 };
 
+// @desc    Obter ingrediente por ID
+// @route   GET /api/ingredientes/:id
+// @access  Private
+const getIngredienteById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    const ingrediente = await Ingrediente.findById(id);
+
+    if (!ingrediente) {
+      return res.status(404).json({
+        success: false,
+        message: 'Ingrediente não encontrado'
+      });
+    }
+
+    res.json({
+      success: true,
+      data: { ingrediente }
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
 // @desc    Criar ingrediente
 // @route   POST /api/ingredientes
 // @access  Private
@@ -165,6 +191,7 @@ const updateIngredienteStatus = async (req, res, next) => {
 
 module.exports = {
   getIngredientes,
+  getIngredienteById,
   createIngrediente,
   updateIngrediente,
   updateIngredienteStatus

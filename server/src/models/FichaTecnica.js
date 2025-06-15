@@ -5,43 +5,11 @@ const mongoose = require('mongoose');
  * @swagger
  * components:
  *   schemas:
- *     IngredienteFicha:
- *       type: object
- *       required:
- *         - ingrediente_id
- *         - nome
- *         - quantidade_usada
- *         - unidade
- *         - preco_unitario
- *         - peso_compra
- *         - fator_correcao
- *       properties:
- *         ingrediente_id:
- *           type: string
- *         nome:
- *           type: string
- *         quantidade_usada:
- *           type: number
- *         unidade:
- *           type: string
- *         preco_unitario:
- *           type: number
- *         peso_compra:
- *           type: number
- *         fator_correcao:
- *           type: number
- *         custo_calculado:
- *           type: number
- *     
  *     FichaTecnica:
  *       type: object
  *       required:
  *         - nome_receita
  *         - ingredientes
- *         - gas_energia
- *         - embalagem
- *         - mao_obra
- *         - outros
  *         - rendimento
  *         - unidade_rendimento
  *         - margem_lucro
@@ -50,22 +18,40 @@ const mongoose = require('mongoose');
  *           type: string
  *         nome_receita:
  *           type: string
+ *           description: Nome da receita
  *         ingredientes:
  *           type: array
  *           items:
- *             $ref: '#/components/schemas/IngredienteFicha'
- *         gas_energia:
- *           type: number
- *         embalagem:
- *           type: number
- *         mao_obra:
- *           type: number
- *         outros:
- *           type: number
+ *             type: object
+ *             properties:
+ *               ingrediente_id:
+ *                 type: string
+ *               quantidade_usada:
+ *                 type: number
+ *               preco_unitario:
+ *                 type: number
+ *               peso_compra:
+ *                 type: number
+ *               fator_correcao:
+ *                 type: number
+ *               custo_calculado:
+ *                 type: number
  *         rendimento:
  *           type: number
  *         unidade_rendimento:
  *           type: string
+ *         gas_energia:
+ *           type: number
+ *           default: 0
+ *         embalagem:
+ *           type: number
+ *           default: 0
+ *         mao_obra:
+ *           type: number
+ *           default: 0
+ *         outros:
+ *           type: number
+ *           default: 0
  *         margem_lucro:
  *           type: number
  *         custo_total:
@@ -74,91 +60,53 @@ const mongoose = require('mongoose');
  *           type: number
  *         preco_venda_sugerido:
  *           type: number
+ *         modo_preparo:
+ *           type: string
+ *         observacoes:
+ *           type: string
  *         ativo:
  *           type: boolean
+ *           default: true
  */
 
-const ingredienteFichaSchema = new mongoose.Schema({
-  ingrediente_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Ingrediente',
-    required: [true, 'ID do ingrediente é obrigatório']
-  },
-  nome: {
-    type: String,
-    required: [true, 'Nome do ingrediente é obrigatório']
-  },
-  quantidade_usada: {
-    type: Number,
-    required: [true, 'Quantidade usada é obrigatória'],
-    min: [0, 'Quantidade usada deve ser maior que zero']
-  },
-  unidade: {
-    type: String,
-    required: [true, 'Unidade é obrigatória']
-  },
-  preco_unitario: {
-    type: Number,
-    required: [true, 'Preço unitário é obrigatório'],
-    min: [0, 'Preço unitário deve ser maior que zero']
-  },
-  peso_compra: {
-    type: Number,
-    required: [true, 'Peso de compra é obrigatório'],
-    min: [0, 'Peso de compra deve ser maior que zero']
-  },
-  fator_correcao: {
-    type: Number,
-    required: [true, 'Fator de correção é obrigatório'],
-    min: [0, 'Fator de correção deve ser maior que zero']
-  },
-  custo_calculado: {
-    type: Number,
-    default: 0
-  }
-});
-
-const fichaTecnicaSchema = new mongoose.Schema({
+const fichaSchema = new mongoose.Schema({
   nome_receita: {
     type: String,
     required: [true, 'Nome da receita é obrigatório'],
     trim: true,
     maxlength: [200, 'Nome da receita não pode ter mais de 200 caracteres']
   },
-  ingredientes: {
-    type: [ingredienteFichaSchema],
-    required: [true, 'Pelo menos um ingrediente é obrigatório'],
-    validate: {
-      validator: function(v) {
-        return v && v.length > 0;
-      },
-      message: 'Pelo menos um ingrediente é obrigatório'
+  ingredientes: [{
+    ingrediente_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Ingrediente',
+      required: true
+    },
+    quantidade_usada: {
+      type: Number,
+      required: [true, 'Quantidade usada é obrigatória'],
+      min: [0, 'Quantidade deve ser maior que zero']
+    },
+    preco_unitario: {
+      type: Number,
+      required: [true, 'Preço unitário é obrigatório'],
+      min: [0, 'Preço deve ser maior que zero']
+    },
+    peso_compra: {
+      type: Number,
+      required: [true, 'Peso de compra é obrigatório'],
+      min: [0, 'Peso deve ser maior que zero']
+    },
+    fator_correcao: {
+      type: Number,
+      required: [true, 'Fator de correção é obrigatório'],
+      min: [0, 'Fator de correção deve ser maior que zero']
+    },
+    custo_calculado: {
+      type: Number,
+      default: 0
     }
-  },
-  gas_energia: {
-    type: Number,
-    required: [true, 'Custo de gás/energia é obrigatório'],
-    min: [0, 'Custo de gás/energia não pode ser negativo'],
-    default: 0
-  },
-  embalagem: {
-    type: Number,
-    required: [true, 'Custo de embalagem é obrigatório'],
-    min: [0, 'Custo de embalagem não pode ser negativo'],
-    default: 0
-  },
-  mao_obra: {
-    type: Number,
-    required: [true, 'Custo de mão de obra é obrigatório'],
-    min: [0, 'Custo de mão de obra não pode ser negativo'],
-    default: 0
-  },
-  outros: {
-    type: Number,
-    required: [true, 'Outros custos é obrigatório'],
-    min: [0, 'Outros custos não pode ser negativo'],
-    default: 0
-  },
+  }],
   rendimento: {
     type: Number,
     required: [true, 'Rendimento é obrigatório'],
@@ -169,10 +117,30 @@ const fichaTecnicaSchema = new mongoose.Schema({
     required: [true, 'Unidade de rendimento é obrigatória'],
     trim: true
   },
+  gas_energia: {
+    type: Number,
+    default: 0,
+    min: [0, 'Valor deve ser maior ou igual a zero']
+  },
+  embalagem: {
+    type: Number,
+    default: 0,
+    min: [0, 'Valor deve ser maior ou igual a zero']
+  },
+  mao_obra: {
+    type: Number,
+    default: 0,
+    min: [0, 'Valor deve ser maior ou igual a zero']
+  },
+  outros: {
+    type: Number,
+    default: 0,
+    min: [0, 'Valor deve ser maior ou igual a zero']
+  },
   margem_lucro: {
     type: Number,
     required: [true, 'Margem de lucro é obrigatória'],
-    min: [0, 'Margem de lucro não pode ser negativa']
+    min: [0, 'Margem de lucro deve ser maior ou igual a zero']
   },
   custo_total: {
     type: Number,
@@ -186,6 +154,14 @@ const fichaTecnicaSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
+  modo_preparo: {
+    type: String,
+    trim: true
+  },
+  observacoes: {
+    type: String,
+    trim: true
+  },
   ativo: {
     type: Boolean,
     default: true
@@ -195,7 +171,8 @@ const fichaTecnicaSchema = new mongoose.Schema({
 });
 
 // Índices para melhor performance
-fichaTecnicaSchema.index({ nome_receita: 'text' });
-fichaTecnicaSchema.index({ ativo: 1 });
+fichaSchema.index({ nome_receita: 'text' });
+fichaSchema.index({ ativo: 1 });
+fichaSchema.index({ createdAt: -1 });
 
-module.exports = mongoose.model('FichaTecnica', fichaTecnicaSchema);
+module.exports = mongoose.model('FichaTecnica', fichaSchema);

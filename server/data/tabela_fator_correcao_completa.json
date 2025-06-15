@@ -1,0 +1,143 @@
+
+[
+  {
+    "alimento": "Abacate",
+    "categoria": "Frutas e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.64
+  },
+  {
+    "alimento": "Abacaxi",
+    "categoria": "Frutas e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.41
+  },
+  {
+    "alimento": "Açúcar Cristal",
+    "categoria": "Açúcares e Produtos de Confeitaria",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Açúcar Refinado",
+    "categoria": "Açúcares e Produtos de Confeitaria",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Alface",
+    "categoria": "Verduras, Hortaliças e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.50
+  },
+  {
+    "alimento": "Alho",
+    "categoria": "Temperos e Condimentos",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.16
+  },
+  {
+    "alimento": "Arroz Branco",
+    "categoria": "Cereais e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.04
+  },
+  {
+    "alimento": "Batata",
+    "categoria": "Verduras, Hortaliças e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.20
+  },
+  {
+    "alimento": "Carne Bovina - Alcatra",
+    "categoria": "Carnes e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.12
+  },
+  {
+    "alimento": "Cebola",
+    "categoria": "Verduras, Hortaliças e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.11
+  },
+  {
+    "alimento": "Cenoura",
+    "categoria": "Verduras, Hortaliças e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.14
+  },
+  {
+    "alimento": "Farinha de Trigo",
+    "categoria": "Cereais e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Feijão Preto",
+    "categoria": "Leguminosas",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Frango - Peito",
+    "categoria": "Carnes e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.18
+  },
+  {
+    "alimento": "Leite Integral",
+    "categoria": "Leite e Derivados",
+    "peso": 1000,
+    "unidade": "ml",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Óleo de Soja",
+    "categoria": "Gorduras e Óleos",
+    "peso": 1000,
+    "unidade": "ml",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Ovo de Galinha",
+    "categoria": "Ovos e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.10
+  },
+  {
+    "alimento": "Queijo Mussarela",
+    "categoria": "Leite e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Sal Refinado",
+    "categoria": "Temperos e Condimentos",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.0
+  },
+  {
+    "alimento": "Tomate",
+    "categoria": "Verduras, Hortaliças e Derivados",
+    "peso": 1000,
+    "unidade": "g",
+    "fator_correcao": 1.09
+  }
+]
