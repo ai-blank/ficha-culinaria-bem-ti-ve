@@ -204,33 +204,20 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                     <FormLabel>Peso/Quantidade</FormLabel>
                     <FormControl>
                       <Input
-                        type="number"
-                        step="0.01"
-                        min="0"
-                        placeholder="1.0"
+                        placeholder="Ex: 1.0"
                         {...field}
                         value={field.value || ''}
                         onChange={(e) => {
                           const value = e.target.value;
-                          if (value === '' || /^\d*\.?\d*$/.test(value)) {
-                            field.onChange(value === '' ? 0 : parseFloat(value));
-                          }
-                        }}
-                        onKeyDown={(e) => {
-                          // Permitir: backspace, delete, tab, escape, enter, ponto decimal
-                          if ([8, 9, 27, 13, 46, 190].indexOf(e.keyCode) !== -1 ||
-                              // Permitir: Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
-                              (e.keyCode === 65 && e.ctrlKey) ||
-                              (e.keyCode === 67 && e.ctrlKey) ||
-                              (e.keyCode === 86 && e.ctrlKey) ||
-                              (e.keyCode === 88 && e.ctrlKey) ||
-                              // Permitir: home, end, left, right
-                              (e.keyCode >= 35 && e.keyCode <= 39)) {
-                            return;
-                          }
-                          // Bloquear se não for um número
-                          if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-                            e.preventDefault();
+                          // Permitir que o usuário digite qualquer coisa
+                          if (value === '') {
+                            field.onChange(0);
+                          } else {
+                            // Tentar converter para número, mas permitir texto temporário
+                            const numValue = parseFloat(value);
+                            if (!isNaN(numValue)) {
+                              field.onChange(numValue);
+                            }
                           }
                         }}
                       />
