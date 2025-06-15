@@ -21,10 +21,20 @@ connectDB();
 
 // Middleware de segurança
 app.use(helmet());
-app.use(cors({
+
+// CORS configurado com logs
+const corsOptions = {
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true
-}));
+};
+
+app.use(cors(corsOptions));
+
+// Log para debug de CORS
+app.use((req, res, next) => {
+  console.log(`📡 ${req.method} ${req.path} - Origin: ${req.get('Origin')}`);
+  next();
+});
 
 // Rate limiting
 const limiter = rateLimit({
@@ -72,6 +82,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
   console.log(`📚 Documentação disponível em http://localhost:${PORT}/api-docs`);
+  console.log(`🌍 CORS configurado para: ${corsOptions.origin}`);
 });
 
 module.exports = app;

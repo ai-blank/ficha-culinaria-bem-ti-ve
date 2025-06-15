@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft, Mail } from 'lucide-react';
+import { api } from '@/lib/api';
 
 interface ForgotPasswordFormProps {
   onBack: () => void;
@@ -21,19 +22,21 @@ const ForgotPasswordForm: React.FC<ForgotPasswordFormProps> = ({ onBack }) => {
     setLoading(true);
 
     try {
-      // Simular envio de email
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      console.log('📧 Enviando email para:', email);
+      await api.forgotPassword(email);
       
       setSent(true);
       toast({
         title: "Email enviado!",
         description: "Verifique sua caixa de entrada para recuperar sua senha.",
       });
-    } catch (error) {
+      console.log('✅ Email de recuperação enviado com sucesso!');
+    } catch (error: any) {
+      console.error('❌ Erro ao enviar email:', error);
       toast({
         variant: "destructive",
         title: "Erro ao enviar email",
-        description: "Não foi possível enviar o email. Tente novamente.",
+        description: error.message || "Não foi possível enviar o email. Tente novamente.",
       });
     } finally {
       setLoading(false);

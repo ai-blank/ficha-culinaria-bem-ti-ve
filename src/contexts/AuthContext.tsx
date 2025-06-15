@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export interface User {
@@ -37,121 +36,62 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simular verificação de token ao carregar
   useEffect(() => {
     const token = localStorage.getItem('auth_token');
-    const userData = localStorage.getItem('user_data');
-    
-    if (token && userData) {
-      try {
-        setUser(JSON.parse(userData));
-      } catch (error) {
-        console.error('Erro ao recuperar dados do usuário:', error);
-        localStorage.removeItem('auth_token');
-        localStorage.removeItem('user_data');
+    if (token) {
+      const savedUser = localStorage.getItem('user_data');
+      if (savedUser) {
+        setUser(JSON.parse(savedUser));
       }
     }
     setIsLoading(false);
   }, []);
 
   const login = async (email: string, password: string): Promise<boolean> => {
-    setIsLoading(true);
     try {
-      // Simular API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log('🔑 Tentando fazer login...');
+      const response = await api.login(email, password);
       
-      // Simular usuários de exemplo
-      const mockUsers = [
-        {
-          id: '1',
-          name: 'Admin Bem Ti Vê',
-          email: 'admin@bemtive.com',
-          password: 'Admin123!',
-          company: 'Bem Ti Vê',
-          phone: '(11) 99999-9999',
-          admin: true,
-          active: true,
-          emailVerified: true,
-          createdAt: '2024-01-01T00:00:00Z'
-        },
-        {
-          id: '2',
-          name: 'Chef Maria Silva',
-          email: 'maria@bemtive.com',
-          password: 'Chef123!',
-          company: 'Restaurante da Maria',
-          phone: '(11) 88888-8888',
-          admin: false,
-          active: true,
-          emailVerified: true,
-          createdAt: '2024-01-02T00:00:00Z'
-        }
-      ];
-
-      const foundUser = mockUsers.find(u => u.email === email && u.password === password);
-      
-      if (foundUser && foundUser.active) {
-        const { password: _, ...userWithoutPassword } = foundUser;
-        const token = 'mock_jwt_token_' + Date.now();
+      if (response.success) {
+        const userData = response.data.user;
+        const token = response.data.token;
         
+        setUser(userData);
         localStorage.setItem('auth_token', token);
-        localStorage.setItem('user_data', JSON.stringify(userWithoutPassword));
-        setUser(userWithoutPassword);
+        localStorage.setItem('user_data', JSON.stringify(userData));
+        
+        console.log('✅ Login bem-sucedido!');
         return true;
       }
-      
       return false;
     } catch (error) {
-      console.error('Erro no login:', error);
+      console.error('❌ Erro no login:', error);
       return false;
-    } finally {
-      setIsLoading(false);
     }
   };
 
-  const register = async (data: RegisterData): Promise<boolean> => {
-    setIsLoading(true);
+  const register = async (userData: RegisterData): Promise<boolean> => {
     try {
-      // Simular API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log('📝 Tentando registrar usuário...');
+      const response = await api.register(userData);
       
-      // Validações
-      if (data.password !== data.confirmPassword) {
-        return false;
+      if (response.success) {
+        console.log('✅ Registro bem-sucedido!');
+        // Não fazer login automático, apenas registrar
+        return true;
       }
-      
-      if (data.password.length < 8) {
-        return false;
-      }
-
-      // Simular criação de usuário
-      const newUser: User = {
-        id: Date.now().toString(),
-        name: data.name,
-        email: data.email,
-        company: data.company,
-        phone: data.phone,
-        admin: false,
-        active: true,
-        emailVerified: false, // Precisaria confirmar por email
-        createdAt: new Date().toISOString()
-      };
-
-      // Para demo, vamos simular que o email foi verificado
-      newUser.emailVerified = true;
-      
-      const token = 'mock_jwt_token_' + Date.now();
-      localStorage.setItem('auth_token', token);
-      localStorage.setItem('user_data', JSON.stringify(newUser));
-      setUser(newUser);
-      
-      return true;
-    } catch (error) {
-      console.error('Erro no registro:', error);
       return false;
-    } finally {
-      setIsLoading(false);
+    } catch (error) {
+      console.error('❌ Erro no registro:', error);
+      return false;
     }
+  };
+
+  const logout = () => {
+    setUser(null);
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('user_data');
+    console.log('👋 Logout realizado');
   };
 
   const updateProfile = async (data: Partial<User>): Promise<boolean> => {
@@ -173,12 +113,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const logout = () => {
-    localStorage.removeItem('auth_token');
-    localStorage.removeItem('user_data');
-    setUser(null);
   };
 
   return (
