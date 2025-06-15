@@ -209,14 +209,14 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                         value={field.value || ''}
                         onChange={(e) => {
                           const value = e.target.value;
-                          // Permitir que o usuário digite qualquer coisa
+                          // Permitir que o usuário digite qualquer coisa, incluindo valores que começam com 0
                           if (value === '') {
-                            field.onChange(0);
+                            field.onChange('');
                           } else {
-                            // Tentar converter para número, mas permitir texto temporário
+                            // Permitir texto temporário durante a digitação
                             const numValue = parseFloat(value);
-                            if (!isNaN(numValue)) {
-                              field.onChange(numValue);
+                            if (!isNaN(numValue) || value.match(/^0\.?\d*$/) || value === '0') {
+                              field.onChange(value);
                             }
                           }
                         }}
