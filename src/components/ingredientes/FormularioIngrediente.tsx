@@ -36,14 +36,14 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
   const { toast } = useToast();
   const {
     categorias,
-    fatoresCorrecao,
     criarIngrediente,
     verificarNomeDuplicado,
-    extrairUnidade,
-    buscarFatorCorrecao,
+    buscarAlimentosNaBase,
+    obterDadosAlimentoDaBase,
   } = useIngredientes();
 
-  const [alimentoSelecionado, setAlimentoSelecionado] = useState('');
+  const [termoBusca, setTermoBusca] = useState('');
+  const [alimentosFiltrados, setAlimentosFiltrados] = useState<any[]>([]);
 
   const form = useForm<NovoIngredienteFormData>({
     resolver: zodResolver(formSchema),
@@ -60,17 +60,30 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
     },
   });
 
-  // Auto-preenchimento baseado no alimento selecionado
+  // Buscar alimentos conforme o usuário digita
   useEffect(() => {
-    if (alimentoSelecionado) {
-      const { alimento, unidade } = extrairUnidade(alimentoSelecionado);
-      const fatorCorrecao = buscarFatorCorrecao(alimento);
-      
-      form.setValue('alimento', alimento);
-      form.setValue('unidade', unidade);
-      form.setValue('fator_correcao', fatorCorrecao);
+    if (termoBusca) {
+      const resultados = buscarAlimentosNaBase(termoBusca);
+      setAlimentosFiltrados(resultados);
+    } else {
+      setAlimentosFiltrados([]);
     }
-  }, [alimentoSelecionado, form, extrairUnidade, buscarFatorCorrecao]);
+  }, [termoBusca, buscarAlimentosNaBase]);
+
+  // Preencher campos automaticamente quando um alimento da base é selecionado
+  const handleSelecionarAlimentoDaBase = (nomeAlimento: string) => {
+    const dadosAlimento = obterDadosAlimentoDaBase(nomeAlimento);
+    
+    if (dadosAlimento) {
+      form.setValue('alimento', dadosAlimento.alimento);
+      form.setValue('categoria', dadosAlimento.categoria);
+      form.setValue('unidade', dadosAlimento.unidade);
+      form.setValue('fator_correcao', dadosAlimento.fator_correcao);
+    }
+    
+    setTermoBusca('');
+    setAlimentosFiltrados([]);
+  };
 
   const onSubmit = (dados: NovoIngredienteFormData) => {
     if (verificarNomeDuplicado(dados.alimento)) {
@@ -109,23 +122,35 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            {/* Seleção rápida baseada na tabela */}
+            {/* Busca na base de dados */}
             <div className="space-y-2">
               <label className="text-sm font-medium">
                 Buscar na base de dados (opcional)
               </label>
-              <Select onValueChange={setAlimentoSelecionado}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Selecione um alimento da base..." />
-                </SelectTrigger>
-                <SelectContent>
-                  {fatoresCorrecao.map((item, index) => (
-                    <SelectItem key={index} value={item.alimento}>
-                      {item.alimento}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <div className="relative">
+                <Input
+                  placeholder="Digite para buscar alimentos..."
+                  value={termoBusca}
+                  onChange={(e) => setTermoBusca(e.target.value)}
+                />
+                {alimentosFiltrados.length > 0 && (
+                  <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-48 overflow-y-auto">
+                    {alimentosFiltrados.map((alimento, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        className="w-full px-3 py-2 text-left hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                        onClick={() => handleSelecionarAlimentoDaBase(alimento.alimento)}
+                      >
+                        <div className="font-medium">{alimento.alimento}</div>
+                        <div className="text-sm text-gray-500">
+                          {alimento.categoria} - {alimento.unidade} - FC: {alimento.fator_correcao}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Campos principais */}
@@ -150,7 +175,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Categoria</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} value={field.value}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Selecione a categoria" />
@@ -197,7 +222,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Unidade</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} value={field.value}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Unidade" />
