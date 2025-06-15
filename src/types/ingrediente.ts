@@ -2,7 +2,7 @@
 export interface Ingrediente {
   id: string;
   alimento: string;
-  peso: number;
+  peso: string;
   preco: number;
   unidade: string;
   fator_correcao: number;
@@ -21,12 +21,12 @@ export interface FatorCorrecaoData {
   percentual_aproveitamento: number;
   fator_correcao: number;
   categoria?: string;
-  peso?: number;
+  peso?: string;
 }
 
 export interface NovoIngredienteFormData {
   alimento: string;
-  peso: number;
+  peso: string;
   preco: number;
   unidade: string;
   fator_correcao: number;

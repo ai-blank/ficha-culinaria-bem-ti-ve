@@ -14,7 +14,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
   alimento: z.string().min(2, 'Nome do alimento é obrigatório'),
-  peso: z.number().min(0.01, 'Peso deve ser maior que 0'),
+  peso: z.string().min(1, 'Peso deve ser informado'),
   preco: z.number().min(0.01, 'Preço deve ser maior que 0'),
   unidade: z.string().min(1, 'Unidade é obrigatória'),
   fator_correcao: z.number().min(0.1, 'Fator de correção deve ser maior que 0'),
@@ -49,7 +49,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
     resolver: zodResolver(formSchema),
     defaultValues: {
       alimento: '',
-      peso: 0,
+      peso: '',
       preco: 0,
       unidade: '',
       fator_correcao: 1.0,
@@ -79,6 +79,9 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
       form.setValue('categoria', dadosAlimento.categoria);
       form.setValue('unidade', dadosAlimento.unidade);
       form.setValue('fator_correcao', dadosAlimento.fator_correcao);
+      if (dadosAlimento.peso) {
+        form.setValue('peso', dadosAlimento.peso);
+      }
     }
     
     setTermoBusca('');
@@ -206,20 +209,6 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                       <Input
                         placeholder="Ex: 1.0"
                         {...field}
-                        value={field.value || ''}
-                        onChange={(e) => {
-                          const value = e.target.value;
-                          // Permitir que o usuário digite qualquer coisa, incluindo valores que começam com 0
-                          if (value === '') {
-                            field.onChange('');
-                          } else {
-                            // Permitir texto temporário durante a digitação
-                            const numValue = parseFloat(value);
-                            if (!isNaN(numValue) || value.match(/^0\.?\d*$/) || value === '0') {
-                              field.onChange(value);
-                            }
-                          }
-                        }}
                       />
                     </FormControl>
                     <FormMessage />

@@ -6,7 +6,7 @@ export interface IngredienteFicha {
   quantidade_usada: number;
   unidade: string;
   preco_unitario: number;
-  peso_compra: number;
+  peso_compra: string;
   fator_correcao: number;
   custo_calculado?: number;
 }

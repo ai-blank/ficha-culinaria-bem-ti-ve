@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -25,7 +24,7 @@ const formSchema = z.object({
     quantidade_usada: z.number().min(0.01, 'Quantidade deve ser maior que 0'),
     unidade: z.string(),
     preco_unitario: z.number(),
-    peso_compra: z.number(),
+    peso_compra: z.string(),
     fator_correcao: z.number(),
   })).min(1, 'Adicione pelo menos um ingrediente'),
   gas_energia: z.number().min(0, 'Valor deve ser positivo'),
