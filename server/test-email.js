@@ -12,7 +12,7 @@ async function testEmail() {
     console.log('- From:', process.env.EMAIL_FROM);
     
     await sendEmail({
-      email: 'seu-email@exemplo.com', // Substitua pelo seu email
+      email: 'contato.alexblank@gmail.com', // Substitua pelo seu email
       subject: 'Teste de Email - Bem Ti Vê',
       message: 'Este é um teste do servidor de email! Se você recebeu esta mensagem, o servidor está funcionando corretamente.',
       html: `
