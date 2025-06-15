@@ -21,6 +21,7 @@ export interface FatorCorrecaoData {
   percentual_aproveitamento: number;
   fator_correcao: number;
   categoria?: string;
+  peso?: number;
 }
 
 export interface NovoIngredienteFormData {
