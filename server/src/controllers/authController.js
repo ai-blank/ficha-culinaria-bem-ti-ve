@@ -39,12 +39,13 @@ const register = async (req, res, next) => {
     // Gerar token de verificação
     const verificationToken = crypto.randomBytes(20).toString('hex');
 
-    // Criar usuário
+    // Criar usuário INATIVO até confirmar email
     const user = await User.create({
       nome,
       email,
       password,
-      tokenVerificacao: verificationToken
+      tokenVerificacao: verificationToken,
+      ativo: false // Usuário criado como INATIVO
     });
 
     // Enviar email de verificação
@@ -87,7 +88,8 @@ const register = async (req, res, next) => {
           nome: user.nome,
           email: user.email,
           admin: user.admin,
-          emailVerificado: user.emailVerificado
+          emailVerificado: user.emailVerificado,
+          ativo: user.ativo // Será false
         }
       }
     });
@@ -127,7 +129,7 @@ const login = async (req, res, next) => {
     if (!user.ativo) {
       return res.status(401).json({
         success: false,
-        message: 'Conta desativada. Entre em contato com o administrador.'
+        message: 'Conta não ativada. Verifique seu email para ativar a conta.'
       });
     }
 
@@ -177,13 +179,17 @@ const confirmEmail = async (req, res, next) => {
       });
     }
 
+    // Ativar usuário e marcar email como verificado
     user.emailVerificado = true;
+    user.ativo = true; // ATIVAR usuário após confirmação
     user.tokenVerificacao = undefined;
     await user.save();
 
+    console.log(`✅ Usuário ${user.email} ativado com sucesso!`);
+
     res.json({
       success: true,
-      message: 'Email verificado com sucesso'
+      message: 'Email verificado e conta ativada com sucesso'
     });
 
   } catch (error) {

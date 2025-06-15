@@ -29,8 +29,8 @@ const bcrypt = require('bcryptjs');
  *           description: Se o usuário é administrador
  *         ativo:
  *           type: boolean
- *           default: true
- *           description: Se o usuário está ativo
+ *           default: false
+ *           description: Se o usuário está ativo (só fica true após confirmar email)
  *         emailVerificado:
  *           type: boolean
  *           default: false
@@ -72,7 +72,7 @@ const userSchema = new mongoose.Schema({
   },
   ativo: {
     type: Boolean,
-    default: true
+    default: false // Usuário criado como INATIVO por padrão
   },
   emailVerificado: {
     type: Boolean,
