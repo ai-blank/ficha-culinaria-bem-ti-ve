@@ -48,7 +48,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
   onCancel,
 }) => {
   const { toast } = useToast();
-  const { ingredientes } = useIngredientes();
+  const { ingredientes, loading: loadingIngredientes } = useIngredientes();
   const {
     criarFichaTecnica,
     atualizarFichaTecnica,
@@ -91,8 +91,16 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
   }, [form]);
 
   const adicionarIngrediente = (ingredienteId: string) => {
+    console.log('🔍 Adicionando ingrediente:', ingredienteId);
+    console.log('📋 Ingredientes disponíveis:', ingredientes);
+    
     const ingrediente = ingredientes.find(ing => ing.id === ingredienteId);
-    if (!ingrediente) return;
+    if (!ingrediente) {
+      console.error('❌ Ingrediente não encontrado:', ingredienteId);
+      return;
+    }
+
+    console.log('✅ Ingrediente encontrado:', ingrediente);
 
     const novoIngrediente: IngredienteFicha = {
       id: Date.now().toString(),
@@ -106,6 +114,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     };
 
     append(novoIngrediente);
+    console.log('✅ Ingrediente adicionado à ficha:', novoIngrediente);
   };
 
   const calcular = () => {
@@ -234,6 +243,13 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     return 'Calcular e salvar';
   };
 
+  // Debug dos ingredientes
+  console.log('🔍 Estado dos ingredientes:', {
+    total: ingredientes.length,
+    loading: loadingIngredientes,
+    ingredientes: ingredientes.map(ing => ({ id: ing.id, nome: ing.alimento, ativo: ing.ativo }))
+  });
+
   return (
     <div className="space-y-6">
       <Card>
@@ -264,20 +280,35 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-semibold">Ingredientes</h3>
-                  <Select onValueChange={adicionarIngrediente}>
-                    <SelectTrigger className="w-64">
-                      <SelectValue placeholder="+ Adicionar ingrediente" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {ingredientes
-                        .filter(ing => ing.ativo)
-                        .map((ingrediente) => (
-                          <SelectItem key={ingrediente.id} value={ingrediente.id}>
-                            {ingrediente.alimento}
+                  <div className="flex items-center gap-2">
+                    {loadingIngredientes && (
+                      <span className="text-sm text-muted-foreground">Carregando...</span>
+                    )}
+                    <Select onValueChange={adicionarIngrediente}>
+                      <SelectTrigger className="w-64">
+                        <SelectValue placeholder="+ Adicionar ingrediente" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {loadingIngredientes ? (
+                          <SelectItem key="loading" value="loading" disabled>
+                            Carregando ingredientes...
                           </SelectItem>
-                        ))}
-                    </SelectContent>
-                  </Select>
+                        ) : ingredientes.length === 0 ? (
+                          <SelectItem key="empty" value="empty" disabled>
+                            Nenhum ingrediente encontrado
+                          </SelectItem>
+                        ) : (
+                          ingredientes
+                            .filter(ing => ing.ativo)
+                            .map((ingrediente) => (
+                              <SelectItem key={ingrediente.id} value={ingrediente.id}>
+                                {ingrediente.alimento}
+                              </SelectItem>
+                            ))
+                        )}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
 
                 {fields.map((field, index) => (
