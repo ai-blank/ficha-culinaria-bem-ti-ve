@@ -1,4 +1,3 @@
-
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
@@ -318,6 +317,85 @@ const resetPassword = async (req, res, next) => {
   }
 };
 
+// @desc    Reenviar email de confirmação
+// @route   POST /api/auth/resend-confirmation
+// @access  Public
+const resendConfirmation = async (req, res, next) => {
+  try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        message: 'Email inválido',
+        errors: errors.array()
+      });
+    }
+
+    const { email } = req.body;
+
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'Usuário não encontrado'
+      });
+    }
+
+    if (user.emailVerificado) {
+      return res.status(400).json({
+        success: false,
+        message: 'Email já foi verificado'
+      });
+    }
+
+    // Gerar novo token de verificação
+    const verificationToken = crypto.randomBytes(20).toString('hex');
+    user.tokenVerificacao = verificationToken;
+    await user.save();
+
+    // Enviar email de verificação
+    try {
+      const verificationUrl = `${process.env.FRONTEND_URL}/confirm-email?token=${verificationToken}`;
+      await sendEmail({
+        email: user.email,
+        subject: '🎉 Confirmação de Email - Bem Ti Vê',
+        message: `Olá ${user.nome}!\n\nConforme solicitado, aqui está um novo link para verificar seu email no Bem Ti Vê.\n\nClique no botão abaixo para ativar sua conta:`,
+        html: `
+          <p>Olá <strong>${user.nome}</strong>!</p>
+          
+          <p>🎉 Conforme solicitado, aqui está um novo link para <strong>verificar seu email</strong> no Bem Ti Vê!</p>
+          
+          <p>Para começar a usar todas as funcionalidades do sistema, você só precisa clicar no botão abaixo:</p>
+          
+          <ul style="color: #555; line-height: 1.8;">
+            <li>🍽️ Criar e gerenciar fichas técnicas de pratos</li>
+            <li>📊 Controlar custos e ingredientes</li>
+            <li>📈 Otimizar sua gestão culinária</li>
+            <li>🎯 Aumentar a eficiência da sua cozinha</li>
+          </ul>
+        `,
+        buttonText: 'Verificar Email e Começar',
+        buttonUrl: verificationUrl
+      });
+
+      res.json({
+        success: true,
+        message: 'Email de confirmação reenviado com sucesso'
+      });
+    } catch (emailError) {
+      console.error('Erro ao enviar email:', emailError);
+      return res.status(500).json({
+        success: false,
+        message: 'Erro ao enviar email de confirmação'
+      });
+    }
+
+  } catch (error) {
+    next(error);
+  }
+};
+
 // @desc    Obter dados do usuário atual
 // @route   GET /api/auth/me
 // @access  Private
@@ -350,5 +428,6 @@ module.exports = {
   confirmEmail,
   forgotPassword,
   resetPassword,
+  resendConfirmation,
   getMe
 };

@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import LoginForm from '@/components/auth/LoginForm';
 import RegisterForm from '@/components/auth/RegisterForm';
 import ForgotPasswordForm from '@/components/auth/ForgotPasswordForm';
+import ResendConfirmationForm from '@/components/auth/ResendConfirmationForm';
 
-type FormType = 'login' | 'register' | 'forgot';
+type FormType = 'login' | 'register' | 'forgot' | 'resend';
 
 const AuthPage: React.FC = () => {
   const [currentForm, setCurrentForm] = useState<FormType>('login');
@@ -16,6 +17,7 @@ const AuthPage: React.FC = () => {
           <LoginForm
             onToggleForm={() => setCurrentForm('register')}
             onForgotPassword={() => setCurrentForm('forgot')}
+            onResendConfirmation={() => setCurrentForm('resend')}
           />
         );
       case 'register':
@@ -27,6 +29,12 @@ const AuthPage: React.FC = () => {
       case 'forgot':
         return (
           <ForgotPasswordForm
+            onBack={() => setCurrentForm('login')}
+          />
+        );
+      case 'resend':
+        return (
+          <ResendConfirmationForm
             onBack={() => setCurrentForm('login')}
           />
         );

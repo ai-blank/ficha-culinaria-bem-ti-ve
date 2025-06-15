@@ -9,9 +9,10 @@ import { useToast } from '@/hooks/use-toast';
 interface LoginFormProps {
   onToggleForm: () => void;
   onForgotPassword: () => void;
+  onResendConfirmation: () => void;
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword }) => {
+const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword, onResendConfirmation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -105,6 +106,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
           className="block w-full text-bem-ti-ve-orange hover:text-bem-ti-ve-orange-dark text-sm transition-colors font-body"
         >
           Esqueceu sua senha?
+        </button>
+        
+        <button
+          type="button"
+          onClick={onResendConfirmation}
+          className="block w-full text-bem-ti-ve-orange hover:text-bem-ti-ve-orange-dark text-sm transition-colors font-body"
+        >
+          Não recebeu o email de confirmação?
         </button>
         
         <div className="text-sm text-gray-600 font-body">

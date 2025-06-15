@@ -68,5 +68,26 @@ export const api = {
     }
 
     return data;
+  },
+
+  async resendConfirmation(email: string) {
+    console.log('🔄 Reenviando confirmação para:', email);
+    
+    const response = await fetch(`${API_BASE_URL}/auth/resend-confirmation`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await response.json();
+    console.log('📧 Resposta do reenvio:', data);
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Erro ao reenviar confirmação');
+    }
+
+    return data;
   }
 };

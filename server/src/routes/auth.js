@@ -1,4 +1,3 @@
-
 const express = require('express');
 const { body } = require('express-validator');
 const authController = require('../controllers/authController');
@@ -106,6 +105,17 @@ router.post('/reset-password', [
   body('token').notEmpty().withMessage('Token é obrigatório'),
   body('password').isLength({ min: 6 }).withMessage('Senha deve ter pelo menos 6 caracteres')
 ], authController.resetPassword);
+
+/**
+ * @swagger
+ * /auth/resend-confirmation:
+ *   post:
+ *     summary: Reenvia email de confirmação
+ *     tags: [Autenticação]
+ */
+router.post('/resend-confirmation', [
+  body('email').isEmail().withMessage('Email inválido')
+], authController.resendConfirmation);
 
 /**
  * @swagger
