@@ -83,10 +83,15 @@ const sendEmail = async (options) => {
             color: #555;
             margin-bottom: 30px;
           }
+          .button-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px 0;
+          }
           .button {
             display: inline-block;
             background: linear-gradient(135deg, #f3ab6b 0%, #ec6d0b 100%);
-            color: white;
+            color: white !important;
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 8px;
@@ -94,9 +99,13 @@ const sendEmail = async (options) => {
             text-align: center;
             margin: 20px 0;
             transition: transform 0.2s ease;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
           }
           .button:hover {
             transform: translateY(-2px);
+            background: linear-gradient(135deg, #ec6d0b 0%, #d85a00 100%);
           }
           .footer {
             text-align: center;
@@ -139,8 +148,8 @@ const sendEmail = async (options) => {
             </div>
             
             ${buttonText && buttonUrl ? `
-              <div style="text-align: center;">
-                <a href="${buttonUrl}" class="button">${buttonText}</a>
+              <div class="button-container">
+                <a href="${buttonUrl}" class="button" style="color: white !important; text-decoration: none;">${buttonText}</a>
               </div>
             ` : ''}
             
