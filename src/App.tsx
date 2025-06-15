@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import AuthPage from "./pages/AuthPage";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import ConfirmEmailPage from "./pages/ConfirmEmailPage";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const AppContent = () => {
           path="/" 
           element={user ? <Dashboard /> : <AuthPage />} 
         />
+        <Route path="/confirm-email" element={<ConfirmEmailPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
