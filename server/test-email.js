@@ -39,7 +39,7 @@ async function testEmail() {
         </div>
       `,
       buttonText: 'Acessar Sistema',
-      buttonUrl: process.env.FRONTEND_URL || 'https://localhost:3000'
+      buttonUrl: process.env.FRONTEND_URL || 'https://localhost:8080'
     });
     
     console.log('✅ Email de teste enviado com sucesso!');

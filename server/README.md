@@ -59,7 +59,7 @@ EMAIL_PORT=587
 EMAIL_USER=seu_email@gmail.com
 EMAIL_PASS=sua_senha_ou_app_password
 EMAIL_FROM=noreply@fichaTecnica.com
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:8080
 ```
 
 3. **Inicie o servidor:**
