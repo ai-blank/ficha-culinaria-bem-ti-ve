@@ -24,42 +24,94 @@ app.use(helmet({
   crossOriginEmbedderPolicy: false,
 }));
 
-// CORS configurado com logs melhorados
+// CORS configurado com padrões dinâmicos
 const corsOptions = {
-  origin: [
-    'http://localhost:8080',
-    'https://cfa6ee5c-2b8a-424b-91c6-d147cfb1087e.lovableproject.com',
-    process.env.FRONTEND_URL || 'http://localhost:8080'
-  ],
+  origin: function (origin, callback) {
+    console.log(`🌍 Verificando origin: ${origin}`);
+    
+    // Permitir requests sem origin (ex: aplicações mobile ou Postman)
+    if (!origin) {
+      console.log('✅ Origin vazio - permitido');
+      return callback(null, true);
+    }
+
+    // Lista de origins permitidos
+    const allowedOrigins = [
+      'http://localhost:8080',
+      'https://cfa6ee5c-2b8a-424b-91c6-d147cfb1087e.lovableproject.com',
+      process.env.FRONTEND_URL || 'http://localhost:8080'
+    ];
+
+    // Verificar origins exatos
+    if (allowedOrigins.includes(origin)) {
+      console.log('✅ Origin exato encontrado - permitido');
+      return callback(null, true);
+    }
+
+    // Permitir qualquer subdomínio do Lovable
+    if (origin.includes('lovableproject.com') || origin.includes('lovable.app')) {
+      console.log('✅ Domínio Lovable detectado - permitido');
+      return callback(null, true);
+    }
+
+    // Permitir IPs locais na porta 8080 (ex: 192.168.x.x:8080)
+    const localIpPattern = /^https?:\/\/(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+):8080$/;
+    if (localIpPattern.test(origin)) {
+      console.log('✅ IP local detectado - permitido');
+      return callback(null, true);
+    }
+
+    console.log(`❌ Origin não permitido: ${origin}`);
+    callback(new Error('Não permitido pelo CORS'));
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With', 'Origin'],
   optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 
-// Log detalhado para debug de CORS
+// Middleware adicional para debug e configuração manual de headers
 app.use((req, res, next) => {
-  console.log(`📡 ${req.method} ${req.path}`);
-  console.log(`🌍 Origin: ${req.get('Origin')}`);
-  console.log(`🔑 Headers: ${JSON.stringify(req.headers)}`);
-  
-  // Adicionar headers CORS manualmente se necessário
   const origin = req.get('Origin');
-  if (corsOptions.origin.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept');
+  
+  console.log(`📡 ${req.method} ${req.path}`);
+  console.log(`🌍 Origin: ${origin}`);
+  console.log(`🔑 User-Agent: ${req.get('User-Agent')}`);
+  
+  // Configurar headers CORS manualmente para garantir compatibilidade
+  if (origin) {
+    // Verificar se o origin é permitido usando a mesma lógica do corsOptions
+    const allowedOrigins = [
+      'http://localhost:8080',
+      'https://cfa6ee5c-2b8a-424b-91c6-d147cfb1087e.lovableproject.com',
+      process.env.FRONTEND_URL || 'http://localhost:8080'
+    ];
+
+    const isAllowed = allowedOrigins.includes(origin) || 
+                     origin.includes('lovableproject.com') || 
+                     origin.includes('lovable.app') ||
+                     /^https?:\/\/(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+):8080$/.test(origin);
+
+    if (isAllowed) {
+      res.header('Access-Control-Allow-Origin', origin);
+      res.header('Access-Control-Allow-Credentials', 'true');
+      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+      res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept, Origin');
+      console.log(`✅ Headers CORS configurados para: ${origin}`);
+    } else {
+      console.log(`❌ Origin rejeitado nos headers: ${origin}`);
+    }
   }
   
+  // Responder a requisições OPTIONS
   if (req.method === 'OPTIONS') {
     console.log('🔄 Respondendo OPTIONS request');
-    res.sendStatus(200);
-  } else {
-    next();
+    return res.status(200).end();
   }
+  
+  next();
 });
 
 // Rate limiting
@@ -89,7 +141,7 @@ app.get('/api/health', (req, res) => {
     status: 'OK', 
     timestamp: new Date().toISOString(),
     environment: process.env.NODE_ENV,
-    cors: 'enabled'
+    cors: 'enabled with dynamic origins'
   });
 });
 
@@ -109,8 +161,10 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
   console.log(`📚 Documentação disponível em http://localhost:${PORT}/api-docs`);
-  console.log(`🌍 CORS configurado para:`);
-  corsOptions.origin.forEach(origin => console.log(`   - ${origin}`));
+  console.log(`🌍 CORS configurado dinamicamente para:`);
+  console.log(`   - localhost:8080`);
+  console.log(`   - Domínios Lovable (*.lovableproject.com, *.lovable.app)`);
+  console.log(`   - IPs locais na porta 8080 (192.168.x.x:8080, etc.)`);
 });
 
 module.exports = app;
