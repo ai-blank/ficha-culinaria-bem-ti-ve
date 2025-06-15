@@ -63,6 +63,7 @@ const getIngredientes = async (req, res, next) => {
     });
 
   } catch (error) {
+    console.error('❌ Erro ao listar ingredientes:', error);
     next(error);
   }
 };
@@ -89,6 +90,7 @@ const getIngredienteById = async (req, res, next) => {
     });
 
   } catch (error) {
+    console.error('❌ Erro ao buscar ingrediente:', error);
     next(error);
   }
 };
@@ -98,8 +100,11 @@ const getIngredienteById = async (req, res, next) => {
 // @access  Private
 const createIngrediente = async (req, res, next) => {
   try {
+    console.log('📝 Dados recebidos para criar ingrediente:', req.body);
+    
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
+      console.log('❌ Erros de validação:', errors.array());
       return res.status(400).json({
         success: false,
         message: 'Dados inválidos',
@@ -107,7 +112,20 @@ const createIngrediente = async (req, res, next) => {
       });
     }
 
+    // Verificar se o alimento já existe
+    const alimentoExistente = await Ingrediente.findOne({ 
+      alimento: { $regex: new RegExp(`^${req.body.alimento}$`, 'i') }
+    });
+
+    if (alimentoExistente) {
+      return res.status(400).json({
+        success: false,
+        message: 'Já existe um ingrediente com este nome'
+      });
+    }
+
     const ingrediente = await Ingrediente.create(req.body);
+    console.log('✅ Ingrediente criado com sucesso:', ingrediente);
 
     res.status(201).json({
       success: true,
@@ -116,6 +134,7 @@ const createIngrediente = async (req, res, next) => {
     });
 
   } catch (error) {
+    console.error('❌ Erro ao criar ingrediente:', error);
     next(error);
   }
 };
@@ -126,6 +145,7 @@ const createIngrediente = async (req, res, next) => {
 const updateIngrediente = async (req, res, next) => {
   try {
     const { id } = req.params;
+    console.log('📝 Atualizando ingrediente:', id, req.body);
 
     const ingrediente = await Ingrediente.findById(id);
     if (!ingrediente) {
@@ -135,11 +155,28 @@ const updateIngrediente = async (req, res, next) => {
       });
     }
 
+    // Se está alterando o nome, verificar duplicatas
+    if (req.body.alimento && req.body.alimento !== ingrediente.alimento) {
+      const alimentoExistente = await Ingrediente.findOne({ 
+        alimento: { $regex: new RegExp(`^${req.body.alimento}$`, 'i') },
+        _id: { $ne: id }
+      });
+
+      if (alimentoExistente) {
+        return res.status(400).json({
+          success: false,
+          message: 'Já existe um ingrediente com este nome'
+        });
+      }
+    }
+
     const updatedIngrediente = await Ingrediente.findByIdAndUpdate(
       id,
       req.body,
       { new: true, runValidators: true }
     );
+
+    console.log('✅ Ingrediente atualizado:', updatedIngrediente);
 
     res.json({
       success: true,
@@ -148,6 +185,7 @@ const updateIngrediente = async (req, res, next) => {
     });
 
   } catch (error) {
+    console.error('❌ Erro ao atualizar ingrediente:', error);
     next(error);
   }
 };
@@ -178,6 +216,8 @@ const updateIngredienteStatus = async (req, res, next) => {
     ingrediente.ativo = ativo;
     await ingrediente.save();
 
+    console.log('✅ Status do ingrediente atualizado:', ingrediente);
+
     res.json({
       success: true,
       message: `Ingrediente ${ativo ? 'ativado' : 'desativado'} com sucesso`,
@@ -185,6 +225,7 @@ const updateIngredienteStatus = async (req, res, next) => {
     });
 
   } catch (error) {
+    console.error('❌ Erro ao atualizar status:', error);
     next(error);
   }
 };

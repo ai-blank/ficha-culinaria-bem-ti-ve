@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Ingrediente, FatorCorrecaoData, NovoIngredienteFormData } from '@/types/ingrediente';
 
@@ -19,8 +18,10 @@ export const useIngredientes = () => {
     const user = localStorage.getItem('user');
     if (user) {
       const userData = JSON.parse(user);
+      console.log('🔑 Token encontrado:', userData.token ? 'Sim' : 'Não');
       return userData.token;
     }
+    console.log('❌ Nenhum token encontrado no localStorage');
     return null;
   };
 
@@ -41,7 +42,7 @@ export const useIngredientes = () => {
       // Carregar ingredientes da API
       await carregarIngredientes();
     } catch (error) {
-      console.error('Erro ao carregar dados:', error);
+      console.error('❌ Erro ao carregar dados:', error);
     } finally {
       setLoading(false);
     }
@@ -51,7 +52,7 @@ export const useIngredientes = () => {
     try {
       const token = getAuthToken();
       if (!token) {
-        console.log('Token não encontrado, usando dados do localStorage como fallback');
+        console.log('⚠️ Token não encontrado, usando dados do localStorage como fallback');
         const ingredientesSalvos = localStorage.getItem('ingredientes');
         if (ingredientesSalvos) {
           setIngredientes(JSON.parse(ingredientesSalvos));
@@ -59,6 +60,7 @@ export const useIngredientes = () => {
         return;
       }
 
+      console.log('🔄 Carregando ingredientes da API...');
       const response = await fetch(`${API_BASE_URL}/ingredientes`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -68,9 +70,11 @@ export const useIngredientes = () => {
 
       if (response.ok) {
         const data = await response.json();
+        console.log('✅ Ingredientes carregados da API:', data.data.ingredientes.length);
         setIngredientes(data.data.ingredientes);
       } else {
-        console.error('Erro ao carregar ingredientes da API');
+        const errorData = await response.json();
+        console.error('❌ Erro ao carregar ingredientes da API:', errorData);
         // Fallback para localStorage
         const ingredientesSalvos = localStorage.getItem('ingredientes');
         if (ingredientesSalvos) {
@@ -78,7 +82,7 @@ export const useIngredientes = () => {
         }
       }
     } catch (error) {
-      console.error('Erro ao carregar ingredientes:', error);
+      console.error('❌ Erro de rede ao carregar ingredientes:', error);
       // Fallback para localStorage
       const ingredientesSalvos = localStorage.getItem('ingredientes');
       if (ingredientesSalvos) {
@@ -161,7 +165,7 @@ export const useIngredientes = () => {
       alimentosCustomizados.push(novoAlimentoBase);
       localStorage.setItem('base_alimentos_customizada', JSON.stringify(alimentosCustomizados));
 
-      console.log('Novo alimento adicionado à base de dados:', novoAlimentoBase);
+      console.log('✅ Novo alimento adicionado à base de dados:', novoAlimentoBase);
       
       return novoAlimentoBase;
     }
@@ -189,7 +193,7 @@ export const useIngredientes = () => {
         setFatoresCorrecao(fatoresMesclados);
       }
     } catch (error) {
-      console.error('Erro ao carregar alimentos customizados:', error);
+      console.error('❌ Erro ao carregar alimentos customizados:', error);
     }
   };
 
@@ -205,9 +209,11 @@ export const useIngredientes = () => {
       const token = getAuthToken();
       
       if (!token) {
-        // Fallback para localStorage se não houver token
+        console.log('⚠️ Token não encontrado, usando localStorage');
         return criarIngredienteLocal(dados);
       }
+
+      console.log('🔄 Enviando ingrediente para API:', dados);
 
       // Adicionar alimento à base de dados se não existir
       adicionarAlimentoNaBase(dados);
@@ -221,9 +227,12 @@ export const useIngredientes = () => {
         body: JSON.stringify(dados),
       });
 
-      if (response.ok) {
-        const result = await response.json();
+      const result = await response.json();
+      console.log('📡 Resposta da API:', result);
+
+      if (response.ok && result.success) {
         const novoIngrediente = result.data.ingrediente;
+        console.log('✅ Ingrediente criado na API:', novoIngrediente);
         
         // Atualizar estado local
         const novosIngredientes = [...ingredientes, novoIngrediente];
@@ -231,12 +240,12 @@ export const useIngredientes = () => {
         
         return novoIngrediente;
       } else {
-        const error = await response.json();
-        throw new Error(error.message || 'Erro ao criar ingrediente');
+        console.error('❌ Erro na resposta da API:', result);
+        throw new Error(result.message || 'Erro ao criar ingrediente');
       }
     } catch (error) {
-      console.error('Erro ao criar ingrediente na API, usando localStorage:', error);
-      return criarIngredienteLocal(dados);
+      console.error('❌ Erro ao criar ingrediente na API:', error);
+      throw error; // Re-throw para que o componente possa tratar
     }
   };
 
@@ -256,6 +265,7 @@ export const useIngredientes = () => {
     setIngredientes(novosIngredientes);
     localStorage.setItem('ingredientes', JSON.stringify(novosIngredientes));
     
+    console.log('✅ Ingrediente criado localmente:', novoIngrediente);
     return novoIngrediente;
   };
 
@@ -264,9 +274,11 @@ export const useIngredientes = () => {
       const token = getAuthToken();
       
       if (!token) {
-        // Fallback para localStorage se não houver token
+        console.log('⚠️ Token não encontrado, usando localStorage');
         return atualizarIngredienteLocal(id, dados);
       }
+
+      console.log('🔄 Atualizando ingrediente na API:', id, dados);
 
       const response = await fetch(`${API_BASE_URL}/ingredientes/${id}`, {
         method: 'PATCH',
@@ -280,6 +292,7 @@ export const useIngredientes = () => {
       if (response.ok) {
         const result = await response.json();
         const ingredienteAtualizado = result.data.ingrediente;
+        console.log('✅ Ingrediente atualizado na API:', ingredienteAtualizado);
         
         // Atualizar estado local
         const ingredientesAtualizados = ingredientes.map(ing => 
@@ -287,11 +300,12 @@ export const useIngredientes = () => {
         );
         setIngredientes(ingredientesAtualizados);
       } else {
-        console.error('Erro ao atualizar ingrediente na API, usando localStorage');
+        const errorData = await response.json();
+        console.error('❌ Erro ao atualizar ingrediente na API:', errorData);
         atualizarIngredienteLocal(id, dados);
       }
     } catch (error) {
-      console.error('Erro ao atualizar ingrediente:', error);
+      console.error('❌ Erro de rede ao atualizar ingrediente:', error);
       atualizarIngredienteLocal(id, dados);
     }
   };
@@ -305,6 +319,7 @@ export const useIngredientes = () => {
     
     setIngredientes(ingredientesAtualizados);
     localStorage.setItem('ingredientes', JSON.stringify(ingredientesAtualizados));
+    console.log('✅ Ingrediente atualizado localmente');
   };
 
   const verificarNomeDuplicado = (alimento: string, idIgnorar?: string): boolean => {
