@@ -118,21 +118,6 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggleForm, onForgotPassword })
           </button>
         </div>
       </div>
-
-      {/* Demo credentials */}
-      <div className="mt-8 p-4 bg-white/60 rounded-lg border border-white/20">
-        <p className="text-xs text-gray-600 mb-2 font-medium font-body">
-          🔑 Credenciais para demonstração:
-        </p>
-        <div className="text-xs space-y-1 font-body">
-          <div>
-            <strong>Admin:</strong> admin@bemtive.com / Admin123!
-          </div>
-          <div>
-            <strong>Chef:</strong> maria@bemtive.com / Chef123!
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
