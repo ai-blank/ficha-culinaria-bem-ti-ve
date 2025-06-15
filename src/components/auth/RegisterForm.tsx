@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -103,9 +104,14 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
       const success = await register(formData);
       if (success) {
         toast({
-          title: "Conta criada com sucesso!",
-          description: "Bem-vindo ao sistema Bem Ti Vê",
+          title: "Cadastro realizado com sucesso! 📧",
+          description: "Verifique seu email para confirmar sua conta e ativar o acesso ao sistema.",
         });
+        
+        // Aguardar um momento para o usuário ler a mensagem, depois voltar ao login
+        setTimeout(() => {
+          onToggleForm();
+        }, 3000);
       } else {
         toast({
           variant: "destructive",
@@ -268,6 +274,17 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
           </button>
         </div>
       </div>
+
+      {loading && (
+        <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <div className="flex items-center space-x-2">
+            <div className="w-4 h-4 border-2 border-bem-ti-ve-orange border-t-transparent rounded-full animate-spin"></div>
+            <p className="text-sm text-blue-700 font-body">
+              Criando sua conta e enviando email de confirmação...
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
