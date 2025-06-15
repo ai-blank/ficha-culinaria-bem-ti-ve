@@ -15,6 +15,8 @@ const sendEmail = async (options) => {
 
   // Template HTML base para emails
   const getEmailTemplate = (title, content, buttonText = null, buttonUrl = null) => {
+    console.log('📧 Template Debug:', { title, buttonText, buttonUrl, hasButton: !!(buttonText && buttonUrl) });
+    
     return `
       <!DOCTYPE html>
       <html lang="pt-BR">
@@ -172,6 +174,15 @@ const sendEmail = async (options) => {
     `;
   };
 
+  // Debug dos parâmetros recebidos
+  console.log('📧 Dados do email:', {
+    to: options.email,
+    subject: options.subject,
+    buttonText: options.buttonText,
+    buttonUrl: options.buttonUrl,
+    hasCustomHtml: !!options.html
+  });
+
   // Configurar mensagem com template HTML
   const message = {
     from: `${process.env.EMAIL_FROM} <${process.env.EMAIL_USER}>`,
@@ -185,6 +196,9 @@ const sendEmail = async (options) => {
       options.buttonUrl
     )
   };
+
+  // Log do HTML final para debug
+  console.log('📧 HTML Final (primeiros 500 chars):', message.html.substring(0, 500));
 
   // Enviar email
   const info = await transporter.sendMail(message);
