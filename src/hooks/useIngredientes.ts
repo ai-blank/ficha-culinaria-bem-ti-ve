@@ -80,6 +80,7 @@ export const useIngredientes = () => {
         categoria: alimentoEncontrado.categoria || 'Outros',
         unidade: alimentoEncontrado.unidade || 'kg',
         fator_correcao: alimentoEncontrado.fator_correcao || 1.0,
+        peso: alimentoEncontrado.peso || '1.0',
       };
     }
     

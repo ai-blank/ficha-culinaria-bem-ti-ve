@@ -31,7 +31,8 @@ export const useFichasTecnicas = () => {
   const calcularCustoIngredientes = (ingredientesFicha: IngredienteFicha[]): number => {
     return ingredientesFicha.reduce((total, ing) => {
       const quantidadeCorrigida = ing.quantidade_usada / ing.fator_correcao;
-      const custoIngrediente = (quantidadeCorrigida / ing.peso_compra) * ing.preco_unitario;
+      const pesoCompra = parseFloat(ing.peso_compra) || 1;
+      const custoIngrediente = (quantidadeCorrigida / pesoCompra) * ing.preco_unitario;
       return total + custoIngrediente;
     }, 0);
   };
