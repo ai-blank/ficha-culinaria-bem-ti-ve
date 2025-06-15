@@ -53,8 +53,26 @@ const register = async (req, res, next) => {
       const verificationUrl = `${process.env.FRONTEND_URL}/confirm-email?token=${verificationToken}`;
       await sendEmail({
         email: user.email,
-        subject: 'Verificação de Email - Ficha Técnica',
-        message: `Por favor, clique no link para verificar seu email: ${verificationUrl}`
+        subject: '🎉 Bem-vindo ao Bem Ti Vê!',
+        message: `Olá ${nome}!\n\nSeja bem-vindo(a) ao sistema Bem Ti Vê! Para começar a usar todas as funcionalidades, você precisa verificar seu email.\n\nClique no botão abaixo para ativar sua conta:`,
+        html: `
+          <p>Olá <strong>${nome}</strong>!</p>
+          
+          <p>🎉 <strong>Seja bem-vindo(a) ao Bem Ti Vê!</strong></p>
+          
+          <p>Estamos muito felizes em tê-lo(a) conosco! O Bem Ti Vê é seu parceiro ideal para:</p>
+          
+          <ul style="color: #555; line-height: 1.8;">
+            <li>🍽️ Criar e gerenciar fichas técnicas de pratos</li>
+            <li>📊 Controlar custos e ingredientes</li>
+            <li>📈 Otimizar sua gestão culinária</li>
+            <li>🎯 Aumentar a eficiência da sua cozinha</li>
+          </ul>
+          
+          <p>Para começar a usar todas essas funcionalidades, você só precisa verificar seu email clicando no botão abaixo:</p>
+        `,
+        buttonText: 'Verificar Email e Começar',
+        buttonUrl: verificationUrl
       });
     } catch (emailError) {
       console.error('Erro ao enviar email:', emailError);
@@ -212,8 +230,29 @@ const forgotPassword = async (req, res, next) => {
       const resetUrl = `${process.env.FRONTEND_URL}/reset-password?token=${resetToken}`;
       await sendEmail({
         email: user.email,
-        subject: 'Redefinição de Senha - Ficha Técnica',
-        message: `Você solicitou a redefinição de senha. Clique no link: ${resetUrl}`
+        subject: '🔐 Redefinição de Senha - Bem Ti Vê',
+        message: `Olá ${user.nome}!\n\nRecebemos uma solicitação para redefinir a senha da sua conta no Bem Ti Vê.\n\nSe foi você quem solicitou, clique no botão abaixo para criar uma nova senha:`,
+        html: `
+          <p>Olá <strong>${user.nome}</strong>!</p>
+          
+          <p>🔐 Recebemos uma solicitação para <strong>redefinir a senha</strong> da sua conta no Bem Ti Vê.</p>
+          
+          <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ec6d0b;">
+            <p style="margin: 0; color: #e65100;">
+              <strong>⚠️ Importante:</strong> Este link é válido por apenas 10 minutos por motivos de segurança.
+            </p>
+          </div>
+          
+          <p>Se foi você quem solicitou esta redefinição, clique no botão abaixo para criar uma nova senha:</p>
+          
+          <br>
+          
+          <p style="font-size: 14px; color: #666;">
+            Se você não solicitou esta redefinição, pode ignorar este email com segurança. Sua conta permanecerá protegida.
+          </p>
+        `,
+        buttonText: 'Redefinir Minha Senha',
+        buttonUrl: resetUrl
       });
 
       res.json({
