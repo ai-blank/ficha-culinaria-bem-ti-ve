@@ -20,20 +20,46 @@ const app = express();
 connectDB();
 
 // Middleware de segurança
-app.use(helmet());
+app.use(helmet({
+  crossOriginEmbedderPolicy: false,
+}));
 
-// CORS configurado com logs
+// CORS configurado com logs melhorados
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:8080',
-  credentials: true
+  origin: [
+    'http://localhost:8080',
+    'https://cfa6ee5c-2b8a-424b-91c6-d147cfb1087e.lovableproject.com',
+    process.env.FRONTEND_URL || 'http://localhost:8080'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+  optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 
-// Log para debug de CORS
+// Log detalhado para debug de CORS
 app.use((req, res, next) => {
-  console.log(`📡 ${req.method} ${req.path} - Origin: ${req.get('Origin')}`);
-  next();
+  console.log(`📡 ${req.method} ${req.path}`);
+  console.log(`🌍 Origin: ${req.get('Origin')}`);
+  console.log(`🔑 Headers: ${JSON.stringify(req.headers)}`);
+  
+  // Adicionar headers CORS manualmente se necessário
+  const origin = req.get('Origin');
+  if (corsOptions.origin.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept');
+  }
+  
+  if (req.method === 'OPTIONS') {
+    console.log('🔄 Respondendo OPTIONS request');
+    res.sendStatus(200);
+  } else {
+    next();
+  }
 });
 
 // Rate limiting
@@ -62,7 +88,8 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV 
+    environment: process.env.NODE_ENV,
+    cors: 'enabled'
   });
 });
 
@@ -79,10 +106,11 @@ app.use('*', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
   console.log(`📚 Documentação disponível em http://localhost:${PORT}/api-docs`);
-  console.log(`🌍 CORS configurado para: ${corsOptions.origin}`);
+  console.log(`🌍 CORS configurado para:`);
+  corsOptions.origin.forEach(origin => console.log(`   - ${origin}`));
 });
 
 module.exports = app;
