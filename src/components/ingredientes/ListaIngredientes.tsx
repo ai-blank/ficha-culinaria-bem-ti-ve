@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Search, Edit, Trash2, Plus } from 'lucide-react';
+import { Search, Edit, Trash2, Plus, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 import { useIngredientes } from '@/hooks/useIngredientes';
 import { Ingrediente } from '@/types/ingrediente';
 
@@ -21,6 +21,7 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
   const { ingredientes, atualizarIngrediente } = useIngredientes();
   const [busca, setBusca] = useState('');
   const [ordenacao, setOrdenacao] = useState<'nome' | 'categoria' | 'preco'>('nome');
+  const [direcaoOrdenacao, setDirecaoOrdenacao] = useState<'asc' | 'desc'>('asc');
 
   const ingredientesFiltrados = ingredientes
     .filter((ingrediente) =>
@@ -29,17 +30,44 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
       ingrediente.fornecedor?.toLowerCase().includes(busca.toLowerCase())
     )
     .sort((a, b) => {
+      let resultado = 0;
+      
       switch (ordenacao) {
         case 'nome':
-          return a.alimento.localeCompare(b.alimento);
+          resultado = a.alimento.localeCompare(b.alimento);
+          break;
         case 'categoria':
-          return a.categoria.localeCompare(b.categoria);
+          resultado = a.categoria.localeCompare(b.categoria);
+          break;
         case 'preco':
-          return a.preco - b.preco;
+          resultado = a.preco - b.preco;
+          break;
         default:
-          return 0;
+          resultado = 0;
       }
+      
+      return direcaoOrdenacao === 'desc' ? -resultado : resultado;
     });
+
+  const handleOrdenacao = (novaOrdenacao: 'nome' | 'categoria' | 'preco') => {
+    if (ordenacao === novaOrdenacao) {
+      // Se clicou na mesma ordenação, inverte a direção
+      setDirecaoOrdenacao(direcaoOrdenacao === 'asc' ? 'desc' : 'asc');
+    } else {
+      // Se é uma nova ordenação, começa com ascendente
+      setOrdenacao(novaOrdenacao);
+      setDirecaoOrdenacao('asc');
+    }
+  };
+
+  const getIconeOrdenacao = (tipoOrdenacao: 'nome' | 'categoria' | 'preco') => {
+    if (ordenacao !== tipoOrdenacao) {
+      return <ArrowUpDown className="w-3 h-3 ml-1" />;
+    }
+    return direcaoOrdenacao === 'asc' ? 
+      <ArrowUp className="w-3 h-3 ml-1" /> : 
+      <ArrowDown className="w-3 h-3 ml-1" />;
+  };
 
   const alternarStatus = (id: string, ativo: boolean) => {
     atualizarIngrediente(id, { ativo: !ativo });
@@ -81,23 +109,29 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
             <Button
               variant={ordenacao === 'nome' ? 'default' : 'outline'}
               size="sm"
-              onClick={() => setOrdenacao('nome')}
+              onClick={() => handleOrdenacao('nome')}
+              className="flex items-center"
             >
               Nome
+              {getIconeOrdenacao('nome')}
             </Button>
             <Button
               variant={ordenacao === 'categoria' ? 'default' : 'outline'}
               size="sm"
-              onClick={() => setOrdenacao('categoria')}
+              onClick={() => handleOrdenacao('categoria')}
+              className="flex items-center"
             >
               Categoria
+              {getIconeOrdenacao('categoria')}
             </Button>
             <Button
               variant={ordenacao === 'preco' ? 'default' : 'outline'}
               size="sm"
-              onClick={() => setOrdenacao('preco')}
+              onClick={() => handleOrdenacao('preco')}
+              className="flex items-center"
             >
               Preço
+              {getIconeOrdenacao('preco')}
             </Button>
           </div>
         </div>

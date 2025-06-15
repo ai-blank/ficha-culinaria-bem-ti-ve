@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Search, Edit, Trash2, Plus, Copy, Calculator } from 'lucide-react';
+import { Search, Edit, Trash2, Plus, Copy, Calculator, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 import { useFichasTecnicas } from '@/hooks/useFichasTecnicas';
 import { FichaTecnica } from '@/types/ficha-tecnica';
 import { useToast } from '@/hooks/use-toast';
@@ -23,23 +22,51 @@ export const ListaFichasTecnicas: React.FC<ListaFichasTecnicasProps> = ({
   const { fichasTecnicas, atualizarFichaTecnica, clonarFichaTecnica } = useFichasTecnicas();
   const [busca, setBusca] = useState('');
   const [ordenacao, setOrdenacao] = useState<'nome' | 'custo' | 'data'>('nome');
+  const [direcaoOrdenacao, setDirecaoOrdenacao] = useState<'asc' | 'desc'>('asc');
 
   const fichasFiltradas = fichasTecnicas
     .filter((ficha) =>
       ficha.nome_receita.toLowerCase().includes(busca.toLowerCase())
     )
     .sort((a, b) => {
+      let resultado = 0;
+      
       switch (ordenacao) {
         case 'nome':
-          return a.nome_receita.localeCompare(b.nome_receita);
+          resultado = a.nome_receita.localeCompare(b.nome_receita);
+          break;
         case 'custo':
-          return (a.custo_total || 0) - (b.custo_total || 0);
+          resultado = (a.custo_total || 0) - (b.custo_total || 0);
+          break;
         case 'data':
-          return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
+          resultado = new Date(a.updated_at).getTime() - new Date(b.updated_at).getTime();
+          break;
         default:
-          return 0;
+          resultado = 0;
       }
+      
+      return direcaoOrdenacao === 'desc' ? -resultado : resultado;
     });
+
+  const handleOrdenacao = (novaOrdenacao: 'nome' | 'custo' | 'data') => {
+    if (ordenacao === novaOrdenacao) {
+      // Se clicou na mesma ordenação, inverte a direção
+      setDirecaoOrdenacao(direcaoOrdenacao === 'asc' ? 'desc' : 'asc');
+    } else {
+      // Se é uma nova ordenação, começa com ascendente
+      setOrdenacao(novaOrdenacao);
+      setDirecaoOrdenacao('asc');
+    }
+  };
+
+  const getIconeOrdenacao = (tipoOrdenacao: 'nome' | 'custo' | 'data') => {
+    if (ordenacao !== tipoOrdenacao) {
+      return <ArrowUpDown className="w-3 h-3 ml-1" />;
+    }
+    return direcaoOrdenacao === 'asc' ? 
+      <ArrowUp className="w-3 h-3 ml-1" /> : 
+      <ArrowDown className="w-3 h-3 ml-1" />;
+  };
 
   const alternarStatus = (id: string, ativo: boolean) => {
     atualizarFichaTecnica(id, { ativo: !ativo });
@@ -107,23 +134,29 @@ export const ListaFichasTecnicas: React.FC<ListaFichasTecnicasProps> = ({
             <Button
               variant={ordenacao === 'nome' ? 'default' : 'outline'}
               size="sm"
-              onClick={() => setOrdenacao('nome')}
+              onClick={() => handleOrdenacao('nome')}
+              className="flex items-center"
             >
               Nome
+              {getIconeOrdenacao('nome')}
             </Button>
             <Button
               variant={ordenacao === 'custo' ? 'default' : 'outline'}
               size="sm"
-              onClick={() => setOrdenacao('custo')}
+              onClick={() => handleOrdenacao('custo')}
+              className="flex items-center"
             >
               Custo
+              {getIconeOrdenacao('custo')}
             </Button>
             <Button
               variant={ordenacao === 'data' ? 'default' : 'outline'}
               size="sm"
-              onClick={() => setOrdenacao('data')}
+              onClick={() => handleOrdenacao('data')}
+              className="flex items-center"
             >
               Data
+              {getIconeOrdenacao('data')}
             </Button>
           </div>
         </div>
