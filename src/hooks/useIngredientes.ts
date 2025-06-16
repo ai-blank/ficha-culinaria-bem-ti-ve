@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Ingrediente, FatorCorrecaoData, NovoIngredienteFormData } from '@/types/ingrediente';
 
@@ -334,7 +335,7 @@ export const useIngredientes = () => {
         const ingredienteAtualizado = result.data.ingrediente;
         console.log('✅ Ingrediente atualizado na API:', ingredienteAtualizado);
         
-        // Atualizar estado local
+        // Atualizar estado local imediatamente
         const ingredientesAtualizados = ingredientes.map(ing => 
           ing.id === id ? ingredienteAtualizado : ing
         );
@@ -384,6 +385,11 @@ export const useIngredientes = () => {
     return valor;
   };
 
+  // Função para recarregar ingredientes
+  const recarregarIngredientes = () => {
+    carregarIngredientes();
+  };
+
   return {
     ingredientes,
     categorias,
@@ -398,5 +404,6 @@ export const useIngredientes = () => {
     buscarAlimentosNaBase,
     obterDadosAlimentoDaBase,
     adicionarAlimentoNaBase,
+    recarregarIngredientes,
   };
 };

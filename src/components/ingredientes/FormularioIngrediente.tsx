@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -9,7 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useIngredientes } from '@/hooks/useIngredientes';
-import { NovoIngredienteFormData } from '@/types/ingrediente';
+import { NovoIngredienteFormData, Ingrediente } from '@/types/ingrediente';
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
@@ -25,11 +26,13 @@ const formSchema = z.object({
 });
 
 interface FormularioIngredienteProps {
+  ingrediente?: Ingrediente;
   onSuccess?: () => void;
   onCancel?: () => void;
 }
 
 export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
+  ingrediente,
   onSuccess,
   onCancel,
 }) => {
@@ -37,6 +40,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
   const {
     categorias,
     criarIngrediente,
+    atualizarIngrediente,
     verificarNomeDuplicado,
     buscarAlimentosNaBase,
     obterDadosAlimentoDaBase,
@@ -45,18 +49,20 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
   const [termoBusca, setTermoBusca] = useState('');
   const [alimentosFiltrados, setAlimentosFiltrados] = useState<any[]>([]);
 
+  const isEditMode = !!ingrediente;
+
   const form = useForm<NovoIngredienteFormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      alimento: '',
-      peso: '',
-      preco: 0,
-      unidade: '',
-      fator_correcao: 1.0,
-      categoria: '',
-      quantidade_estoque: undefined,
-      data_validade: '',
-      fornecedor: '',
+      alimento: ingrediente?.alimento || '',
+      peso: ingrediente?.peso || '',
+      preco: ingrediente?.preco || 0,
+      unidade: ingrediente?.unidade || '',
+      fator_correcao: ingrediente?.fator_correcao || 1.0,
+      categoria: ingrediente?.categoria || '',
+      quantidade_estoque: ingrediente?.quantidade_estoque || undefined,
+      data_validade: ingrediente?.data_validade ? ingrediente.data_validade.split('T')[0] : '',
+      fornecedor: ingrediente?.fornecedor || '',
     },
   });
 
@@ -88,30 +94,58 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
     setAlimentosFiltrados([]);
   };
 
-  const onSubmit = (dados: NovoIngredienteFormData) => {
-    if (verificarNomeDuplicado(dados.alimento)) {
-      toast({
-        variant: "destructive",
-        title: "Erro",
-        description: "Já existe um ingrediente com este nome.",
-      });
-      return;
-    }
+  const onSubmit = async (dados: NovoIngredienteFormData) => {
+    if (isEditMode) {
+      // Modo edição
+      if (ingrediente.alimento !== dados.alimento && verificarNomeDuplicado(dados.alimento, ingrediente.id)) {
+        toast({
+          variant: "destructive",
+          title: "Erro",
+          description: "Já existe um ingrediente com este nome.",
+        });
+        return;
+      }
 
-    try {
-      criarIngrediente(dados);
-      toast({
-        title: "Sucesso",
-        description: "Ingrediente cadastrado com sucesso!",
-      });
-      form.reset();
-      onSuccess?.();
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Erro",
-        description: "Erro ao cadastrar ingrediente.",
-      });
+      try {
+        await atualizarIngrediente(ingrediente.id, dados);
+        toast({
+          title: "Sucesso",
+          description: "Ingrediente atualizado com sucesso!",
+        });
+        onSuccess?.();
+      } catch (error) {
+        toast({
+          variant: "destructive",
+          title: "Erro",
+          description: "Erro ao atualizar ingrediente.",
+        });
+      }
+    } else {
+      // Modo criação
+      if (verificarNomeDuplicado(dados.alimento)) {
+        toast({
+          variant: "destructive",
+          title: "Erro",
+          description: "Já existe um ingrediente com este nome.",
+        });
+        return;
+      }
+
+      try {
+        await criarIngrediente(dados);
+        toast({
+          title: "Sucesso",
+          description: "Ingrediente cadastrado com sucesso!",
+        });
+        form.reset();
+        onSuccess?.();
+      } catch (error) {
+        toast({
+          variant: "destructive",
+          title: "Erro",
+          description: "Erro ao cadastrar ingrediente.",
+        });
+      }
     }
   };
 
@@ -119,42 +153,44 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
         <CardTitle className="text-2xl font-heading text-center">
-          Cadastrar Novo Ingrediente
+          {isEditMode ? 'Editar Ingrediente' : 'Cadastrar Novo Ingrediente'}
         </CardTitle>
       </CardHeader>
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            {/* Busca na base de dados */}
-            <div className="space-y-2">
-              <label className="text-sm font-medium">
-                Buscar na base de dados (opcional)
-              </label>
-              <div className="relative">
-                <Input
-                  placeholder="Digite para buscar alimentos..."
-                  value={termoBusca}
-                  onChange={(e) => setTermoBusca(e.target.value)}
-                />
-                {alimentosFiltrados.length > 0 && (
-                  <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-48 overflow-y-auto">
-                    {alimentosFiltrados.map((alimento, index) => (
-                      <button
-                        key={index}
-                        type="button"
-                        className="w-full px-3 py-2 text-left text-black hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
-                        onClick={() => handleSelecionarAlimentoDaBase(alimento.alimento)}
-                      >
-                        <div className="font-medium text-black">{alimento.alimento}</div>
-                        <div className="text-sm text-gray-500">
-                          {alimento.categoria} - {alimento.unidade} - FC: {alimento.fator_correcao}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                )}
+            {/* Busca na base de dados - apenas no modo criação */}
+            {!isEditMode && (
+              <div className="space-y-2">
+                <label className="text-sm font-medium">
+                  Buscar na base de dados (opcional)
+                </label>
+                <div className="relative">
+                  <Input
+                    placeholder="Digite para buscar alimentos..."
+                    value={termoBusca}
+                    onChange={(e) => setTermoBusca(e.target.value)}
+                  />
+                  {alimentosFiltrados.length > 0 && (
+                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-48 overflow-y-auto">
+                      {alimentosFiltrados.map((alimento, index) => (
+                        <button
+                          key={index}
+                          type="button"
+                          className="w-full px-3 py-2 text-left text-black hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                          onClick={() => handleSelecionarAlimentoDaBase(alimento.alimento)}
+                        >
+                          <div className="font-medium text-black">{alimento.alimento}</div>
+                          <div className="text-sm text-gray-500">
+                            {alimento.categoria} - {alimento.unidade} - FC: {alimento.fator_correcao}
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Campos principais */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -335,7 +371,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
             {/* Botões */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button type="submit" className="flex-1">
-                Cadastrar Ingrediente
+                {isEditMode ? 'Atualizar Ingrediente' : 'Cadastrar Ingrediente'}
               </Button>
               {onCancel && (
                 <Button type="button" variant="outline" onClick={onCancel} className="flex-1">

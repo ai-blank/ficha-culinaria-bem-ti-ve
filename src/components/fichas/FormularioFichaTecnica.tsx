@@ -93,12 +93,28 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
   }, [form]);
 
   const adicionarIngrediente = (ingredienteId: string) => {
-    console.log('🔍 Adicionando ingrediente:', ingredienteId);
+    console.log('🔍 Adicionando ingrediente com ID:', ingredienteId);
     console.log('📋 Ingredientes disponíveis:', ingredientes);
+    
+    // Validar se o ID é válido antes de buscar
+    if (!ingredienteId || ingredienteId.startsWith('fallback-')) {
+      console.error('❌ ID de ingrediente inválido:', ingredienteId);
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: "Selecione um ingrediente válido da lista.",
+      });
+      return;
+    }
     
     const ingrediente = ingredientes.find(ing => ing.id === ingredienteId);
     if (!ingrediente) {
       console.error('❌ Ingrediente não encontrado:', ingredienteId);
+      toast({
+        variant: "destructive",
+        title: "Erro", 
+        description: "Ingrediente não encontrado. Tente recarregar a página.",
+      });
       return;
     }
 
@@ -252,6 +268,9 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     ingredientes: ingredientes.map(ing => ({ id: ing.id, nome: ing.alimento, ativo: ing.ativo }))
   });
 
+  // Filtrar apenas ingredientes válidos (com ID e ativos)
+  const ingredientesValidos = ingredientes.filter(ing => ing.id && ing.ativo);
+
   return (
     <div className="space-y-6">
       <Card>
@@ -295,21 +314,19 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                           <SelectItem key="loading" value="loading" disabled>
                             Carregando ingredientes...
                           </SelectItem>
-                        ) : ingredientes.length === 0 ? (
+                        ) : ingredientesValidos.length === 0 ? (
                           <SelectItem key="empty" value="empty" disabled>
                             Nenhum ingrediente encontrado
                           </SelectItem>
                         ) : (
-                          ingredientes
-                            .filter(ing => ing.ativo)
-                            .map((ingrediente, index) => (
-                              <SelectItem 
-                                key={ingrediente.id || `ingrediente-fallback-${index}`} 
-                                value={ingrediente.id || `fallback-${index}`}
-                              >
-                                {ingrediente.alimento}
-                              </SelectItem>
-                            ))
+                          ingredientesValidos.map((ingrediente) => (
+                            <SelectItem 
+                              key={ingrediente.id} 
+                              value={ingrediente.id}
+                            >
+                              {ingrediente.alimento}
+                            </SelectItem>
+                          ))
                         )}
                       </SelectContent>
                     </Select>
