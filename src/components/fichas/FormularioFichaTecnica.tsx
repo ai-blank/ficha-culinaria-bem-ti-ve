@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -301,8 +302,11 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                         ) : (
                           ingredientes
                             .filter(ing => ing.ativo)
-                            .map((ingrediente) => (
-                              <SelectItem key={`ingrediente-${ingrediente.id}`} value={ingrediente.id}>
+                            .map((ingrediente, index) => (
+                              <SelectItem 
+                                key={ingrediente.id || `ingrediente-fallback-${index}`} 
+                                value={ingrediente.id || `fallback-${index}`}
+                              >
                                 {ingrediente.alimento}
                               </SelectItem>
                             ))
@@ -630,3 +634,4 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     </div>
   );
 };
+
