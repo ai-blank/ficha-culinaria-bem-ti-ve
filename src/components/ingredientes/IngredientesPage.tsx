@@ -32,6 +32,7 @@ export const IngredientesPage: React.FC = () => {
     return (
       <div className="container mx-auto p-6">
         <FormularioIngrediente
+          ingrediente={ingredienteEditando}
           onSuccess={handleSuccesso}
           onCancel={handleCancelar}
         />
