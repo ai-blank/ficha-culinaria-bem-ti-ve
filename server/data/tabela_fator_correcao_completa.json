@@ -1,143 +1,162 @@
-
 [
   {
     "alimento": "Abacate",
     "categoria": "Frutas e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.64
+    "fator_correcao": 1.64,
+    "id_alimento": 1
   },
   {
     "alimento": "Abacaxi",
     "categoria": "Frutas e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.41
+    "fator_correcao": 1.41,
+    "id_alimento": 2
   },
   {
     "alimento": "Açúcar Cristal",
     "categoria": "Açúcares e Produtos de Confeitaria",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 3
   },
   {
     "alimento": "Açúcar Refinado",
     "categoria": "Açúcares e Produtos de Confeitaria",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 4
   },
   {
     "alimento": "Alface",
     "categoria": "Verduras, Hortaliças e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.50
+    "fator_correcao": 1.5,
+    "id_alimento": 5
   },
   {
     "alimento": "Alho",
     "categoria": "Temperos e Condimentos",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.16
+    "fator_correcao": 1.16,
+    "id_alimento": 6
   },
   {
     "alimento": "Arroz Branco",
     "categoria": "Cereais e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.04
+    "fator_correcao": 1.04,
+    "id_alimento": 7
   },
   {
     "alimento": "Batata",
     "categoria": "Verduras, Hortaliças e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.20
+    "fator_correcao": 1.2,
+    "id_alimento": 8
   },
   {
     "alimento": "Carne Bovina - Alcatra",
     "categoria": "Carnes e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.12
+    "fator_correcao": 1.12,
+    "id_alimento": 9
   },
   {
     "alimento": "Cebola",
     "categoria": "Verduras, Hortaliças e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.11
+    "fator_correcao": 1.11,
+    "id_alimento": 10
   },
   {
     "alimento": "Cenoura",
     "categoria": "Verduras, Hortaliças e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.14
+    "fator_correcao": 1.14,
+    "id_alimento": 11
   },
   {
     "alimento": "Farinha de Trigo",
     "categoria": "Cereais e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 12
   },
   {
     "alimento": "Feijão Preto",
     "categoria": "Leguminosas",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 13
   },
   {
     "alimento": "Frango - Peito",
     "categoria": "Carnes e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.18
+    "fator_correcao": 1.18,
+    "id_alimento": 14
   },
   {
     "alimento": "Leite Integral",
     "categoria": "Leite e Derivados",
     "peso": 1000,
     "unidade": "ml",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 15
   },
   {
     "alimento": "Óleo de Soja",
     "categoria": "Gorduras e Óleos",
     "peso": 1000,
     "unidade": "ml",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 16
   },
   {
     "alimento": "Ovo de Galinha",
     "categoria": "Ovos e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.10
+    "fator_correcao": 1.1,
+    "id_alimento": 17
   },
   {
     "alimento": "Queijo Mussarela",
     "categoria": "Leite e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 18
   },
   {
     "alimento": "Sal Refinado",
     "categoria": "Temperos e Condimentos",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.0
+    "fator_correcao": 1.0,
+    "id_alimento": 19
   },
   {
     "alimento": "Tomate",
     "categoria": "Verduras, Hortaliças e Derivados",
     "peso": 1000,
     "unidade": "g",
-    "fator_correcao": 1.09
+    "fator_correcao": 1.09,
+    "id_alimento": 20
   }
 ]

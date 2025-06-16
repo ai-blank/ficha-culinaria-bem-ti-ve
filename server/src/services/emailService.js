@@ -109,14 +109,6 @@ const sendEmail = async (options) => {
             transform: translateY(-2px);
             background: linear-gradient(135deg, #ec6d0b 0%, #d85a00 100%);
           }
-          .text-link {
-            color: #ec6d0b;
-            text-decoration: underline;
-            font-weight: 600;
-          }
-          .text-link:hover {
-            color: #d85a00;
-          }
           .footer {
             text-align: center;
             margin-top: 40px;
@@ -160,11 +152,6 @@ const sendEmail = async (options) => {
             ${buttonText && buttonUrl ? `
               <div class="button-container">
                 <a href="${buttonUrl}" class="button" style="color: white !important; text-decoration: none;">${buttonText}</a>
-                <br><br>
-                <p style="font-size: 14px; color: #666; margin-top: 15px;">
-                  Ou copie e cole este link no seu navegador:<br>
-                  <a href="${buttonUrl}" class="text-link">${buttonUrl}</a>
-                </p>
               </div>
             ` : ''}
             
