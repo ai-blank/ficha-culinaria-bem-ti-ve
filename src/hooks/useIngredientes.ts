@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Ingrediente, FatorCorrecaoData, NovoIngredienteFormData } from '@/types/ingrediente';
 
@@ -104,7 +103,14 @@ export const useIngredientes = () => {
       if (response.ok) {
         const data = await response.json();
         console.log('✅ Ingredientes carregados da API:', data.data.ingredientes.length);
-        setIngredientes(data.data.ingredientes);
+        
+        // Normalizar IDs para compatibilidade
+        const ingredientesNormalizados = data.data.ingredientes.map((ing: any) => ({
+          ...ing,
+          id: ing._id || ing.id
+        }));
+        
+        setIngredientes(ingredientesNormalizados);
       } else {
         const errorData = await response.json();
         console.error('❌ Erro ao carregar ingredientes da API:', errorData);
@@ -247,9 +253,7 @@ export const useIngredientes = () => {
       }
 
       console.log('🔄 Enviando ingrediente para API:', dados);
-      console.log('🔑 Usando token:', token.substring(0, 20) + '...');
 
-      // Adicionar alimento à base de dados se não existir
       adicionarAlimentoNaBase(dados);
 
       const response = await fetch(`${API_BASE_URL}/ingredientes`, {
@@ -267,7 +271,10 @@ export const useIngredientes = () => {
       console.log('📡 Resposta da API:', result);
 
       if (response.ok && result.success) {
-        const novoIngrediente = result.data.ingrediente;
+        const novoIngrediente = {
+          ...result.data.ingrediente,
+          id: result.data.ingrediente._id || result.data.ingrediente.id
+        };
         console.log('✅ Ingrediente criado na API:', novoIngrediente);
         
         // Atualizar estado local
@@ -319,9 +326,16 @@ export const useIngredientes = () => {
         return atualizarIngredienteLocal(id, dados);
       }
 
-      console.log('🔄 Atualizando ingrediente na API:', id, dados);
+      console.log('🔄 Atualizando ingrediente na API. ID:', id);
+      console.log('🔄 Dados para atualização:', dados);
 
-      const response = await fetch(`${API_BASE_URL}/ingredientes/${id}`, {
+      // Usar o ID original (_id do MongoDB) se disponível
+      const ingredienteExistente = ingredientes.find(ing => ing.id === id);
+      const mongoId = ingredienteExistente?._id || id;
+
+      console.log('🔄 Usando ID do MongoDB:', mongoId);
+
+      const response = await fetch(`${API_BASE_URL}/ingredientes/${mongoId}`, {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -330,9 +344,14 @@ export const useIngredientes = () => {
         body: JSON.stringify(dados),
       });
 
+      console.log('📡 Status da resposta da atualização:', response.status);
+
       if (response.ok) {
         const result = await response.json();
-        const ingredienteAtualizado = result.data.ingrediente;
+        const ingredienteAtualizado = {
+          ...result.data.ingrediente,
+          id: result.data.ingrediente._id || result.data.ingrediente.id
+        };
         console.log('✅ Ingrediente atualizado na API:', ingredienteAtualizado);
         
         // Atualizar estado local imediatamente
@@ -340,14 +359,17 @@ export const useIngredientes = () => {
           ing.id === id ? ingredienteAtualizado : ing
         );
         setIngredientes(ingredientesAtualizados);
+        
+        // Recarregar dados para sincronizar
+        await carregarIngredientes();
       } else {
         const errorData = await response.json();
         console.error('❌ Erro ao atualizar ingrediente na API:', errorData);
-        atualizarIngredienteLocal(id, dados);
+        throw new Error(`Erro ${response.status}: ${errorData.message || 'Erro desconhecido'}`);
       }
     } catch (error) {
       console.error('❌ Erro de rede ao atualizar ingrediente:', error);
-      atualizarIngredienteLocal(id, dados);
+      throw error; // Re-throw para que o componente possa tratar o erro
     }
   };
 

@@ -1,6 +1,7 @@
 
 export interface Ingrediente {
   id: string;
+  _id?: string; // Campo MongoDB
   alimento: string;
   peso: string;
   preco: number;
@@ -22,6 +23,7 @@ export interface FatorCorrecaoData {
   fator_correcao: number;
   categoria?: string;
   peso?: string;
+  id_alimento?: number; // Novo campo ID do alimento
 }
 
 export interface NovoIngredienteFormData {

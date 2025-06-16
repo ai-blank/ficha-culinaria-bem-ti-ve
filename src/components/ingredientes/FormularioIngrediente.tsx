@@ -48,6 +48,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
 
   const [termoBusca, setTermoBusca] = useState('');
   const [alimentosFiltrados, setAlimentosFiltrados] = useState<any[]>([]);
+  const [salvando, setSalvando] = useState(false);
 
   const isEditMode = !!ingrediente;
 
@@ -76,7 +77,6 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
     }
   }, [termoBusca, buscarAlimentosNaBase]);
 
-  // Preencher campos automaticamente quando um alimento da base é selecionado
   const handleSelecionarAlimentoDaBase = (nomeAlimento: string) => {
     const dadosAlimento = obterDadosAlimentoDaBase(nomeAlimento);
     
@@ -95,57 +95,60 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
   };
 
   const onSubmit = async (dados: NovoIngredienteFormData) => {
-    if (isEditMode) {
-      // Modo edição
-      if (ingrediente.alimento !== dados.alimento && verificarNomeDuplicado(dados.alimento, ingrediente.id)) {
-        toast({
-          variant: "destructive",
-          title: "Erro",
-          description: "Já existe um ingrediente com este nome.",
-        });
-        return;
-      }
+    setSalvando(true);
+    
+    try {
+      if (isEditMode) {
+        console.log('🔄 Editando ingrediente:', ingrediente.id, dados);
+        
+        // Verificar duplicata apenas se o nome mudou
+        if (ingrediente.alimento !== dados.alimento && verificarNomeDuplicado(dados.alimento, ingrediente.id)) {
+          toast({
+            variant: "destructive",
+            title: "Erro",
+            description: "Já existe um ingrediente com este nome.",
+          });
+          return;
+        }
 
-      try {
         await atualizarIngrediente(ingrediente.id, dados);
+        
         toast({
           title: "Sucesso",
           description: "Ingrediente atualizado com sucesso!",
         });
         onSuccess?.();
-      } catch (error) {
-        toast({
-          variant: "destructive",
-          title: "Erro",
-          description: "Erro ao atualizar ingrediente.",
-        });
-      }
-    } else {
-      // Modo criação
-      if (verificarNomeDuplicado(dados.alimento)) {
-        toast({
-          variant: "destructive",
-          title: "Erro",
-          description: "Já existe um ingrediente com este nome.",
-        });
-        return;
-      }
+      } else {
+        console.log('🔄 Criando novo ingrediente:', dados);
+        
+        // Verificar duplicata
+        if (verificarNomeDuplicado(dados.alimento)) {
+          toast({
+            variant: "destructive",
+            title: "Erro",
+            description: "Já existe um ingrediente com este nome.",
+          });
+          return;
+        }
 
-      try {
         await criarIngrediente(dados);
+        
         toast({
           title: "Sucesso",
           description: "Ingrediente cadastrado com sucesso!",
         });
         form.reset();
         onSuccess?.();
-      } catch (error) {
-        toast({
-          variant: "destructive",
-          title: "Erro",
-          description: "Erro ao cadastrar ingrediente.",
-        });
       }
+    } catch (error) {
+      console.error('❌ Erro ao salvar ingrediente:', error);
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: isEditMode ? "Erro ao atualizar ingrediente." : "Erro ao cadastrar ingrediente.",
+      });
+    } finally {
+      setSalvando(false);
     }
   };
 
@@ -242,10 +245,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                   <FormItem>
                     <FormLabel>Peso/Quantidade</FormLabel>
                     <FormControl>
-                      <Input
-                        placeholder="Ex: 1.0"
-                        {...field}
-                      />
+                      <Input placeholder="Ex: 1.0" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -317,7 +317,6 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
               )}
             />
 
-            {/* Campos opcionais */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <FormField
                 control={form.control}
@@ -368,13 +367,15 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
               />
             </div>
 
-            {/* Botões */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button type="submit" className="flex-1">
-                {isEditMode ? 'Atualizar Ingrediente' : 'Cadastrar Ingrediente'}
+              <Button type="submit" className="flex-1" disabled={salvando}>
+                {salvando 
+                  ? (isEditMode ? 'Atualizando...' : 'Cadastrando...') 
+                  : (isEditMode ? 'Atualizar Ingrediente' : 'Cadastrar Ingrediente')
+                }
               </Button>
               {onCancel && (
-                <Button type="button" variant="outline" onClick={onCancel} className="flex-1">
+                <Button type="button" variant="outline" onClick={onCancel} className="flex-1" disabled={salvando}>
                   Cancelar
                 </Button>
               )}
