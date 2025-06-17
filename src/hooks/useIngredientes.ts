@@ -334,6 +334,7 @@ export const useIngredientes = () => {
       const mongoId = ingredienteExistente?._id || id;
 
       console.log('🔄 Usando ID do MongoDB:', mongoId);
+      console.log('🔄 URL da requisição:', `${API_BASE_URL}/ingredientes/${mongoId}`);
 
       const response = await fetch(`${API_BASE_URL}/ingredientes/${mongoId}`, {
         method: 'PATCH',
@@ -345,6 +346,7 @@ export const useIngredientes = () => {
       });
 
       console.log('📡 Status da resposta da atualização:', response.status);
+      console.log('📡 Headers da resposta:', response.headers);
 
       if (response.ok) {
         const result = await response.json();
@@ -369,7 +371,14 @@ export const useIngredientes = () => {
       }
     } catch (error) {
       console.error('❌ Erro de rede ao atualizar ingrediente:', error);
-      throw error; // Re-throw para que o componente possa tratar o erro
+      
+      // Se for erro de CORS ou rede, tentar método local como fallback
+      if (error.message.includes('fetch') || error.message.includes('CORS')) {
+        console.log('🔄 Tentando fallback local devido ao erro de rede/CORS');
+        return atualizarIngredienteLocal(id, dados);
+      }
+      
+      throw error; // Re-throw para outros tipos de erro
     }
   };
 

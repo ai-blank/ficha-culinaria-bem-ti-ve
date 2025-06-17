@@ -65,7 +65,7 @@ const corsOptions = {
     callback(new Error('Não permitido pelo CORS'));
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With', 'Origin'],
   optionsSuccessStatus: 200
 };
@@ -78,7 +78,6 @@ app.use((req, res, next) => {
   
   console.log(`📡 ${req.method} ${req.path}`);
   console.log(`🌍 Origin: ${origin}`);
-  console.log(`🔑 User-Agent: ${req.get('User-Agent')}`);
   
   // Configurar headers CORS manualmente para garantir compatibilidade
   if (origin) {
@@ -97,7 +96,7 @@ app.use((req, res, next) => {
     if (isAllowed) {
       res.header('Access-Control-Allow-Origin', origin);
       res.header('Access-Control-Allow-Credentials', 'true');
-      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+      res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, PATCH, DELETE, OPTIONS');
       res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With, Accept, Origin');
       console.log(`✅ Headers CORS configurados para: ${origin}`);
     } else {
@@ -165,6 +164,7 @@ app.listen(PORT, '0.0.0.0', () => {
   console.log(`   - localhost:8080`);
   console.log(`   - Domínios Lovable (*.lovableproject.com, *.lovable.app)`);
   console.log(`   - IPs locais na porta 8080 (192.168.x.x:8080, etc.)`);
+  console.log(`   - Métodos permitidos: GET, POST, PUT, PATCH, DELETE, OPTIONS`);
 });
 
 module.exports = app;
