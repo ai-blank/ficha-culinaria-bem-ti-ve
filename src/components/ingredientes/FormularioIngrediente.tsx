@@ -253,7 +253,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                   <FormItem>
                     <FormLabel>Peso/Quantidade</FormLabel>
                     <FormControl>
-                      <Input placeholder="Ex: 1.0" {...field} />
+                      <Input type="text" placeholder="Ex: 1.0" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
