@@ -377,11 +377,11 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                           <FormLabel>Quantidade Usada ({field.unidade})</FormLabel>
                           <FormControl>
                             <Input
+                              type="text"
                               placeholder="0.00"
-                              {...quantidadeField}
+                              value={quantidadeField.value}
                               onChange={(e) => {
                                 const value = e.target.value;
-                                // Aceitar tanto string quanto number
                                 quantidadeField.onChange(value);
                               }}
                             />

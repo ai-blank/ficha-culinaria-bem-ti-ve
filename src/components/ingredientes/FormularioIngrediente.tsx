@@ -92,8 +92,10 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
         form.setValue('peso', dadosAlimento.peso);
       }
       
-      // Forçar a re-renderização do campo categoria
-      form.trigger(['categoria', 'unidade', 'fator_correcao']);
+      // Forçar a re-renderização dos campos
+      setTimeout(() => {
+        form.trigger(['categoria', 'unidade', 'fator_correcao', 'alimento']);
+      }, 100);
     }
     
     setTermoBusca('');

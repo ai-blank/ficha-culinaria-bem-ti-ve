@@ -7,6 +7,7 @@ import { FichaTecnica } from '@/types/ficha-tecnica';
 export const FichasTecnicasPage: React.FC = () => {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [fichaEditando, setFichaEditando] = useState<FichaTecnica | null>(null);
+  const [refreshKey, setRefreshKey] = useState(0);
 
   const handleNovaFicha = () => {
     setFichaEditando(null);
@@ -21,6 +22,8 @@ export const FichasTecnicasPage: React.FC = () => {
   const handleSuccesso = () => {
     setMostrarFormulario(false);
     setFichaEditando(null);
+    // Forçar atualização da lista
+    setRefreshKey(prev => prev + 1);
   };
 
   const handleCancelar = () => {
@@ -43,6 +46,7 @@ export const FichasTecnicasPage: React.FC = () => {
   return (
     <div className="container mx-auto p-6">
       <ListaFichasTecnicas
+        key={refreshKey}
         onNovaFicha={handleNovaFicha}
         onEditarFicha={handleEditarFicha}
       />
