@@ -81,6 +81,9 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
     const dadosAlimento = obterDadosAlimentoDaBase(nomeAlimento);
     
     if (dadosAlimento) {
+      console.log('🔄 Preenchendo dados do alimento automaticamente:', dadosAlimento);
+      
+      // Preencher todos os campos automaticamente
       form.setValue('alimento', dadosAlimento.alimento);
       form.setValue('categoria', dadosAlimento.categoria);
       form.setValue('unidade', dadosAlimento.unidade);
@@ -88,6 +91,11 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
       if (dadosAlimento.peso) {
         form.setValue('peso', dadosAlimento.peso);
       }
+      
+      // Forçar a atualização do campo categoria no formulário
+      setTimeout(() => {
+        form.trigger('categoria');
+      }, 100);
     }
     
     setTermoBusca('');
@@ -223,7 +231,7 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                           <SelectValue placeholder="Selecione a categoria" />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent>
+                      <SelectContent className="bg-white z-50">
                         {categorias.map((categoria) => (
                           <SelectItem key={categoria} value={categoria}>
                             {categoria}

@@ -111,7 +111,12 @@ export const useFichasTecnicas = () => {
 
   const calcularCustoIngredientes = (ingredientesFicha: IngredienteFicha[]): number => {
     return ingredientesFicha.reduce((total, ing) => {
-      const quantidadeCorrigida = ing.quantidade_usada / ing.fator_correcao;
+      // Converter quantidade para número se for string
+      const quantidadeUsada = typeof ing.quantidade_usada === 'string' 
+        ? parseFloat(ing.quantidade_usada) || 0 
+        : ing.quantidade_usada;
+        
+      const quantidadeCorrigida = quantidadeUsada / ing.fator_correcao;
       const pesoCompra = parseFloat(ing.peso_compra) || 1;
       const custoIngrediente = (quantidadeCorrigida / pesoCompra) * ing.preco_unitario;
       return total + custoIngrediente;
@@ -155,7 +160,25 @@ export const useFichasTecnicas = () => {
       }
 
       console.log('🔄 Enviando ficha técnica para API:', dados);
-      console.log('🔑 Usando token:', token.substring(0, 20) + '...');
+
+      // Normalizar dados antes de enviar para a API
+      const dadosNormalizados = {
+        ...dados,
+        ingredientes: dados.ingredientes.map(ing => ({
+          // Usar apenas o ingrediente_id como string para o MongoDB
+          ingrediente_id: ing.ingrediente_id,
+          nome: ing.nome,
+          quantidade_usada: typeof ing.quantidade_usada === 'string' 
+            ? parseFloat(ing.quantidade_usada) || 0 
+            : ing.quantidade_usada,
+          unidade: ing.unidade,
+          preco_unitario: ing.preco_unitario,
+          peso_compra: ing.peso_compra,
+          fator_correcao: ing.fator_correcao,
+        }))
+      };
+
+      console.log('🔄 Dados normalizados para API:', dadosNormalizados);
 
       const response = await fetch(`${API_BASE_URL}/fichas`, {
         method: 'POST',
@@ -163,7 +186,7 @@ export const useFichasTecnicas = () => {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(dados),
+        body: JSON.stringify(dadosNormalizados),
       });
 
       console.log('📡 Status da resposta da API:', response.status);
@@ -201,6 +224,13 @@ export const useFichasTecnicas = () => {
     const novaFicha: FichaTecnica = {
       id: Date.now().toString(),
       ...dados,
+      // Normalizar ingredientes para garantir que quantidade_usada seja number
+      ingredientes: dados.ingredientes.map(ing => ({
+        ...ing,
+        quantidade_usada: typeof ing.quantidade_usada === 'string' 
+          ? parseFloat(ing.quantidade_usada) || 0 
+          : ing.quantidade_usada,
+      })),
       custo_total: resultado.custo_total,
       custo_por_unidade: resultado.custo_por_unidade,
       preco_venda_sugerido: resultado.preco_venda_sugerido,

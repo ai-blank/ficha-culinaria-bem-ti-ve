@@ -3,7 +3,7 @@ export interface IngredienteFicha {
   id: string;
   ingrediente_id: string;
   nome: string;
-  quantidade_usada: number;
+  quantidade_usada: number | string; // Aceitar tanto number quanto string
   unidade: string;
   preco_unitario: number;
   peso_compra: string;

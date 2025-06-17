@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -23,7 +21,10 @@ const formSchema = z.object({
     id: z.string(),
     ingrediente_id: z.string(),
     nome: z.string(),
-    quantidade_usada: z.number().min(0.01, 'Quantidade deve ser maior que 0'),
+    quantidade_usada: z.union([z.number(), z.string()]).refine(val => {
+      const num = typeof val === 'string' ? parseFloat(val) : val;
+      return !isNaN(num) && num > 0;
+    }, 'Quantidade deve ser maior que 0'),
     unidade: z.string(),
     preco_unitario: z.number(),
     peso_compra: z.string(),
@@ -61,6 +62,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
   const [resultadoCalculo, setResultadoCalculo] = useState<any>(null);
   const [dadosAlterados, setDadosAlterados] = useState(false);
   const [calculoRealizado, setCalculoRealizado] = useState(false);
+  const [ingredienteSelecionado, setIngredienteSelecionado] = useState('');
 
   const form = useForm<NovaFichaTecnicaFormData>({
     resolver: zodResolver(formSchema),
@@ -92,13 +94,8 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     return () => subscription.unsubscribe();
   }, [form]);
 
-  const adicionarIngrediente = (ingredienteId: string) => {
-    console.log('🔍 Adicionando ingrediente com ID:', ingredienteId);
-    console.log('📋 Ingredientes disponíveis:', ingredientes);
-    
-    // Validar se o ID é válido antes de buscar
-    if (!ingredienteId || ingredienteId.startsWith('fallback-')) {
-      console.error('❌ ID de ingrediente inválido:', ingredienteId);
+  const adicionarIngrediente = () => {
+    if (!ingredienteSelecionado || ingredienteSelecionado.startsWith('fallback-')) {
       toast({
         variant: "destructive",
         title: "Erro",
@@ -107,9 +104,8 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
       return;
     }
     
-    const ingrediente = ingredientes.find(ing => ing.id === ingredienteId);
+    const ingrediente = ingredientes.find(ing => ing.id === ingredienteSelecionado);
     if (!ingrediente) {
-      console.error('❌ Ingrediente não encontrado:', ingredienteId);
       toast({
         variant: "destructive",
         title: "Erro", 
@@ -132,6 +128,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     };
 
     append(novoIngrediente);
+    setIngredienteSelecionado('');
     console.log('✅ Ingrediente adicionado à ficha:', novoIngrediente);
   };
 
@@ -301,37 +298,55 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-semibold">Ingredientes</h3>
-                  <div className="flex items-center gap-2">
-                    {loadingIngredientes && (
-                      <span className="text-sm text-muted-foreground">Carregando...</span>
-                    )}
-                    <Select onValueChange={adicionarIngrediente}>
-                      <SelectTrigger className="w-64">
-                        <SelectValue placeholder="+ Adicionar ingrediente" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {loadingIngredientes ? (
-                          <SelectItem key="loading" value="loading" disabled>
-                            Carregando ingredientes...
-                          </SelectItem>
-                        ) : ingredientesValidos.length === 0 ? (
-                          <SelectItem key="empty" value="empty" disabled>
-                            Nenhum ingrediente encontrado
-                          </SelectItem>
-                        ) : (
-                          ingredientesValidos.map((ingrediente) => (
-                            <SelectItem 
-                              key={ingrediente.id} 
-                              value={ingrediente.id}
-                            >
-                              {ingrediente.alimento}
-                            </SelectItem>
-                          ))
-                        )}
-                      </SelectContent>
-                    </Select>
-                  </div>
                 </div>
+
+                {/* Seção para adicionar ingrediente com layout melhorado */}
+                <Card className="p-4 bg-gray-50">
+                  <div className="flex gap-3 items-end">
+                    <div className="flex-1">
+                      <label className="text-sm font-medium text-gray-700 mb-2 block">
+                        Selecionar Ingrediente
+                      </label>
+                      <Select 
+                        value={ingredienteSelecionado} 
+                        onValueChange={setIngredienteSelecionado}
+                      >
+                        <SelectTrigger className="bg-white">
+                          <SelectValue placeholder="Escolha um ingrediente..." />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white z-50">
+                          {loadingIngredientes ? (
+                            <SelectItem key="loading" value="loading" disabled>
+                              Carregando ingredientes...
+                            </SelectItem>
+                          ) : ingredientesValidos.length === 0 ? (
+                            <SelectItem key="empty" value="empty" disabled>
+                              Nenhum ingrediente encontrado
+                            </SelectItem>
+                          ) : (
+                            ingredientesValidos.map((ingrediente) => (
+                              <SelectItem 
+                                key={ingrediente.id} 
+                                value={ingrediente.id}
+                              >
+                                {ingrediente.alimento}
+                              </SelectItem>
+                            ))
+                          )}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <Button
+                      type="button"
+                      onClick={adicionarIngrediente}
+                      disabled={!ingredienteSelecionado || loadingIngredientes}
+                      className="flex items-center gap-2 px-6"
+                    >
+                      <Plus className="w-4 h-4" />
+                      Adicionar
+                    </Button>
+                  </div>
+                </Card>
 
                 {fields.map((field, index) => (
                   <Card key={field.id} className="p-4">
@@ -362,11 +377,13 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                           <FormLabel>Quantidade Usada ({field.unidade})</FormLabel>
                           <FormControl>
                             <Input
-                              type="number"
-                              step="0.01"
                               placeholder="0.00"
                               {...quantidadeField}
-                              onChange={(e) => quantidadeField.onChange(parseFloat(e.target.value) || 0)}
+                              onChange={(e) => {
+                                const value = e.target.value;
+                                // Aceitar tanto string quanto number
+                                quantidadeField.onChange(value);
+                              }}
                             />
                           </FormControl>
                           <FormMessage />
@@ -651,4 +668,3 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     </div>
   );
 };
-
