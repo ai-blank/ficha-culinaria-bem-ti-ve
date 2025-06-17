@@ -92,10 +92,8 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
         form.setValue('peso', dadosAlimento.peso);
       }
       
-      // Forçar a atualização do campo categoria no formulário
-      setTimeout(() => {
-        form.trigger('categoria');
-      }, 100);
+      // Forçar a re-renderização do campo categoria
+      form.trigger(['categoria', 'unidade', 'fator_correcao']);
     }
     
     setTermoBusca('');
@@ -183,16 +181,16 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                     onChange={(e) => setTermoBusca(e.target.value)}
                   />
                   {alimentosFiltrados.length > 0 && (
-                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-48 overflow-y-auto">
+                    <div className="absolute z-10 w-full mt-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg max-h-48 overflow-y-auto">
                       {alimentosFiltrados.map((alimento, index) => (
                         <button
                           key={index}
                           type="button"
-                          className="w-full px-3 py-2 text-left text-black hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
+                          className="w-full px-3 py-2 text-left text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700 focus:outline-none"
                           onClick={() => handleSelecionarAlimentoDaBase(alimento.alimento)}
                         >
-                          <div className="font-medium text-black">{alimento.alimento}</div>
-                          <div className="text-sm text-gray-500">
+                          <div className="font-medium text-black dark:text-white">{alimento.alimento}</div>
+                          <div className="text-sm text-gray-500 dark:text-gray-400">
                             {alimento.categoria} - {alimento.unidade} - FC: {alimento.fator_correcao}
                           </div>
                         </button>
@@ -231,9 +229,13 @@ export const FormularioIngrediente: React.FC<FormularioIngredienteProps> = ({
                           <SelectValue placeholder="Selecione a categoria" />
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent className="bg-white z-50">
+                      <SelectContent className="bg-white dark:bg-gray-800 z-50 border border-gray-300 dark:border-gray-600">
                         {categorias.map((categoria) => (
-                          <SelectItem key={categoria} value={categoria}>
+                          <SelectItem 
+                            key={categoria} 
+                            value={categoria}
+                            className="text-black dark:text-black hover:bg-gray-100 dark:hover:bg-gray-700"
+                          >
                             {categoria}
                           </SelectItem>
                         ))}
