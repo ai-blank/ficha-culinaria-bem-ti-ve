@@ -1,3 +1,4 @@
+
 const express = require('express');
 const { body } = require('express-validator');
 const authController = require('../controllers/authController');
@@ -93,6 +94,17 @@ router.post('/confirm', authController.confirmEmail);
 router.post('/forgot-password', [
   body('email').isEmail().withMessage('Email inválido')
 ], authController.forgotPassword);
+
+/**
+ * @swagger
+ * /auth/validate-reset-token:
+ *   post:
+ *     summary: Valida token de redefinição de senha
+ *     tags: [Autenticação]
+ */
+router.post('/validate-reset-token', [
+  body('token').notEmpty().withMessage('Token é obrigatório')
+], authController.validateResetToken);
 
 /**
  * @swagger

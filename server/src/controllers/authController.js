@@ -1,3 +1,4 @@
+
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
@@ -280,6 +281,44 @@ const forgotPassword = async (req, res, next) => {
   }
 };
 
+// @desc    Validar token de reset
+// @route   POST /api/auth/validate-reset-token
+// @access  Public
+const validateResetToken = async (req, res, next) => {
+  try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        message: 'Token é obrigatório',
+        errors: errors.array()
+      });
+    }
+
+    const { token } = req.body;
+
+    const user = await User.findOne({
+      tokenResetSenha: token,
+      tokenResetExpire: { $gt: Date.now() }
+    });
+
+    if (!user) {
+      return res.status(400).json({
+        success: false,
+        message: 'Token inválido ou expirado'
+      });
+    }
+
+    res.json({
+      success: true,
+      message: 'Token válido'
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
 // @desc    Redefinir senha
 // @route   POST /api/auth/reset-password
 // @access  Public
@@ -433,6 +472,7 @@ module.exports = {
   login,
   confirmEmail,
   forgotPassword,
+  validateResetToken,
   resetPassword,
   resendConfirmation,
   getMe

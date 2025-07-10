@@ -10,6 +10,7 @@ import AuthPage from "./pages/AuthPage";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 import ConfirmEmailPage from "./pages/ConfirmEmailPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const AppContent = () => {
           element={user ? <Dashboard /> : <AuthPage />} 
         />
         <Route path="/confirm-email" element={<ConfirmEmailPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

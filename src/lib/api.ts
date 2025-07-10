@@ -24,6 +24,48 @@ export const api = {
     return data;
   },
 
+  async resetPassword(token: string, password: string) {
+    console.log('🔄 Redefinindo senha com token:', token);
+    
+    const response = await fetch(`${API_BASE_URL}/auth/reset-password`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token, password }),
+    });
+
+    const data = await response.json();
+    console.log('🔑 Resposta da redefinição:', data);
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Erro ao redefinir senha');
+    }
+
+    return data;
+  },
+
+  async validateResetToken(token: string) {
+    console.log('🔄 Validando token:', token);
+    
+    const response = await fetch(`${API_BASE_URL}/auth/validate-reset-token`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token }),
+    });
+
+    const data = await response.json();
+    console.log('✅ Resposta da validação:', data);
+
+    if (!response.ok) {
+      throw new Error(data.message || 'Token inválido');
+    }
+
+    return data;
+  },
+
   async login(email: string, password: string) {
     console.log('🔄 Fazendo login:', email);
     
