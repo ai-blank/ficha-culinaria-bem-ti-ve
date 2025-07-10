@@ -1,34 +1,41 @@
 
 import React, { useState } from 'react';
 import { FormularioIngrediente } from './FormularioIngrediente';
+import { FormularioMix } from './FormularioMix';
 import { ListaIngredientes } from './ListaIngredientes';
 import { Ingrediente } from '@/types/ingrediente';
 
+type ModoExibicao = 'lista' | 'ingrediente' | 'mix';
+
 export const IngredientesPage: React.FC = () => {
-  const [mostrarFormulario, setMostrarFormulario] = useState(false);
+  const [modo, setModo] = useState<ModoExibicao>('lista');
   const [ingredienteEditando, setIngredienteEditando] = useState<Ingrediente | null>(null);
 
   const handleNovoIngrediente = () => {
     setIngredienteEditando(null);
-    setMostrarFormulario(true);
+    setModo('ingrediente');
+  };
+
+  const handleNovoMix = () => {
+    setModo('mix');
   };
 
   const handleEditarIngrediente = (ingrediente: Ingrediente) => {
     setIngredienteEditando(ingrediente);
-    setMostrarFormulario(true);
+    setModo('ingrediente');
   };
 
   const handleSuccesso = () => {
-    setMostrarFormulario(false);
+    setModo('lista');
     setIngredienteEditando(null);
   };
 
   const handleCancelar = () => {
-    setMostrarFormulario(false);
+    setModo('lista');
     setIngredienteEditando(null);
   };
 
-  if (mostrarFormulario) {
+  if (modo === 'ingrediente') {
     return (
       <div className="container mx-auto p-6">
         <FormularioIngrediente
@@ -40,10 +47,22 @@ export const IngredientesPage: React.FC = () => {
     );
   }
 
+  if (modo === 'mix') {
+    return (
+      <div className="container mx-auto p-6">
+        <FormularioMix
+          onSuccess={handleSuccesso}
+          onCancel={handleCancelar}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto p-6">
       <ListaIngredientes
         onNovoIngrediente={handleNovoIngrediente}
+        onNovoMix={handleNovoMix}
         onEditarIngrediente={handleEditarIngrediente}
       />
     </div>

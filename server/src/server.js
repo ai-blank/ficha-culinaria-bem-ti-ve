@@ -1,4 +1,3 @@
-
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -11,6 +10,7 @@ const userRoutes = require('./routes/users');
 const ingredienteRoutes = require('./routes/ingredientes');
 const fichaRoutes = require('./routes/fichas');
 const alimentoRoutes = require('./routes/alimentos');
+const mixRoutes = require('./routes/mixes');
 const swaggerSetup = require('./config/swagger');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -133,6 +133,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/ingredientes', ingredienteRoutes);
 app.use('/api/fichas', fichaRoutes);
 app.use('/api/alimentos', alimentoRoutes);
+app.use('/api/mixes', mixRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
