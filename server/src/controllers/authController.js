@@ -1,18 +1,11 @@
-
-const crypto = require('crypto');
-const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 const User = require('../models/User');
-const sendEmail = require('../services/emailService');
+const { sendEmail } = require('../services/emailService');
 
-// Gerar JWT Token
-const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE
-  });
-};
-
-// @desc    Registrar usuário
+// @desc    Registrar novo usuário
 // @route   POST /api/auth/register
 // @access  Public
 const register = async (req, res, next) => {
@@ -28,79 +21,73 @@ const register = async (req, res, next) => {
 
     const { nome, email, password } = req.body;
 
-    // Verificar se usuário já existe
-    const userExists = await User.findOne({ email });
-    if (userExists) {
+    // Verificar se o email já existe
+    const emailExists = await User.findOne({ email });
+    if (emailExists) {
       return res.status(400).json({
         success: false,
-        message: 'Usuário já existe com este email'
+        message: 'Email já está em uso'
       });
     }
 
-    // Gerar token de verificação
-    const verificationToken = crypto.randomBytes(20).toString('hex');
+    // Criar token de verificação
+    const tokenVerificacao = crypto.randomBytes(20).toString('hex');
 
-    // Criar usuário INATIVO até confirmar email
+    // Criar usuário
     const user = await User.create({
       nome,
       email,
       password,
-      tokenVerificacao: verificationToken,
-      ativo: false // Usuário criado como INATIVO
+      tokenVerificacao
+    });
+
+    // Criar token JWT
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_EXPIRE
     });
 
     // Enviar email de verificação
-    try {
-      const verificationUrl = `${process.env.FRONTEND_URL}/confirm-email?token=${verificationToken}`;
-      await sendEmail({
-        email: user.email,
-        subject: '🎉 Bem-vindo ao Bem Ti Vê!',
-        message: `Olá ${nome}!\n\nSeja bem-vindo(a) ao sistema Bem Ti Vê! Para começar a usar todas as funcionalidades, você precisa verificar seu email.\n\nClique no botão abaixo para ativar sua conta:`,
-        html: `
-          <p>Olá <strong>${nome}</strong>!</p>
-          
-          <p>🎉 <strong>Seja bem-vindo(a) ao Bem Ti Vê!</strong></p>
-          
-          <p>Estamos muito felizes em tê-lo(a) conosco! O Bem Ti Vê é seu parceiro ideal para:</p>
-          
-          <ul style="color: #555; line-height: 1.8;">
-            <li>🍽️ Criar e gerenciar fichas técnicas de pratos</li>
-            <li>📊 Controlar custos e ingredientes</li>
-            <li>📈 Otimizar sua gestão culinária</li>
-            <li>🎯 Aumentar a eficiência da sua cozinha</li>
-          </ul>
-          
-          <p>Para começar a usar todas essas funcionalidades, você só precisa verificar seu email clicando no botão abaixo:</p>
-        `,
-        buttonText: 'Verificar Email e Começar',
-        buttonUrl: verificationUrl
-      });
-    } catch (emailError) {
-      console.error('Erro ao enviar email:', emailError);
-      // Continue mesmo se o email falhar
-    }
+    const confirmLink = `${req.protocol}://${req.get('host')}/api/auth/confirm-email?token=${tokenVerificacao}`;
+    const message = `
+      <p>Por favor, clique neste link para confirmar seu email:</p>
+      <a href="${confirmLink}" target="_blank">Confirmar Email</a>
+    `;
 
-    res.status(201).json({
-      success: true,
-      message: 'Usuário registrado com sucesso. Verifique seu email para ativar a conta.',
-      data: {
-        user: {
-          id: user._id,
-          nome: user.nome,
-          email: user.email,
-          admin: user.admin,
-          emailVerificado: user.emailVerificado,
-          ativo: user.ativo // Será false
+    try {
+      await sendEmail({
+        to: user.email,
+        subject: 'Confirmação de Email',
+        text: message
+      });
+
+      res.status(201).json({
+        success: true,
+        message: 'Usuário registrado com sucesso. Verifique seu email para confirmar sua conta.',
+        data: {
+          user: {
+            id: user._id,
+            nome: user.nome,
+            email: user.email
+          },
+          token: token
         }
-      }
-    });
+      });
+
+    } catch (error) {
+      // Rollback: Excluir usuário se falhar ao enviar email
+      await User.findByIdAndDelete(user._id);
+      return res.status(500).json({
+        success: false,
+        message: 'Erro ao enviar email de confirmação. Tente novamente.'
+      });
+    }
 
   } catch (error) {
     next(error);
   }
 };
 
-// @desc    Login do usuário
+// @desc    Fazer login do usuário
 // @route   POST /api/auth/login
 // @access  Public
 const login = async (req, res, next) => {
@@ -116,39 +103,63 @@ const login = async (req, res, next) => {
 
     const { email, password } = req.body;
 
-    // Verificar se usuário existe
+    // Verificar se o usuário existe
     const user = await User.findOne({ email }).select('+password');
-    
-    if (!user || !(await user.matchPassword(password))) {
+
+    if (!user) {
       return res.status(401).json({
         success: false,
         message: 'Credenciais inválidas'
       });
     }
 
-    // Verificar se usuário está ativo
-    if (!user.ativo) {
+    // Verificar se a senha está correta
+    const isMatch = await user.matchPassword(password);
+
+    if (!isMatch) {
       return res.status(401).json({
         success: false,
-        message: 'Conta não ativada. Verifique seu email para ativar a conta.'
+        message: 'Credenciais inválidas'
       });
     }
 
-    // Gerar token
-    const token = generateToken(user._id);
+    // Verificar se o email foi confirmado
+    if (!user.emailVerificado) {
+      return res.status(401).json({
+        success: false,
+        message: 'Email não confirmado. Verifique sua caixa de entrada.'
+      });
+    }
+
+    // Verificar se o usuário está ativo
+    if (!user.ativo) {
+      return res.status(403).json({
+        success: false,
+        message: 'Usuário inativo. Contacte o administrador.'
+      });
+    }
+
+    // Criar token JWT
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_EXPIRE
+    });
 
     res.json({
       success: true,
       message: 'Login realizado com sucesso',
       data: {
-        token,
         user: {
           id: user._id,
           nome: user.nome,
           email: user.email,
           admin: user.admin,
-          emailVerificado: user.emailVerificado
-        }
+          ativo: user.ativo,
+          emailVerificado: user.emailVerificado,
+          createdAt: user.createdAt,
+          company: user.company,
+          phone: user.phone
+        },
+        token: token
       }
     });
 
@@ -157,40 +168,30 @@ const login = async (req, res, next) => {
   }
 };
 
-// @desc    Confirmar email
-// @route   POST /api/auth/confirm
+// @desc    Confirmar email do usuário
+// @route   GET /api/auth/confirm-email
 // @access  Public
 const confirmEmail = async (req, res, next) => {
   try {
-    const { token } = req.body;
-
-    if (!token) {
-      return res.status(400).json({
-        success: false,
-        message: 'Token de verificação é obrigatório'
-      });
-    }
+    const { token } = req.query;
 
     const user = await User.findOne({ tokenVerificacao: token });
 
     if (!user) {
       return res.status(400).json({
         success: false,
-        message: 'Token de verificação inválido'
+        message: 'Token inválido'
       });
     }
 
-    // Ativar usuário e marcar email como verificado
     user.emailVerificado = true;
-    user.ativo = true; // ATIVAR usuário após confirmação
+    user.ativo = true; // Ativar usuário após confirmação
     user.tokenVerificacao = undefined;
     await user.save();
 
-    console.log(`✅ Usuário ${user.email} ativado com sucesso!`);
-
     res.json({
       success: true,
-      message: 'Email verificado e conta ativada com sucesso'
+      message: 'Email confirmado com sucesso. Agora você pode fazer login.'
     });
 
   } catch (error) {
@@ -198,20 +199,11 @@ const confirmEmail = async (req, res, next) => {
   }
 };
 
-// @desc    Esqueci minha senha
-// @route   POST /api/auth/forgot-password
+// @desc    Reenviar email de confirmação
+// @route   POST /api/auth/resend-confirmation
 // @access  Public
-const forgotPassword = async (req, res, next) => {
+const resendConfirmation = async (req, res, next) => {
   try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        success: false,
-        message: 'Email inválido',
-        errors: errors.array()
-      });
-    }
-
     const { email } = req.body;
 
     const user = await User.findOne({ email });
@@ -223,60 +215,92 @@ const forgotPassword = async (req, res, next) => {
       });
     }
 
-    // Gerar token de reset
-    const resetToken = crypto.randomBytes(20).toString('hex');
+    // Verificar se o email já foi confirmado
+    if (user.emailVerificado) {
+      return res.status(400).json({
+        success: false,
+        message: 'Este email já foi confirmado'
+      });
+    }
 
-    user.tokenResetSenha = resetToken;
-    user.tokenResetExpire = Date.now() + 10 * 60 * 1000; // 10 minutos
-
+    // Criar novo token de verificação
+    user.tokenVerificacao = crypto.randomBytes(20).toString('hex');
     await user.save();
 
-    // Enviar email
+    // Enviar email de verificação
+    const confirmLink = `${req.protocol}://${req.get('host')}/api/auth/confirm-email?token=${user.tokenVerificacao}`;
+    const message = `
+      <p>Por favor, clique neste link para confirmar seu email:</p>
+      <a href="${confirmLink}" target="_blank">Confirmar Email</a>
+    `;
+
+    await sendEmail({
+      to: user.email,
+      subject: 'Confirmação de Email',
+      text: message
+    });
+
+    res.json({
+      success: true,
+      message: 'Email de confirmação reenviado com sucesso. Verifique sua caixa de entrada.'
+    });
+
+  } catch (error) {
+    next(error);
+  }
+};
+
+// @desc    Solicitar redefinição de senha
+// @route   POST /api/auth/forgot-password
+// @access  Public
+const forgotPassword = async (req, res, next) => {
+  try {
+    const { email } = req.body;
+
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: 'Usuário não encontrado'
+      });
+    }
+
+    // Criar token de redefinição
+    const tokenResetSenha = crypto.randomBytes(20).toString('hex');
+    user.tokenResetSenha = crypto.createHash('sha256').update(tokenResetSenha).digest('hex');
+    user.tokenResetExpire = Date.now() + 10 * 60 * 1000; // 10 minutos
+    await user.save();
+
+    // Enviar email de redefinição
+    const resetLink = `${req.protocol}://${req.get('host')}/reset-password?token=${tokenResetSenha}`;
+    const message = `
+      <p>Você solicitou a redefinição da sua senha. Clique no link abaixo para redefinir:</p>
+      <a href="${resetLink}" target="_blank">Redefinir Senha</a>
+      <p>Este link é válido por 10 minutos.</p>
+    `;
+
     try {
-      const resetUrl = `${process.env.FRONTEND_URL}/reset-password?token=${resetToken}`;
       await sendEmail({
-        email: user.email,
-        subject: '🔐 Redefinição de Senha - Bem Ti Vê',
-        message: `Olá ${user.nome}!\n\nRecebemos uma solicitação para redefinir a senha da sua conta no Bem Ti Vê.\n\nSe foi você quem solicitou, clique no botão abaixo para criar uma nova senha:`,
-        html: `
-          <p>Olá <strong>${user.nome}</strong>!</p>
-  
-          <p>🔐 Recebemos uma solicitação para <strong>redefinir a senha</strong> da sua conta no Bem Ti Vê.</p>
-          
-          <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ec6d0b;">
-            <p style="margin: 0; color: #e65100;">
-              <strong>⚠️ Importante:</strong> Este link é válido por apenas 10 minutos por motivos de segurança.
-            </p>
-          </div>
-          
-          <p>Se foi você quem solicitou esta redefinição, clique no botão abaixo para criar uma nova senha:</p>
-
-          <a href="${resetUrl}" style="display: inline-block; background-color: #e65100; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-            Redefinir Minha Senha
-          </a>
-
-          <br><br>
-
-          <p style="font-size: 14px; color: #666;">
-            Se você não solicitou esta redefinição, pode ignorar este email com segurança. Sua conta permanecerá protegida.
-          </p>
-        `,
-        buttonText: 'Redefinir Minha Senha',
-        buttonUrl: resetUrl
+        to: user.email,
+        subject: 'Redefinição de Senha',
+        text: message
       });
 
       res.json({
         success: true,
-        message: 'Email de redefinição enviado'
+        message: 'Email de redefinição enviado com sucesso. Verifique sua caixa de entrada.'
       });
-    } catch (emailError) {
+
+    } catch (error) {
+      // Limpar campos de redefinição se falhar ao enviar email
       user.tokenResetSenha = undefined;
       user.tokenResetExpire = undefined;
       await user.save();
 
       return res.status(500).json({
         success: false,
-        message: 'Erro ao enviar email'
+        message: 'Erro ao enviar email de redefinição. Tente novamente.'
       });
     }
 
@@ -285,24 +309,17 @@ const forgotPassword = async (req, res, next) => {
   }
 };
 
-// @desc    Validar token de reset
+// @desc    Validar token de redefinição de senha
 // @route   POST /api/auth/validate-reset-token
 // @access  Public
 const validateResetToken = async (req, res, next) => {
   try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        success: false,
-        message: 'Token é obrigatório',
-        errors: errors.array()
-      });
-    }
-
     const { token } = req.body;
 
+    const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
+
     const user = await User.findOne({
-      tokenResetSenha: token,
+      tokenResetSenha: tokenHash,
       tokenResetExpire: { $gt: Date.now() }
     });
 
@@ -323,26 +340,19 @@ const validateResetToken = async (req, res, next) => {
   }
 };
 
-// @desc    Redefinir senha
+// @desc    Redefinir senha do usuário
 // @route   POST /api/auth/reset-password
 // @access  Public
 const resetPassword = async (req, res, next) => {
   try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        success: false,
-        message: 'Dados inválidos',
-        errors: errors.array()
-      });
-    }
-
     const { token, password } = req.body;
 
+    const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
+
     const user = await User.findOne({
-      tokenResetSenha: token,
+      tokenResetSenha: tokenHash,
       tokenResetExpire: { $gt: Date.now() }
-    });
+    }).select('+password');
 
     if (!user) {
       return res.status(400).json({
@@ -366,24 +376,25 @@ const resetPassword = async (req, res, next) => {
   }
 };
 
-// @desc    Reenviar email de confirmação
-// @route   POST /api/auth/resend-confirmation
-// @access  Public
-const resendConfirmation = async (req, res, next) => {
+// @desc    Alterar senha do usuário logado
+// @route   POST /api/auth/change-password
+// @access  Private
+const changePassword = async (req, res, next) => {
   try {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({
         success: false,
-        message: 'Email inválido',
+        message: 'Dados inválidos',
         errors: errors.array()
       });
     }
 
-    const { email } = req.body;
+    const { currentPassword, newPassword } = req.body;
+    const userId = req.user._id;
 
-    const user = await User.findOne({ email });
-
+    // Buscar usuário com senha
+    const user = await User.findById(userId).select('+password');
     if (!user) {
       return res.status(404).json({
         success: false,
@@ -391,79 +402,22 @@ const resendConfirmation = async (req, res, next) => {
       });
     }
 
-    if (user.emailVerificado) {
-      return res.status(400).json({
+    // Verificar senha atual
+    const isCurrentPasswordValid = await user.matchPassword(currentPassword);
+    if (!isCurrentPasswordValid) {
+      return res.status(401).json({
         success: false,
-        message: 'Email já foi verificado'
+        message: 'Senha atual incorreta'
       });
     }
 
-    // Gerar novo token de verificação
-    const verificationToken = crypto.randomBytes(20).toString('hex');
-    user.tokenVerificacao = verificationToken;
+    // Atualizar senha
+    user.password = newPassword;
     await user.save();
-
-    // Enviar email de verificação
-    try {
-      const verificationUrl = `${process.env.FRONTEND_URL}/confirm-email?token=${verificationToken}`;
-      await sendEmail({
-        email: user.email,
-        subject: '🎉 Confirmação de Email - Bem Ti Vê',
-        message: `Olá ${user.nome}!\n\nConforme solicitado, aqui está um novo link para verificar seu email no Bem Ti Vê.\n\nClique no botão abaixo para ativar sua conta:`,
-        html: `
-          <p>Olá <strong>${user.nome}</strong>!</p>
-          
-          <p>🎉 Conforme solicitado, aqui está um novo link para <strong>verificar seu email</strong> no Bem Ti Vê!</p>
-          
-          <p>Para começar a usar todas as funcionalidades do sistema, você só precisa clicar no botão abaixo:</p>
-          
-          <ul style="color: #555; line-height: 1.8;">
-            <li>🍽️ Criar e gerenciar fichas técnicas de pratos</li>
-            <li>📊 Controlar custos e ingredientes</li>
-            <li>📈 Otimizar sua gestão culinária</li>
-            <li>🎯 Aumentar a eficiência da sua cozinha</li>
-          </ul>
-        `,
-        buttonText: 'Verificar Email e Começar',
-        buttonUrl: verificationUrl
-      });
-
-      res.json({
-        success: true,
-        message: 'Email de confirmação reenviado com sucesso'
-      });
-    } catch (emailError) {
-      console.error('Erro ao enviar email:', emailError);
-      return res.status(500).json({
-        success: false,
-        message: 'Erro ao enviar email de confirmação'
-      });
-    }
-
-  } catch (error) {
-    next(error);
-  }
-};
-
-// @desc    Obter dados do usuário atual
-// @route   GET /api/auth/me
-// @access  Private
-const getMe = async (req, res, next) => {
-  try {
-    const user = req.user;
 
     res.json({
       success: true,
-      data: {
-        user: {
-          id: user._id,
-          nome: user.nome,
-          email: user.email,
-          admin: user.admin,
-          emailVerificado: user.emailVerificado,
-          ativo: user.ativo
-        }
-      }
+      message: 'Senha alterada com sucesso'
     });
 
   } catch (error) {
@@ -475,9 +429,9 @@ module.exports = {
   register,
   login,
   confirmEmail,
+  resendConfirmation,
   forgotPassword,
   validateResetToken,
   resetPassword,
-  resendConfirmation,
-  getMe
+  changePassword
 };

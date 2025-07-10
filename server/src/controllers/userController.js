@@ -67,7 +67,7 @@ const updateUser = async (req, res, next) => {
     }
 
     const { id } = req.params;
-    const { nome, email } = req.body;
+    const { nome, email, company, phone } = req.body;
 
     // Verificar se o usuário pode editar este perfil
     if (req.user._id.toString() !== id && !req.user.admin) {
@@ -98,9 +98,15 @@ const updateUser = async (req, res, next) => {
     }
 
     // Atualizar usuário
+    const updateData = {};
+    if (nome) updateData.nome = nome;
+    if (email) updateData.email = email;
+    if (company !== undefined) updateData.company = company;
+    if (phone !== undefined) updateData.phone = phone;
+
     const updatedUser = await User.findByIdAndUpdate(
       id,
-      { nome, email },
+      updateData,
       { new: true, runValidators: true }
     ).select('-password');
 

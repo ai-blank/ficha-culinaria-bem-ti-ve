@@ -23,6 +23,12 @@ const bcrypt = require('bcryptjs');
  *           type: string
  *           format: email
  *           description: Email do usuário
+ *         company:
+ *           type: string
+ *           description: Empresa/Negócio do usuário
+ *         phone:
+ *           type: string
+ *           description: Telefone do usuário
  *         admin:
  *           type: boolean
  *           default: false
@@ -59,6 +65,16 @@ const userSchema = new mongoose.Schema({
       /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
       'Email inválido'
     ]
+  },
+  company: {
+    type: String,
+    trim: true,
+    maxlength: [100, 'Nome da empresa não pode ter mais de 100 caracteres']
+  },
+  phone: {
+    type: String,
+    trim: true,
+    maxlength: [20, 'Telefone não pode ter mais de 20 caracteres']
   },
   password: {
     type: String,

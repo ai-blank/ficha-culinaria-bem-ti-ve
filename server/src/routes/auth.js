@@ -77,19 +77,27 @@ router.post('/login', [
 
 /**
  * @swagger
- * /auth/confirm:
- *   post:
- *     summary: Confirma email do usuário
- *     tags: [Autenticação]
- */
-router.post('/confirm', authController.confirmEmail);
-
-/**
- * @swagger
  * /auth/forgot-password:
  *   post:
  *     summary: Solicita redefinição de senha
  *     tags: [Autenticação]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *     responses:
+ *       200:
+ *         description: Email de redefinição enviado
+ *       404:
+ *         description: Usuário não encontrado
  */
 router.post('/forgot-password', [
   body('email').isEmail().withMessage('Email inválido')
@@ -97,21 +105,30 @@ router.post('/forgot-password', [
 
 /**
  * @swagger
- * /auth/validate-reset-token:
- *   post:
- *     summary: Valida token de redefinição de senha
- *     tags: [Autenticação]
- */
-router.post('/validate-reset-token', [
-  body('token').notEmpty().withMessage('Token é obrigatório')
-], authController.validateResetToken);
-
-/**
- * @swagger
  * /auth/reset-password:
  *   post:
- *     summary: Redefine senha com token
+ *     summary: Redefine a senha com token
  *     tags: [Autenticação]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - token
+ *               - password
+ *             properties:
+ *               token:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *                 minLength: 6
+ *     responses:
+ *       200:
+ *         description: Senha redefinida com sucesso
+ *       400:
+ *         description: Token inválido ou expirado
  */
 router.post('/reset-password', [
   body('token').notEmpty().withMessage('Token é obrigatório'),
@@ -120,10 +137,74 @@ router.post('/reset-password', [
 
 /**
  * @swagger
+ * /auth/validate-reset-token:
+ *   post:
+ *     summary: Valida token de redefinição
+ *     tags: [Autenticação]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - token
+ *             properties:
+ *               token:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Token válido
+ *       400:
+ *         description: Token inválido ou expirado
+ */
+router.post('/validate-reset-token', [
+  body('token').notEmpty().withMessage('Token é obrigatório')
+], authController.validateResetToken);
+
+/**
+ * @swagger
+ * /auth/confirm-email:
+ *   get:
+ *     summary: Confirma email do usuário
+ *     tags: [Autenticação]
+ *     parameters:
+ *       - in: query
+ *         name: token
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Email confirmado com sucesso
+ *       400:
+ *         description: Token inválido
+ */
+router.get('/confirm-email', authController.confirmEmail);
+
+/**
+ * @swagger
  * /auth/resend-confirmation:
  *   post:
  *     summary: Reenvia email de confirmação
  *     tags: [Autenticação]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - email
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *     responses:
+ *       200:
+ *         description: Email reenviado
+ *       404:
+ *         description: Usuário não encontrado
  */
 router.post('/resend-confirmation', [
   body('email').isEmail().withMessage('Email inválido')
@@ -131,13 +212,36 @@ router.post('/resend-confirmation', [
 
 /**
  * @swagger
- * /auth/me:
- *   get:
- *     summary: Obtém dados do usuário logado
+ * /auth/change-password:
+ *   post:
+ *     summary: Altera senha do usuário logado
  *     tags: [Autenticação]
  *     security:
  *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - currentPassword
+ *               - newPassword
+ *             properties:
+ *               currentPassword:
+ *                 type: string
+ *               newPassword:
+ *                 type: string
+ *                 minLength: 6
+ *     responses:
+ *       200:
+ *         description: Senha alterada com sucesso
+ *       401:
+ *         description: Senha atual incorreta
  */
-router.get('/me', auth, authController.getMe);
+router.post('/change-password', auth, [
+  body('currentPassword').notEmpty().withMessage('Senha atual é obrigatória'),
+  body('newPassword').isLength({ min: 6 }).withMessage('Nova senha deve ter pelo menos 6 caracteres')
+], authController.changePassword);
 
 module.exports = router;
