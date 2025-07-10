@@ -301,20 +301,20 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                 </div>
 
                 {/* Seção para adicionar ingrediente com layout melhorado */}
-                <Card className="p-4 bg-gray-50">
+                <Card className="p-4">
                   <div className="flex gap-3 items-end">
                     <div className="flex-1">
-                      <label className="text-sm font-medium text-gray-700 mb-2 block">
+                      <label className="text-sm font-medium mb-2 block">
                         Selecionar Ingrediente
                       </label>
                       <Select 
                         value={ingredienteSelecionado} 
                         onValueChange={setIngredienteSelecionado}
                       >
-                        <SelectTrigger className="bg-white">
+                        <SelectTrigger className="">
                           <SelectValue placeholder="Escolha um ingrediente..." />
                         </SelectTrigger>
-                        <SelectContent className="bg-white z-50">
+                        <SelectContent className="z-50">
                           {loadingIngredientes ? (
                             <SelectItem key="loading" value="loading" disabled>
                               Carregando ingredientes...
