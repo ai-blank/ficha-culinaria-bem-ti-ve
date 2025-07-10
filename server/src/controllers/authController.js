@@ -240,7 +240,7 @@ const forgotPassword = async (req, res, next) => {
         message: `Olá ${user.nome}!\n\nRecebemos uma solicitação para redefinir a senha da sua conta no Bem Ti Vê.\n\nSe foi você quem solicitou, clique no botão abaixo para criar uma nova senha:`,
         html: `
           <p>Olá <strong>${user.nome}</strong>!</p>
-          
+  
           <p>🔐 Recebemos uma solicitação para <strong>redefinir a senha</strong> da sua conta no Bem Ti Vê.</p>
           
           <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ec6d0b;">
@@ -250,9 +250,13 @@ const forgotPassword = async (req, res, next) => {
           </div>
           
           <p>Se foi você quem solicitou esta redefinição, clique no botão abaixo para criar uma nova senha:</p>
-          
-          <br>
-          
+
+          <a href="${resetUrl}" style="display: inline-block; background-color: #e65100; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Redefinir Minha Senha
+          </a>
+
+          <br><br>
+
           <p style="font-size: 14px; color: #666;">
             Se você não solicitou esta redefinição, pode ignorar este email com segurança. Sua conta permanecerá protegida.
           </p>
