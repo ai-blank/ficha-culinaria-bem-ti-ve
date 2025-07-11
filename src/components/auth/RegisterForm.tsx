@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { PasswordInput } from '@/components/ui/password-input';
 import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
@@ -208,10 +208,9 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
 
         <div className="space-y-2">
           <Label htmlFor="password" className="text-gray-700 font-body">Senha *</Label>
-          <Input
+          <PasswordInput
             id="password"
             name="password"
-            type="password"
             value={formData.password}
             onChange={handleChange}
             placeholder="Sua senha"
@@ -241,10 +240,9 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggleForm }) => {
 
         <div className="space-y-2">
           <Label htmlFor="confirmPassword" className="text-gray-700 font-body">Confirmar senha *</Label>
-          <Input
+          <PasswordInput
             id="confirmPassword"
             name="confirmPassword"
-            type="password"
             value={formData.confirmPassword}
             onChange={handleChange}
             placeholder="Confirme sua senha"
