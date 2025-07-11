@@ -10,6 +10,7 @@ import { useIngredientes } from '@/hooks/useIngredientes';
 import { useMixes } from '@/hooks/useMixes';
 import { useToast } from '@/hooks/use-toast';
 import { X, Plus, Package } from 'lucide-react';
+import { MixIngrediente } from '@/types/mix';
 
 interface FormularioMixProps {
   onCancel: () => void;
@@ -17,21 +18,18 @@ interface FormularioMixProps {
 
 const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
   const [nome, setNome] = useState('');
-  const [ingredientesSelecionados, setIngredientesSelecionados] = useState<Array<{
-    ingredienteId: string;
-    quantidade: number;
-  }>>([]);
+  const [ingredientesSelecionados, setIngredientesSelecionados] = useState<MixIngrediente[]>([]);
   const [ingredienteSelecionado, setIngredienteSelecionado] = useState('');
   const [quantidade, setQuantidade] = useState<number>(1);
   const [loading, setLoading] = useState(false);
 
-  const { ingredientes, carregarIngredientes } = useIngredientes();
+  const { ingredientes, recarregarIngredientes } = useIngredientes();
   const { criarMix } = useMixes();
   const { toast } = useToast();
 
   useEffect(() => {
-    carregarIngredientes();
-  }, [carregarIngredientes]);
+    recarregarIngredientes();
+  }, [recarregarIngredientes]);
 
   const adicionarIngrediente = () => {
     if (!ingredienteSelecionado || quantidade <= 0) {
@@ -44,7 +42,7 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
     }
 
     const jaExiste = ingredientesSelecionados.find(
-      item => item.ingredienteId === ingredienteSelecionado
+      item => (typeof item.ingredienteId === 'string' ? item.ingredienteId : item.ingredienteId.id) === ingredienteSelecionado
     );
 
     if (jaExiste) {
@@ -56,18 +54,27 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
       return;
     }
 
-    setIngredientesSelecionados([
-      ...ingredientesSelecionados,
-      { ingredienteId: ingredienteSelecionado, quantidade }
-    ]);
+    // Encontrar o ingrediente para pegar sua unidade
+    const ingredienteEncontrado = ingredientes.find(ing => (ing.id || ing._id) === ingredienteSelecionado);
+    const unidadeIngrediente = ingredienteEncontrado?.unidade || 'un';
 
+    const novoIngrediente: MixIngrediente = {
+      ingredienteId: ingredienteSelecionado,
+      quantidade,
+      unidade: unidadeIngrediente
+    };
+
+    setIngredientesSelecionados([...ingredientesSelecionados, novoIngrediente]);
     setIngredienteSelecionado('');
     setQuantidade(1);
   };
 
   const removerIngrediente = (ingredienteId: string) => {
     setIngredientesSelecionados(
-      ingredientesSelecionados.filter(item => item.ingredienteId !== ingredienteId)
+      ingredientesSelecionados.filter(item => {
+        const id = typeof item.ingredienteId === 'string' ? item.ingredienteId : item.ingredienteId.id;
+        return id !== ingredienteId;
+      })
     );
   };
 
@@ -96,7 +103,10 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
     try {
       await criarMix({
         nome,
-        ingredientes: ingredientesSelecionados
+        ingredientes: ingredientesSelecionados,
+        categoria: 'Mix',
+        peso_total: '1.0',
+        unidade: 'un'
       });
 
       toast({
@@ -189,22 +199,25 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
               <div className="space-y-2">
                 <Label>Ingredientes Selecionados:</Label>
                 <div className="flex flex-wrap gap-2">
-                  {ingredientesSelecionados.map((item) => (
-                    <Badge
-                      key={item.ingredienteId}
-                      variant="secondary"
-                      className="flex items-center gap-1 px-3 py-1"
-                    >
-                      {getIngredienteNome(item.ingredienteId)} ({item.quantidade})
-                      <button
-                        type="button"
-                        onClick={() => removerIngrediente(item.ingredienteId)}
-                        className="ml-1 hover:bg-red-100 rounded-full p-0.5"
+                  {ingredientesSelecionados.map((item, index) => {
+                    const ingredienteId = typeof item.ingredienteId === 'string' ? item.ingredienteId : item.ingredienteId.id;
+                    return (
+                      <Badge
+                        key={`${ingredienteId}-${index}`}
+                        variant="secondary"
+                        className="flex items-center gap-1 px-3 py-1"
                       >
-                        <X className="h-3 w-3" />
-                      </button>
-                    </Badge>
-                  ))}
+                        {getIngredienteNome(ingredienteId)} ({item.quantidade} {item.unidade})
+                        <button
+                          type="button"
+                          onClick={() => removerIngrediente(ingredienteId)}
+                          className="ml-1 hover:bg-red-100 rounded-full p-0.5"
+                        >
+                          <X className="h-3 w-3" />
+                        </button>
+                      </Badge>
+                    );
+                  })}
                 </div>
               </div>
             )}

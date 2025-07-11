@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { FormularioIngrediente } from './FormularioIngrediente';
-import { FormularioMix } from './FormularioMix';
+import FormularioMix from './FormularioMix';
 import { ListaIngredientes } from './ListaIngredientes';
 import { Ingrediente } from '@/types/ingrediente';
 
@@ -51,7 +51,6 @@ export const IngredientesPage: React.FC = () => {
     return (
       <div className="container mx-auto p-6">
         <FormularioMix
-          onSuccess={handleSuccesso}
           onCancel={handleCancelar}
         />
       </div>
