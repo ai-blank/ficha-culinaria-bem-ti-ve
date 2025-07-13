@@ -5,6 +5,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Check, ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useIngredientes } from '@/hooks/useIngredientes';
 import { useMixes } from '@/hooks/useMixes';
@@ -22,6 +25,7 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
   const [ingredienteSelecionado, setIngredienteSelecionado] = useState('');
   const [quantidade, setQuantidade] = useState<number>(1);
   const [loading, setLoading] = useState(false);
+  const [openCombobox, setOpenCombobox] = useState(false);
 
   const { ingredientes, recarregarIngredientes } = useIngredientes();
   const { criarMix } = useMixes();
@@ -131,6 +135,15 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
     return ingrediente?.alimento || 'Ingrediente não encontrado';
   };
 
+  // Ordenar ingredientes alfabeticamente por nome
+  const ingredientesOrdenados = [...ingredientes].sort((a, b) => 
+    a.alimento.localeCompare(b.alimento, 'pt-BR', { sensitivity: 'base' })
+  );
+
+  const ingredienteSelecionadoData = ingredientes.find(ing => 
+    (ing.id || ing._id) === ingredienteSelecionado
+  );
+
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -157,21 +170,50 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
             
             <div className="flex gap-2">
               <div className="flex-1">
-                <Select value={ingredienteSelecionado} onValueChange={setIngredienteSelecionado}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Selecione um ingrediente" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {ingredientes.map((ingrediente) => (
-                      <SelectItem 
-                        key={ingrediente.id || ingrediente._id} 
-                        value={ingrediente.id || ingrediente._id || ''}
-                      >
-                        {ingrediente.alimento}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                <Popover open={openCombobox} onOpenChange={setOpenCombobox}>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant="outline"
+                      role="combobox"
+                      aria-expanded={openCombobox}
+                      className="justify-between w-full"
+                    >
+                      {ingredienteSelecionadoData
+                        ? `${ingredienteSelecionadoData.alimento} (${ingredienteSelecionadoData.unidade})`
+                        : "Selecione um ingrediente..."}
+                      <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-[400px] p-0" side="bottom" align="start">
+                    <Command>
+                      <CommandInput placeholder="Buscar ingrediente..." />
+                      <CommandList>
+                        <CommandEmpty>Nenhum ingrediente encontrado.</CommandEmpty>
+                        <CommandGroup>
+                          {ingredientesOrdenados.map((ingrediente) => (
+                            <CommandItem
+                              key={ingrediente.id || ingrediente._id}
+                              value={`${ingrediente.alimento} ${ingrediente.unidade}`}
+                              onSelect={() => {
+                                setIngredienteSelecionado(ingrediente.id || ingrediente._id || '');
+                                setOpenCombobox(false);
+                              }}
+                            >
+                              <Check
+                                className={`mr-2 h-4 w-4 ${
+                                  ingredienteSelecionado === (ingrediente.id || ingrediente._id)
+                                    ? "opacity-100"
+                                    : "opacity-0"
+                                }`}
+                              />
+                              {ingrediente.alimento} ({ingrediente.unidade})
+                            </CommandItem>
+                          ))}
+                        </CommandGroup>
+                      </CommandList>
+                    </Command>
+                  </PopoverContent>
+                </Popover>
               </div>
               
               <div className="w-24">
