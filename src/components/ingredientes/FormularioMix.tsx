@@ -33,7 +33,7 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
 
   useEffect(() => {
     recarregarIngredientes();
-  }, [recarregarIngredientes]);
+  }, []);
 
   const adicionarIngrediente = () => {
     if (!ingredienteSelecionado || quantidade <= 0) {
