@@ -77,7 +77,15 @@ export const api = {
       body: JSON.stringify({ email, password }),
     });
 
-    const data = await response.json();
+    let data;
+    try {
+      data = await response.json();
+    } catch (error) {
+      const text = await response.text();
+      console.log('⚠️ Resposta não é JSON:', text);
+      throw new Error(text || 'Erro de comunicação com o servidor');
+    }
+    
     console.log('👤 Resposta do login:', data);
 
     if (!response.ok) {
