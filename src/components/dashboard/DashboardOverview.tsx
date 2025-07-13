@@ -183,8 +183,8 @@ const DashboardOverview: React.FC<DashboardOverviewProps> = ({ onNavigate }) => 
               {fichasTecnicas
                 .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
                 .slice(0, 5)
-                .map((ficha) => (
-                  <div key={ficha.id} className="flex items-center justify-between p-4 border rounded-lg">
+                .map((ficha, index) => (
+                  <div key={ficha.id || `ficha-${index}`} className="flex items-center justify-between p-4 border rounded-lg">
                     <div>
                       <p className="font-medium">{ficha.nome_receita}</p>
                       <p className="text-sm text-muted-foreground">
