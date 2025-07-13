@@ -52,6 +52,7 @@ export const IngredientesPage: React.FC = () => {
       <div className="container mx-auto p-6">
         <FormularioMix
           onCancel={handleCancelar}
+          onSuccess={handleSuccesso}
         />
       </div>
     );

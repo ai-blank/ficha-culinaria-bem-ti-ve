@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge';
 import { Plus, Trash2, Calculator, Save, Check } from 'lucide-react';
 import { useFichasTecnicas } from '@/hooks/useFichasTecnicas';
 import { useIngredientes } from '@/hooks/useIngredientes';
+import { useMixes } from '@/hooks/useMixes';
 import { NovaFichaTecnicaFormData, IngredienteFicha, FichaTecnica } from '@/types/ficha-tecnica';
 import { useToast } from '@/hooks/use-toast';
 
@@ -52,6 +53,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
 }) => {
   const { toast } = useToast();
   const { ingredientes, loading: loadingIngredientes } = useIngredientes();
+  const { mixes } = useMixes();
   const {
     criarFichaTecnica,
     atualizarFichaTecnica,
@@ -104,7 +106,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
       return;
     }
     
-    const ingrediente = ingredientes.find(ing => ing.id === ingredienteSelecionado);
+    const ingrediente = todosItensValidos.find(item => item.id === ingredienteSelecionado);
     if (!ingrediente) {
       toast({
         variant: "destructive",
@@ -265,8 +267,23 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     ingredientes: ingredientes.map(ing => ({ id: ing.id, nome: ing.alimento, ativo: ing.ativo }))
   });
 
-  // Filtrar apenas ingredientes válidos (com ID e ativos)
-  const ingredientesValidos = ingredientes.filter(ing => ing.id && ing.ativo);
+  // Converter mixes para formato de ingrediente
+  const mixesComoIngredientes = mixes.map(mix => ({
+    id: mix.id,
+    alimento: `${mix.nome} (Mix)`,
+    categoria: mix.categoria,
+    preco: mix.preco_total,
+    peso: mix.peso_total,
+    unidade: mix.unidade,
+    fator_correcao: mix.fator_correcao,
+    ativo: mix.ativo,
+  }));
+
+  // Combinar ingredientes e mixes válidos
+  const todosItensValidos = [
+    ...ingredientes.filter(ing => ing.id && ing.ativo),
+    ...mixesComoIngredientes.filter(mix => mix.id && mix.ativo)
+  ];
 
   return (
     <div className="space-y-6">
@@ -319,17 +336,17 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                             <SelectItem key="loading" value="loading" disabled>
                               Carregando ingredientes...
                             </SelectItem>
-                          ) : ingredientesValidos.length === 0 ? (
+                          ) : todosItensValidos.length === 0 ? (
                             <SelectItem key="empty" value="empty" disabled>
-                              Nenhum ingrediente encontrado
+                              Nenhum ingrediente ou mix encontrado
                             </SelectItem>
                           ) : (
-                            ingredientesValidos.map((ingrediente) => (
+                            todosItensValidos.map((item) => (
                               <SelectItem 
-                                key={ingrediente.id} 
-                                value={ingrediente.id}
+                                key={item.id} 
+                                value={item.id}
                               >
-                                {ingrediente.alimento}
+                                {item.alimento}
                               </SelectItem>
                             ))
                           )}

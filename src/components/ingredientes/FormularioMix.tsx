@@ -17,9 +17,10 @@ import { MixIngrediente } from '@/types/mix';
 
 interface FormularioMixProps {
   onCancel: () => void;
+  onSuccess?: () => void;
 }
 
-const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
+const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel, onSuccess }) => {
   const [nome, setNome] = useState('');
   const [ingredientesSelecionados, setIngredientesSelecionados] = useState<MixIngrediente[]>([]);
   const [ingredienteSelecionado, setIngredienteSelecionado] = useState('');
@@ -118,7 +119,11 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel }) => {
         description: "O mix foi cadastrado com sucesso.",
       });
 
-      onCancel();
+      if (onSuccess) {
+        onSuccess();
+      } else {
+        onCancel();
+      }
     } catch (error) {
       toast({
         variant: "destructive",

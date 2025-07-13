@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Search, Edit, Trash2, Plus, ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 import { useIngredientes } from '@/hooks/useIngredientes';
+import { useMixes } from '@/hooks/useMixes';
 import { Ingrediente } from '@/types/ingrediente';
 
 interface ListaIngredientesProps {
@@ -20,15 +21,36 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
   onEditarIngrediente,
 }) => {
   const { ingredientes, atualizarIngrediente } = useIngredientes();
+  const { mixes } = useMixes();
   const [busca, setBusca] = useState('');
   const [ordenacao, setOrdenacao] = useState<'nome' | 'categoria' | 'preco'>('nome');
   const [direcaoOrdenacao, setDirecaoOrdenacao] = useState<'asc' | 'desc'>('asc');
 
-  const ingredientesFiltrados = ingredientes
-    .filter((ingrediente) =>
-      ingrediente.alimento.toLowerCase().includes(busca.toLowerCase()) ||
-      ingrediente.categoria.toLowerCase().includes(busca.toLowerCase()) ||
-      ingrediente.fornecedor?.toLowerCase().includes(busca.toLowerCase())
+  // Converter mixes para formato de ingrediente
+  const mixesComoIngredientes = mixes.map(mix => ({
+    id: mix.id,
+    alimento: `${mix.nome} (Mix)`,
+    categoria: mix.categoria,
+    preco: mix.preco_total,
+    peso: mix.peso_total,
+    unidade: mix.unidade,
+    fator_correcao: mix.fator_correcao,
+    ativo: mix.ativo,
+    data_validade: '',
+    fornecedor: 'Mix',
+    quantidade_estoque: 0,
+    created_at: mix.created_at,
+    updated_at: mix.updated_at,
+  }));
+
+  // Combinar ingredientes e mixes
+  const todosItens = [...ingredientes, ...mixesComoIngredientes];
+
+  const ingredientesFiltrados = todosItens
+    .filter((item) =>
+      item.alimento.toLowerCase().includes(busca.toLowerCase()) ||
+      item.categoria.toLowerCase().includes(busca.toLowerCase()) ||
+      item.fornecedor?.toLowerCase().includes(busca.toLowerCase())
     )
     .sort((a, b) => {
       let resultado = 0;
@@ -193,6 +215,7 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
                         variant="outline"
                         size="sm"
                         onClick={() => onEditarIngrediente?.(ingrediente)}
+                        disabled={ingrediente.alimento.includes('(Mix)')}
                       >
                         <Edit className="w-4 h-4" />
                       </Button>
@@ -200,6 +223,7 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
                         variant={ingrediente.ativo ? "destructive" : "default"}
                         size="sm"
                         onClick={() => alternarStatus(ingrediente.id, ingrediente.ativo)}
+                        disabled={ingrediente.alimento.includes('(Mix)')}
                       >
                         {ingrediente.ativo ? (
                           <Trash2 className="w-4 h-4" />
