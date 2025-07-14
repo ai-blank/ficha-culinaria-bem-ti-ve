@@ -4,6 +4,7 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { api } from '@/lib/api';
+import { API_BASE_URL } from '@/config/api';
 
 const ConfirmEmailPage: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -28,7 +29,7 @@ const ConfirmEmailPage: React.FC = () => {
     try {
       console.log('🔄 Confirmando email com token:', token);
       
-      const response = await fetch(`http://localhost:5000/api/auth/confirm`, {
+      const response = await fetch(`${API_BASE_URL}/auth/confirm`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Ingrediente, FatorCorrecaoData, NovoIngredienteFormData } from '@/types/ingrediente';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+import { API_BASE_URL } from '@/config/api';
 
 export const useIngredientes = () => {
   const [ingredientes, setIngredientes] = useState<Ingrediente[]>([]);

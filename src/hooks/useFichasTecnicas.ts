@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { FichaTecnica, NovaFichaTecnicaFormData, IngredienteFicha, ResultadoCalculo } from '@/types/ficha-tecnica';
 import { useIngredientes } from './useIngredientes';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+import { API_BASE_URL } from '@/config/api';
 
 export const useFichasTecnicas = () => {
   const [fichasTecnicas, setFichasTecnicas] = useState<FichaTecnica[]>([]);

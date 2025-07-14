@@ -8,6 +8,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
 import { User, Mail, Building, Phone, Lock } from 'lucide-react';
 import { api } from '@/lib/api';
+import { API_BASE_URL } from '@/config/api';
 
 const ProfileForm: React.FC = () => {
   const { user, updateProfile } = useAuth();
@@ -74,7 +75,7 @@ const ProfileForm: React.FC = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:5000/api/users/${user.id}`, {
+      const response = await fetch(`${API_BASE_URL}/users/${user.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -153,7 +154,7 @@ const ProfileForm: React.FC = () => {
         return;
       }
 
-      const response = await fetch(`http://localhost:5000/api/auth/change-password`, {
+      const response = await fetch(`${API_BASE_URL}/auth/change-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

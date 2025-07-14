@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Mix, NovoMixFormData } from '@/types/mix';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+import { API_BASE_URL } from '@/config/api';
 
 export const useMixes = () => {
   const [mixes, setMixes] = useState<Mix[]>([]);
