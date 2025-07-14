@@ -82,6 +82,16 @@ const fichaSchema = new mongoose.Schema({
       ref: 'Ingrediente',
       required: true
     },
+    nome: {
+      type: String,
+      required: [true, 'Nome do ingrediente é obrigatório'],
+      trim: true
+    },
+    unidade: {
+      type: String,
+      required: [true, 'Unidade do ingrediente é obrigatória'],
+      trim: true
+    },
     quantidade_usada: {
       type: Number,
       required: [true, 'Quantidade usada é obrigatória'],

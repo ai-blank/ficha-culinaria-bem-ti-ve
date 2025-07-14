@@ -398,7 +398,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                         <h4 className="font-medium">{field.nome || 'Ingrediente sem nome'}</h4>
                         <div className="flex gap-4 text-sm text-muted-foreground">
                           <span>Preço: {formatarMoeda(field.preco_unitario)}</span>
-                          <span>Peso: {field.peso_compra} {field.unidade}</span>
+                          <span>Peso: {field.peso_compra} {field.unidade && <span>({field.unidade})</span>}</span>
                           <span>Fator: {field.fator_correcao}</span>
                         </div>
                       </div>

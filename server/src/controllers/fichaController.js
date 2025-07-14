@@ -137,6 +137,28 @@ const createFicha = async (req, res, next) => {
       });
     }
 
+    // Buscar dados dos ingredientes para salvar nome e unidade
+    const Ingrediente = require('../models/Ingrediente');
+    const Mix = require('../models/Mix');
+    
+    for (let i = 0; i < req.body.ingredientes.length; i++) {
+      const ingrediente = req.body.ingredientes[i];
+      
+      // Buscar no modelo Ingrediente primeiro
+      let dadosIngrediente = await Ingrediente.findById(ingrediente.ingrediente_id);
+      
+      // Se não encontrar, buscar no modelo Mix
+      if (!dadosIngrediente) {
+        dadosIngrediente = await Mix.findById(ingrediente.ingrediente_id);
+      }
+      
+      if (dadosIngrediente) {
+        // Adicionar nome e unidade ao ingrediente
+        req.body.ingredientes[i].nome = dadosIngrediente.alimento || dadosIngrediente.nome;
+        req.body.ingredientes[i].unidade = dadosIngrediente.unidade;
+      }
+    }
+
     // Calcular custos
     const resultadoCalculo = calcularCustos(req.body);
 
@@ -179,6 +201,30 @@ const updateFicha = async (req, res, next) => {
         success: false,
         message: 'Ficha técnica não encontrada'
       });
+    }
+
+    // Se há ingredientes sendo atualizados, buscar dados completos
+    if (req.body.ingredientes) {
+      const Ingrediente = require('../models/Ingrediente');
+      const Mix = require('../models/Mix');
+      
+      for (let i = 0; i < req.body.ingredientes.length; i++) {
+        const ingrediente = req.body.ingredientes[i];
+        
+        // Buscar no modelo Ingrediente primeiro
+        let dadosIngrediente = await Ingrediente.findById(ingrediente.ingrediente_id);
+        
+        // Se não encontrar, buscar no modelo Mix
+        if (!dadosIngrediente) {
+          dadosIngrediente = await Mix.findById(ingrediente.ingrediente_id);
+        }
+        
+        if (dadosIngrediente) {
+          // Adicionar nome e unidade ao ingrediente
+          req.body.ingredientes[i].nome = dadosIngrediente.alimento || dadosIngrediente.nome;
+          req.body.ingredientes[i].unidade = dadosIngrediente.unidade;
+        }
+      }
     }
 
     // Calcular custos se houver dados de cálculo
