@@ -40,6 +40,17 @@ const formSchema = z.object({
   margem_lucro: z.number().min(0, 'Margem deve ser positiva'),
 });
 
+// Função para validar nome duplicado
+const createFormSchemaWithValidation = (verificarNomeDuplicado: (nome: string, idIgnorar?: string) => boolean, fichaTecnicaId?: string) => {
+  return formSchema.extend({
+    nome_receita: z.string()
+      .min(2, 'Nome da receita é obrigatório')
+      .refine((nome) => !verificarNomeDuplicado(nome, fichaTecnicaId), {
+        message: 'Já existe uma ficha técnica com este nome'
+      })
+  });
+};
+
 interface FormularioFichaTecnicaProps {
   fichaTecnica?: FichaTecnica;
   onSuccess?: () => void;
@@ -65,9 +76,13 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
   const [dadosAlterados, setDadosAlterados] = useState(false);
   const [calculoRealizado, setCalculoRealizado] = useState(false);
   const [ingredienteSelecionado, setIngredienteSelecionado] = useState('');
+  const [filtroIngrediente, setFiltroIngrediente] = useState('');
+
+  // Criar o schema com validação de nome duplicado
+  const formSchemaWithValidation = createFormSchemaWithValidation(verificarNomeDuplicado, fichaTecnica?.id);
 
   const form = useForm<NovaFichaTecnicaFormData>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchemaWithValidation),
     defaultValues: {
       nome_receita: fichaTecnica?.nome_receita || '',
       ingredientes: fichaTecnica?.ingredientes || [],
@@ -181,16 +196,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
         description: "A ficha técnica foi atualizada com sucesso.",
       });
     } else {
-      // Criar nova ficha
-      if (verificarNomeDuplicado(dados.nome_receita)) {
-        toast({
-          variant: "destructive",
-          title: "Nome duplicado",
-          description: "Já existe uma ficha técnica com este nome.",
-        });
-        return;
-      }
-
+      // Criar nova ficha - validação já feita no schema
       criarFichaTecnica(dados);
       
       toast({
@@ -219,16 +225,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
         description: "A ficha técnica foi atualizada com sucesso.",
       });
     } else {
-      // Criar nova ficha
-      if (verificarNomeDuplicado(dados.nome_receita)) {
-        toast({
-          variant: "destructive",
-          title: "Nome duplicado",
-          description: "Já existe uma ficha técnica com este nome.",
-        });
-        return;
-      }
-
+      // Criar nova ficha - validação já feita no schema
       criarFichaTecnica(dados);
       
       toast({
@@ -279,11 +276,11 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
     ativo: mix.ativo,
   }));
 
-  // Combinar ingredientes e mixes válidos
+  // Combinar ingredientes e mixes válidos e ordenar alfabeticamente
   const todosItensValidos = [
     ...ingredientes.filter(ing => ing.id && ing.ativo),
     ...mixesComoIngredientes.filter(mix => mix.id && mix.ativo)
-  ];
+  ].sort((a, b) => a.alimento.localeCompare(b.alimento, 'pt-BR'));
 
   return (
     <div className="space-y-6">
@@ -319,49 +316,78 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
 
                 {/* Seção para adicionar ingrediente com layout melhorado */}
                 <Card className="p-4">
-                  <div className="flex gap-3 items-end">
-                    <div className="flex-1">
-                      <label className="text-sm font-medium mb-2 block">
-                        Selecionar Ingrediente
-                      </label>
-                      <Select 
-                        value={ingredienteSelecionado} 
-                        onValueChange={setIngredienteSelecionado}
-                      >
-                        <SelectTrigger className="">
-                          <SelectValue placeholder="Escolha um ingrediente..." />
-                        </SelectTrigger>
-                        <SelectContent className="z-50">
-                          {loadingIngredientes ? (
-                            <SelectItem key="loading" value="loading" disabled>
-                              Carregando ingredientes...
-                            </SelectItem>
-                          ) : todosItensValidos.length === 0 ? (
-                            <SelectItem key="empty" value="empty" disabled>
-                              Nenhum ingrediente ou mix encontrado
-                            </SelectItem>
-                          ) : (
-                            todosItensValidos.map((item) => (
-                              <SelectItem 
-                                key={item.id} 
-                                value={item.id}
-                              >
-                                {item.alimento}
-                              </SelectItem>
-                            ))
-                          )}
-                        </SelectContent>
-                      </Select>
+                  <div className="space-y-3">
+                    <div className="flex gap-3 items-end">
+                      <div className="flex-1">
+                        <label className="text-sm font-medium mb-2 block">
+                          Buscar Ingrediente
+                        </label>
+                        <Input
+                          placeholder="Digite para filtrar ingredientes..."
+                          value={filtroIngrediente}
+                          onChange={(e) => setFiltroIngrediente(e.target.value)}
+                        />
+                      </div>
                     </div>
-                    <Button
-                      type="button"
-                      onClick={adicionarIngrediente}
-                      disabled={!ingredienteSelecionado || loadingIngredientes}
-                      className="flex items-center gap-2 px-6"
-                    >
-                      <Plus className="w-4 h-4" />
-                      Adicionar
-                    </Button>
+                    <div className="flex gap-3 items-end">
+                      <div className="flex-1">
+                        <label className="text-sm font-medium mb-2 block">
+                          Selecionar Ingrediente
+                        </label>
+                        <Select 
+                          value={ingredienteSelecionado} 
+                          onValueChange={setIngredienteSelecionado}
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder="Escolha um ingrediente..." />
+                          </SelectTrigger>
+                          <SelectContent 
+                            className="z-50 max-h-[200px] overflow-y-auto"
+                            side="bottom"
+                            align="start"
+                          >
+                            {loadingIngredientes ? (
+                              <SelectItem key="loading" value="loading" disabled>
+                                Carregando ingredientes...
+                              </SelectItem>
+                            ) : (() => {
+                              const itensFiltrados = todosItensValidos.filter(item =>
+                                item.alimento.toLowerCase().includes(filtroIngrediente.toLowerCase())
+                              );
+                              
+                              return itensFiltrados.length === 0 ? (
+                                <SelectItem key="empty" value="empty" disabled>
+                                  {filtroIngrediente ? 'Nenhum ingrediente encontrado com esse filtro' : 'Nenhum ingrediente ou mix encontrado'}
+                                </SelectItem>
+                              ) : (
+                                itensFiltrados.map((item) => (
+                                  <SelectItem 
+                                    key={item.id} 
+                                    value={item.id}
+                                  >
+                                    <div className="flex items-center justify-between w-full">
+                                      <span>{item.alimento}</span>
+                                      <span className="text-xs text-muted-foreground ml-2">
+                                        {item.unidade}
+                                      </span>
+                                    </div>
+                                  </SelectItem>
+                                ))
+                              );
+                            })()}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <Button
+                        type="button"
+                        onClick={adicionarIngrediente}
+                        disabled={!ingredienteSelecionado || loadingIngredientes}
+                        className="flex items-center gap-2 px-6"
+                      >
+                        <Plus className="w-4 h-4" />
+                        Adicionar
+                      </Button>
+                    </div>
                   </div>
                 </Card>
 
@@ -369,7 +395,7 @@ export const FormularioFichaTecnica: React.FC<FormularioFichaTecnicaProps> = ({
                   <Card key={field.id} className="p-4">
                     <div className="flex justify-between items-start mb-4">
                       <div>
-                        <h4 className="font-medium">{field.nome}</h4>
+                        <h4 className="font-medium">{field.nome || 'Ingrediente sem nome'}</h4>
                         <div className="flex gap-4 text-sm text-muted-foreground">
                           <span>Preço: {formatarMoeda(field.preco_unitario)}</span>
                           <span>Peso: {field.peso_compra} {field.unidade}</span>
