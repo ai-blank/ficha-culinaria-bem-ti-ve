@@ -1,14 +1,10 @@
 // Centralized API configuration
-// For development, try different ports or use environment variables
+// Backend server is running on port 5000 as configured in server/.env
 const getApiBaseUrl = () => {
-  // Try different common backend ports
-  const possiblePorts = [3001, 5000, 8000, 3000];
-  
-  // For now, use a default that works with most setups
-  // Users can modify this based on their backend configuration
-  return 'http://localhost:3001/api';
+  // Backend is configured to run on port 5000
+  return 'http://localhost:5000/api';
 };
 
 export const API_BASE_URL = getApiBaseUrl();
 
-console.log('🔧 API Base URL configured as:', API_BASE_URL);
+console.log('🔧 API conectando na porta 5000 (conforme server/.env):', API_BASE_URL);
