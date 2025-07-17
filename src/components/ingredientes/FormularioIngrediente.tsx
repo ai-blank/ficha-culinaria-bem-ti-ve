@@ -16,7 +16,7 @@ import { useToast } from '@/hooks/use-toast';
 const formSchema = z.object({
   alimento: z.string().min(2, 'Nome do alimento é obrigatório'),
   peso: z.string().min(1, 'Peso deve ser informado'),
-  preco: z.number().min(0.01, 'Preço deve ser maior que 0'),
+  preco: z.number().min(0.001, 'Preço deve ser maior que 0'),
   unidade: z.string().min(1, 'Unidade é obrigatória'),
   fator_correcao: z.number().min(0.1, 'Fator de correção deve ser maior que 0'),
   categoria: z.string().min(1, 'Categoria é obrigatória'),
