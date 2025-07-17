@@ -146,11 +146,63 @@ export const useMixes = () => {
     );
   };
 
+  const atualizarStatusMix = async (id: string, ativo: boolean) => {
+    try {
+      const token = getAuthToken();
+      
+      if (!token) {
+        console.log('⚠️ Token não encontrado, atualizando localmente');
+        const mixesAtualizados = mixes.map(mix => 
+          mix.id === id ? { ...mix, ativo } : mix
+        );
+        setMixes(mixesAtualizados);
+        localStorage.setItem('mixes', JSON.stringify(mixesAtualizados));
+        return;
+      }
+
+      console.log('🔄 Atualizando status do mix na API:', id, ativo);
+
+      const response = await fetch(`${API_BASE_URL}/mixes/${id}/status`, {
+        method: 'PATCH',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ativo }),
+      });
+
+      if (response.ok) {
+        console.log('✅ Status do mix atualizado na API');
+        const mixesAtualizados = mixes.map(mix => 
+          mix.id === id ? { ...mix, ativo } : mix
+        );
+        setMixes(mixesAtualizados);
+      } else {
+        console.error('❌ Erro ao atualizar status do mix na API');
+        // Fallback local
+        const mixesAtualizados = mixes.map(mix => 
+          mix.id === id ? { ...mix, ativo } : mix
+        );
+        setMixes(mixesAtualizados);
+        localStorage.setItem('mixes', JSON.stringify(mixesAtualizados));
+      }
+    } catch (error) {
+      console.error('❌ Erro de rede ao atualizar status do mix:', error);
+      // Fallback local
+      const mixesAtualizados = mixes.map(mix => 
+        mix.id === id ? { ...mix, ativo } : mix
+      );
+      setMixes(mixesAtualizados);
+      localStorage.setItem('mixes', JSON.stringify(mixesAtualizados));
+    }
+  };
+
   return {
     mixes,
     loading,
     criarMix,
     verificarNomeDuplicado,
     carregarMixes,
+    atualizarStatusMix,
   };
 };

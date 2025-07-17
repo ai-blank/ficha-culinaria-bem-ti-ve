@@ -13,15 +13,17 @@ interface ListaIngredientesProps {
   onNovoIngrediente: () => void;
   onNovoMix: () => void;
   onEditarIngrediente: (ingrediente: Ingrediente) => void;
+  onEditarMix?: (mix: any) => void;
 }
 
 export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
   onNovoIngrediente,
   onNovoMix,
   onEditarIngrediente,
+  onEditarMix,
 }) => {
   const { ingredientes, atualizarIngrediente } = useIngredientes();
-  const { mixes } = useMixes();
+  const { mixes, atualizarStatusMix } = useMixes();
   const [busca, setBusca] = useState('');
   const [ordenacao, setOrdenacao] = useState<'nome' | 'categoria' | 'preco'>('nome');
   const [direcaoOrdenacao, setDirecaoOrdenacao] = useState<'asc' | 'desc'>('asc');
@@ -41,10 +43,18 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
     quantidade_estoque: 0,
     created_at: mix.created_at,
     updated_at: mix.updated_at,
+    isMix: true, // Adicionar identificador
+    mixData: mix, // Dados originais do mix
+  }));
+
+  // Adicionar isMix: false aos ingredientes normais para padronização
+  const ingredientesComFlag = ingredientes.map(ingrediente => ({
+    ...ingrediente,
+    isMix: false,
   }));
 
   // Combinar ingredientes e mixes
-  const todosItens = [...ingredientes, ...mixesComoIngredientes];
+  const todosItens = [...ingredientesComFlag, ...mixesComoIngredientes];
 
   const ingredientesFiltrados = todosItens
     .filter((item) =>
@@ -92,8 +102,20 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
       <ArrowDown className="w-3 h-3 ml-1" />;
   };
 
-  const alternarStatus = (id: string, ativo: boolean) => {
-    atualizarIngrediente(id, { ativo: !ativo });
+  const alternarStatus = (id: string, ativo: boolean, isMix: boolean = false) => {
+    if (isMix) {
+      atualizarStatusMix(id, !ativo);
+    } else {
+      atualizarIngrediente(id, { ativo: !ativo });
+    }
+  };
+
+  const handleEditar = (item: any) => {
+    if (item.isMix) {
+      onEditarMix?.(item.mixData);
+    } else {
+      onEditarIngrediente(item);
+    }
   };
 
   const formatarPreco = (preco: number) => {
@@ -214,16 +236,14 @@ export const ListaIngredientes: React.FC<ListaIngredientesProps> = ({
                       <Button
                         variant="outline"
                         size="sm"
-                        onClick={() => onEditarIngrediente?.(ingrediente)}
-                        disabled={ingrediente.alimento.includes('(Mix)')}
+                        onClick={() => handleEditar(ingrediente)}
                       >
                         <Edit className="w-4 h-4" />
                       </Button>
                       <Button
                         variant={ingrediente.ativo ? "destructive" : "default"}
                         size="sm"
-                        onClick={() => alternarStatus(ingrediente.id, ingrediente.ativo)}
-                        disabled={ingrediente.alimento.includes('(Mix)')}
+                        onClick={() => alternarStatus(ingrediente.id, ingrediente.ativo, ingrediente.isMix)}
                       >
                         {ingrediente.ativo ? (
                           <Trash2 className="w-4 h-4" />
