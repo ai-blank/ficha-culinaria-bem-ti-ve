@@ -13,14 +13,15 @@ import { useIngredientes } from '@/hooks/useIngredientes';
 import { useMixes } from '@/hooks/useMixes';
 import { useToast } from '@/hooks/use-toast';
 import { X, Plus, Package } from 'lucide-react';
-import { MixIngrediente } from '@/types/mix';
+import { MixIngrediente, Mix } from '@/types/mix';
 
 interface FormularioMixProps {
+  mix?: Mix | null;
   onCancel: () => void;
   onSuccess?: () => void;
 }
 
-const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel, onSuccess }) => {
+const FormularioMix: React.FC<FormularioMixProps> = ({ mix, onCancel, onSuccess }) => {
   const [nome, setNome] = useState('');
   const [ingredientesSelecionados, setIngredientesSelecionados] = useState<MixIngrediente[]>([]);
   const [ingredienteSelecionado, setIngredienteSelecionado] = useState('');
@@ -34,7 +35,13 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ onCancel, onSuccess }) =>
 
   useEffect(() => {
     recarregarIngredientes();
-  }, []);
+    
+    // Se há um mix para editar, preencher os campos
+    if (mix) {
+      setNome(mix.nome);
+      setIngredientesSelecionados(mix.ingredientes);
+    }
+  }, [mix]);
 
   const adicionarIngrediente = () => {
     if (!ingredienteSelecionado || quantidade <= 0) {
