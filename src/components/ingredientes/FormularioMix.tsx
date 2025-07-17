@@ -234,7 +234,7 @@ const FormularioMix: React.FC<FormularioMixProps> = ({ mix, onCancel, onSuccess 
                   value={quantidade}
                   onChange={(e) => setQuantidade(Number(e.target.value))}
                   placeholder="Qtd"
-                  min="1"
+                  min="0.01"
                   step="0.1"
                 />
               </div>
